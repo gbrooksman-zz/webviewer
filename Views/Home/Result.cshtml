@@ -1,0 +1,15 @@
+
+@model webviewer.Models.SearchParameters
+
+@{
+    Layout = null;
+}
+
+
+    <div id="resultContainer">
+        
+        This is the result page
+
+         @Html.Raw(ViewData["resultString"])
+        
+    </div>

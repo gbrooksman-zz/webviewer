@@ -1,20 +1,39 @@
-#Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+# Welcome to ASP.NET Core
 
-#Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+We've made some big updates in this release, so it’s **important** that you spend a few minutes to learn what’s new.
 
-#Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+You've created a new ASP.NET Core project. [Learn what's new](https://go.microsoft.com/fwlink/?LinkId=518016)
 
-#Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+## This application consists of:
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://www.visualstudio.com/en-us/docs/git/create-a-readme). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+*   Sample pages using ASP.NET Core MVC
+*   [Bower](https://go.microsoft.com/fwlink/?LinkId=518004) for managing client-side libraries
+*   Theming using [Bootstrap](https://go.microsoft.com/fwlink/?LinkID=398939)
+
+## How to
+
+*   [Add a Controller and View](https://go.microsoft.com/fwlink/?LinkID=398600)
+*   [Add an appsetting in config and access it in app.](https://go.microsoft.com/fwlink/?LinkID=699562)
+*   [Manage User Secrets using Secret Manager.](https://go.microsoft.com/fwlink/?LinkId=699315)
+*   [Use logging to log a message.](https://go.microsoft.com/fwlink/?LinkId=699316)
+*   [Add packages using NuGet.](https://go.microsoft.com/fwlink/?LinkId=699317)
+*   [Add client packages using Bower.](https://go.microsoft.com/fwlink/?LinkId=699318)
+*   [Target development, staging or production environment.](https://go.microsoft.com/fwlink/?LinkId=699319)
+
+## Overview
+
+*   [Conceptual overview of what is ASP.NET Core](https://go.microsoft.com/fwlink/?LinkId=518008)
+*   [Fundamentals of ASP.NET Core such as Startup and middleware.](https://go.microsoft.com/fwlink/?LinkId=699320)
+*   [Working with Data](https://go.microsoft.com/fwlink/?LinkId=398602)
+*   [Security](https://go.microsoft.com/fwlink/?LinkId=398603)
+*   [Client side development](https://go.microsoft.com/fwlink/?LinkID=699321)
+*   [Develop on different platforms](https://go.microsoft.com/fwlink/?LinkID=699322)
+*   [Read more on the documentation site](https://go.microsoft.com/fwlink/?LinkID=699323)
+
+## Run & Deploy
+
+*   [Run your app](https://go.microsoft.com/fwlink/?LinkID=517851)
+*   [Run tools such as EF migrations and more](https://go.microsoft.com/fwlink/?LinkID=517853)
+*   [Publish to Microsoft Azure Web Apps](https://go.microsoft.com/fwlink/?LinkID=398609)
+
+We would love to hear your [feedback](https://go.microsoft.com/fwlink/?LinkId=518015)

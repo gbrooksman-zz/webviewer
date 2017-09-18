@@ -10,7 +10,7 @@ using Microsoft.Extensions.Options;
 using System.Dynamic;
 using Microsoft.AspNetCore.Http;
 using webviewer.Managers;
-using Wercs.DTE.WebViewer.Library.Models;
+using webviewer.Models;
 
 
 namespace webviewer.Controllers
@@ -24,21 +24,21 @@ namespace webviewer.Controllers
             _config = controlConfigAccessor.Value;
         }
 
-        [HttpGet]
-        public IActionResult Index()
-        {
-            string resultParams = string.Empty;
+        // // [HttpGet]
+        // // public IActionResult Index()
+        // // {
+        // //     string resultParams = string.Empty;
 
-           // ResultGrid grid = _config.Grid;
+        // //    // ResultGrid grid = _config.Grid;
 
-           // resultParams = grid.Title;
+        // //    // resultParams = grid.Title;
 
-            ViewData["resultString"] = resultParams;   
+        // //     ViewData["resultString"] = resultParams;   
 
 
-            return View("Shared/Result.cshtml");
+        // //     return View("Shared/Result.cshtml");
 
-        }
+        // // }
     }
 
 

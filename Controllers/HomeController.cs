@@ -5,43 +5,46 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using System.IO;
 using Newtonsoft.Json;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Configuration.Json;
 using Microsoft.Extensions.Options;
 using System.Dynamic;
 using Microsoft.AspNetCore.Http;
 using webviewer.Managers;
-using Wercs.DTE.WebViewer.Library.Models;
-
+using webviewer.Models;
 
 namespace webviewer.Controllers
 {
     public class HomeController : Controller
     {
+ 
         private readonly ControlConfig _config;
+        private DataManager dataMgr;
 
-        public HomeController(IOptions<ControlConfig> controlConfigAccessor)
+        public HomeController(IOptions<ControlConfig> controlConfigAccessor, IConfiguration _iconfiguration)
         {
             _config = controlConfigAccessor.Value;
+             dataMgr = new DataManager(_iconfiguration);
         }
 
         [HttpPost]
         public IActionResult Result(SearchParameters searchParams)
         {
-            string resultParams = string.Empty;
+           // string resultParams = string.Empty;
 
-            
+             
 
-            resultParams = _config.ResultGridTitle;
 
-            ResultGrid grid = _config.Grid;
+           // resultParams = _config.ResultGridTitle;
 
-            foreach (Column col in grid.Columns)
-            {
-              resultParams += col.DisplayName + "<br/>";
-                 
-            }
+          //  ResultGrid grid = _config.Grid;
 
-            ViewData["resultString"] = resultParams;   
+           // foreach (Column col in grid.Columns)
+           // {
+          //    resultParams += col.DisplayName + "<br/>";                 
+          //  }
+
+            ViewData["resultString"] = "";  
 
             return View("/Views/Home/Result.cshtml");
         }

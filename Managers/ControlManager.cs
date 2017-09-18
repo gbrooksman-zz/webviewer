@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Wercs.DTE.WebViewer.Library.Models;
+using webviewer.Models;
 using System.Text;
 using Microsoft.AspNetCore.Mvc.Rendering;
 

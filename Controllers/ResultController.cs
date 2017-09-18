@@ -10,6 +10,7 @@ using Microsoft.Extensions.Options;
 using System.Dynamic;
 using Microsoft.AspNetCore.Http;
 using webviewer.Managers;
+using Wercs.DTE.WebViewer.Library.Models;
 
 
 namespace webviewer.Controllers

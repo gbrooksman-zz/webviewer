@@ -5,9 +5,8 @@
     Layout = null;
 }
 
-<form asp-controller="Home"  asp-action="Result">
-
-
+<form asp-controller="Home"  asp-action="Result" method="post">
+    
     <div id="paramContainer">
         
         @Html.Raw(ViewData["paramsString"])

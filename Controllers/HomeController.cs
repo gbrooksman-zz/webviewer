@@ -10,6 +10,7 @@ using Microsoft.Extensions.Options;
 using System.Dynamic;
 using Microsoft.AspNetCore.Http;
 using webviewer.Managers;
+using Wercs.DTE.WebViewer.Library.Models;
 
 
 namespace webviewer.Controllers
@@ -23,10 +24,12 @@ namespace webviewer.Controllers
             _config = controlConfigAccessor.Value;
         }
 
-
-        public IActionResult Result()
+        [HttpPost]
+        public IActionResult Result(SearchParameters searchParams)
         {
             string resultParams = string.Empty;
+
+            
 
             resultParams = _config.ResultGridTitle;
 
@@ -55,7 +58,7 @@ namespace webviewer.Controllers
                         searchParams += ControlManager.CreateTextBox(control);
                         break;
 
-                    case "Button":
+                    case "Button":  //always a submit type
                         searchParams += ControlManager.CreateButton(control);
                         break;
 

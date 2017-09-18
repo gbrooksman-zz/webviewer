@@ -13,14 +13,16 @@
         "DisplayName": "Product ID",
         "Size": 50,
         "Type": "TextBox",
-        "TextCode": "WUI00000"
+        "TextCode": "WUI00000",
+        "HasFilterDropDown":true
       },
       {
         "Name": "ProductName",
         "DisplayName": "Product Name",
         "Size": 75,
         "Type": "TextBox",
-        "TextCode": "WUI00000"
+        "TextCode": "WUI00000",
+        "HasFilterDropDown":true
       },
       {
         "Name": "PublishedDate",

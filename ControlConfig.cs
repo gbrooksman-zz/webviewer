@@ -27,6 +27,8 @@ namespace webviewer
         public string Name { get; set; }
 
         public string DisplayName { get; set; }
+
+        public bool HasFilterDropDown  { get; set; }
     }
 
 

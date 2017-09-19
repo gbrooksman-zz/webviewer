@@ -39,19 +39,19 @@
         "TextCode": "WUI00000"
       },
       {
-        "Name": "Subformat",
-        "Size": 0,
-        "Type": "DropDown",
-        "DisplayName": "Select Subformat",
-        "TextCode": "WUI00000"  
-      },
-      {
         "Name": "Format",
         "Size": 0,
         "Type": "DropDown",
         "DisplayName": "Select Format",
         "TextCode": "WUI00000"  
       },
+      {
+        "Name": "Subformat",
+        "Size": 0,
+        "Type": "DropDown",
+        "DisplayName": "Select Subformat",
+        "TextCode": "WUI00000"  
+      },     
       {
         "Name": "Search",
         "DisplayName": "Search Now",

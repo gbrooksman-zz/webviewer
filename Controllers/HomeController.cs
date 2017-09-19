@@ -19,21 +19,21 @@ namespace webviewer.Controllers
     {
  
         private readonly ControlConfig _config;
+
+        private IConfiguration _iconfiguration;
         private DataManager dataMgr;
 
-        public HomeController(IOptions<ControlConfig> controlConfigAccessor, IConfiguration _iconfiguration)
+        public HomeController(IOptions<ControlConfig> controlConfigAccessor, IConfiguration iconfiguration)
         {
             _config = controlConfigAccessor.Value;
-             dataMgr = new DataManager(_iconfiguration);
+             dataMgr = new DataManager(iconfiguration);
+             _iconfiguration = iconfiguration;
         }
 
         [HttpPost]
         public IActionResult Result(SearchParameters searchParams)
         {
            // string resultParams = string.Empty;
-
-             
-
 
            // resultParams = _config.ResultGridTitle;
 
@@ -52,21 +52,22 @@ namespace webviewer.Controllers
         public IActionResult Index()
         {
             string searchParams = string.Empty;
+            var controlMgr = new ControlManager(_iconfiguration);
 
             foreach (WebViewerControl control in _config.Controls)
             {
                 switch (control.Type)
                 {
                     case "TextBox":
-                        searchParams += ControlManager.CreateTextBox(control);
+                        searchParams += controlMgr.CreateTextBox(control);
                         break;
 
                     case "Button":  //always a submit type
-                        searchParams += ControlManager.CreateButton(control);
+                        searchParams += controlMgr.CreateButton(control);
                         break;
 
                     case "DropDown":
-                        searchParams += ControlManager.CreateDropDown(control);
+                        searchParams += controlMgr.CreateDropDown(control);
                         break;
                 }
             }
@@ -75,7 +76,5 @@ namespace webviewer.Controllers
 
             return View();
         }
-
-
     }
 }

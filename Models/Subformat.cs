@@ -1,4 +1,5 @@
 using System;
+using MongoDB.Bson;
 
 namespace webviewer.Models
 {
@@ -6,9 +7,11 @@ namespace webviewer.Models
     {
         public Subformat() {}
 
-         public string _id {get; set;}
+         public BsonObjectId _id {get; set;}
 
         public string Code {get; set;}
+
+        public string FormatCode {get; set;}
 
         public string Name {get; set;}
     }

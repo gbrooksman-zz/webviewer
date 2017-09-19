@@ -5,15 +5,23 @@ using System.Threading.Tasks;
 using webviewer.Models;
 using System.Text;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.Extensions.Configuration;
+
 
 namespace webviewer.Managers
 {
-    public static class ControlManager
+    public  class ControlManager
     {
         //when using taghelpers, for the value of the input to be submitted as form data, 
         //it needs to have a 'name' attribute. not too obvious
+        DataManager dataMgr ;
 
-        public static string CreateTextBox(WebViewerControl control )
+        public ControlManager(IConfiguration _iconfiguration)
+        {
+            dataMgr = new DataManager(_iconfiguration);
+        }
+
+        public  string CreateTextBox(WebViewerControl control )
         {
             StringBuilder builder = new StringBuilder();
 
@@ -31,7 +39,7 @@ namespace webviewer.Managers
             return builder.ToString();
         }
 
-        public static string CreateButton(WebViewerControl control)
+        public  string CreateButton(WebViewerControl control)
         {
             StringBuilder builder = new StringBuilder();
             AddBreak(builder);
@@ -42,31 +50,44 @@ namespace webviewer.Managers
         }
 
 
-        public static string CreateDropDown(WebViewerControl control)
+        public  string CreateDropDown(WebViewerControl control)
         {
             StringBuilder builder = new StringBuilder();
             AddLabel(builder, control.Name);
             builder.AppendFormat("<select asp-for = '{0}' name='{1}'>", control.Name,control.Name);
-            foreach (var item in GetSubFormats())
-                builder.AppendFormat("<option value = '{0}'>{1}</option>",item.Value, item.Text);
+
+            if (control.Name == "Format")
+            {
+                foreach (var item in GetFormats())
+                {
+                    builder.AppendFormat("<option value = '{0}'>{1}</option>",item.Value, item.Text);
+                }
+            }
+            else
+            {
+                foreach (var item in GetSubFormats())
+                {
+                    builder.AppendFormat("<option value = '{0}'>{1}</option>",item.Value, item.Text);
+                }
+            }
             builder.Append("</select>");
             AddBreak(builder);
             return builder.ToString();
         }
 
-        private static void AddLabel(StringBuilder sb, string modelItemName)
+        private  void AddLabel(StringBuilder sb, string modelItemName)
         {
             sb.AppendFormat("<label>{0}</label>", modelItemName);
             sb.Append("<br/>");
         }
 
-        private static void AddBreak(StringBuilder sb, int count = 2)
+        private  void AddBreak(StringBuilder sb, int count = 2)
         {
             for (int x = 0; x <= count; x++)        
                 sb.Append("<br/>");
         }
 
-        private static void AddFilterDropdown(StringBuilder sb, string modelItemName)
+        private  void AddFilterDropdown(StringBuilder sb, string modelItemName)
         {
             sb.AppendFormat("<select id = '{0}' name = '{1}'  asp-for = '{2}'>","ddFilter" +  modelItemName, modelItemName + "Filter", modelItemName + "Filter");
             sb.AppendFormat("<option selected = 'selected' value = '{0}'>{1}</option>","sw", "Starts With");
@@ -76,7 +97,7 @@ namespace webviewer.Managers
             sb.Append("</select>");
         }
 
-        private static void AddDateFilterDropdown(StringBuilder sb, string modelItemName)
+        private  void AddDateFilterDropdown(StringBuilder sb, string modelItemName)
         {
             sb.AppendFormat("<select id = '{0}' name = '{1}' asp-for = '{2}' >", "ddDateFilter" +  modelItemName , modelItemName + "Filter" , modelItemName + "Filter");
             sb.AppendFormat("<option selected = 'selected' value = '{0}'>{1}</option>","on", "On");
@@ -85,51 +106,43 @@ namespace webviewer.Managers
             sb.Append("</select>");
         }
 
-        private static List<SelectListItem> GetFormats()
+        private  List<SelectListItem> GetFormats()
         {
             List<SelectListItem> items = new List<SelectListItem>();
-            items.Add(new SelectListItem
+
+            List<Format> formats  = dataMgr.GetFormats();
+
+            foreach(var format in formats)
             {
-                Text = "Master",
-                Value = "MTR"
-            });
-            items.Add(new SelectListItem
-            {
-                Text = "Japan",
-                Value = "JPN",
-                Selected = true
-            });
-            items.Add(new SelectListItem
-            {
-                Text = "Europe",
-                Value = "EU"
-            });            
+                items.Add(new SelectListItem
+                {
+                    Text = format.Name,
+                    Value = format.Code
+                });
+            }           
 
             return  items;
         }
 
-        private static List<SelectListItem> GetSubFormats()
+
+        private  List<SelectListItem> GetSubFormats()
         {
             List<SelectListItem> items = new List<SelectListItem>();
-            items.Add(new SelectListItem
-            {
-                Text = "America",
-                Value = "USA"
-            });
-            items.Add(new SelectListItem
-            {
-                Text = "Mexico",
-                Value = "MEX",
-                Selected = true
-            });
-            items.Add(new SelectListItem
-            {
-                Text = "Canada",
-                Value = "CAN"
-            });
 
-            return items;
+            List<Subformat> subformats  = dataMgr.GetSubFormats("MTR");
+
+            foreach(var subformat in subformats)
+            {
+                items.Add(new SelectListItem
+                {
+                    Text = subformat.Name,
+                    Value = subformat.Code
+                });
+            }           
+
+            return  items;
         }
+
 
     }
 }

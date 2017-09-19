@@ -9,7 +9,9 @@ namespace webviewer
     {
         public ControlConfig() { }
 
+        public List<WebViewerControl> Header { get; set; }
         public List<WebViewerControl> Controls { get; set; }
+        public List<WebViewerControl> Footer { get; set; }
 
         public ResultGrid Grid { get; set; }
 

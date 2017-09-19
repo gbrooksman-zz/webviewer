@@ -5,8 +5,32 @@
         "ShowLogin":true
       }
     ],
-    "Header":[],
-    "Footer":[],
+    "Header":
+    [
+      {
+        "Name": "pyramid.jpg",
+        "DisplayName": "Pyramid Logo",
+        "Size": 50,
+        "Type": "CompanyLogo",
+        "TextCode": "WUI00000"
+      },
+      {
+        "Name": "CompanyTitle",
+        "DisplayName": "Pyramid Chemical Company",
+        "Size": 20,
+        "Type": "Label",
+        "TextCode": "WUI00000"
+      }
+    ],
+    "Footer":[ 
+      {
+      "Name": "Copyright",
+      "DisplayName": "Copyright 2017 - Pyramid Chemical Company",
+      "Size": 10,
+      "Type": "Label",
+      "TextCode": "WUI00000"
+      }
+    ],
     "Controls": [
       {
         "Name": "ProductID",

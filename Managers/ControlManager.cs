@@ -12,8 +12,8 @@ namespace webviewer.Managers
 {
     public  class ControlManager
     {
-        //when using taghelpers, for the value of the input to be submitted as form data, 
-        //it needs to have a 'name' attribute. not too obvious
+        //  when using taghelpers, for the value of the input to be submitted as form data, 
+        //  it needs to have a 'name' attribute. not too obvious
         DataManager dataMgr ;
 
         public ControlManager(IConfiguration _iconfiguration)
@@ -75,16 +75,34 @@ namespace webviewer.Managers
             return builder.ToString();
         }
 
-        private  void AddLabel(StringBuilder sb, string modelItemName)
+
+        public string CreateLogo(WebViewerControl control)
         {
-            sb.AppendFormat("<label>{0}</label>", modelItemName);
-            sb.Append("<br/>");
+            StringBuilder builder = new StringBuilder();
+            builder.AppendFormat("<img src={0} />", "~/images/" + control.Name); 
+            return builder.ToString();         
+        }
+
+        public string CreateLabel(WebViewerControl control)
+        {
+            StringBuilder builder = new StringBuilder();
+            AddLabel(builder,control.DisplayName,control.Size);
+            return builder.ToString();         
+        }
+
+
+        private  void AddLabel(StringBuilder sb, string modelItemName, int size = 15)
+        {
+            sb.AppendFormat("<label style = 'font-size:{0}px;'>{1}</label>",size,modelItemName);
+            AddBreak(sb,1);
         }
 
         private  void AddBreak(StringBuilder sb, int count = 2)
         {
-            for (int x = 0; x <= count; x++)        
+            for (int x = 0; x <= count; x++) 
+            {       
                 sb.Append("<br/>");
+            }
         }
 
         private  void AddFilterDropdown(StringBuilder sb, string modelItemName)

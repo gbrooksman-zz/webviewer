@@ -51,8 +51,32 @@ namespace webviewer.Controllers
 
         public IActionResult Index()
         {
+            string header = string.Empty;
             string searchParams = string.Empty;
+            string footer = string.Empty;
+
             var controlMgr = new ControlManager(_iconfiguration);
+            List<WebViewerControl> headerControls = _config.Header;
+            List<WebViewerControl> footerControls = _config.Footer;
+
+            //render header
+            if (headerControls.Count > 0)
+            {
+                foreach (WebViewerControl control in headerControls)
+                {
+                    switch (control.Type)
+                    {                   
+                        case "CompanyLogo":
+                            header += controlMgr.CreateLogo(control);
+                            break;
+                        case "Label":
+                            header += controlMgr.CreateLabel(control);
+                            break;
+                    }
+                }
+            }
+
+            //render body
 
             foreach (WebViewerControl control in _config.Controls)
             {
@@ -72,7 +96,26 @@ namespace webviewer.Controllers
                 }
             }
 
+            //render footer
+            if (footerControls.Count > 0)
+            {
+                foreach (WebViewerControl control in footerControls)
+                {
+                    switch (control.Type)
+                    {                   
+                        case "CompanyLogo":
+                            footer += controlMgr.CreateLogo(control);
+                            break;
+                        case "Label":
+                            footer += controlMgr.CreateLabel(control);
+                            break;
+                    }            
+                }
+            }
+
+            ViewData["headerString"] = header; 
             ViewData["paramsString"] = searchParams;           
+            ViewData["footerString"] = footer; 
 
             return View();
         }

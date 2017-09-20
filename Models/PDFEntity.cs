@@ -18,6 +18,20 @@ namespace webviewer.Models
 
         public string Language {get; set;}
 
+        public string Plant {get; set;}
+
+        public int DocType {get; set;}
+
+        public string DocPath {get; set;}
+
+        public string Supplier {get; set;}
+
+        public DateTime RevisedDate {get; set;}
+
+        public DateTime IssueDate {get; set;}
+
+        public DateTime DisposalDate {get; set;}
+
         public DateTime PublishedDate {get; set;}
 
         public int Authorization {get; set;}
@@ -38,9 +52,17 @@ namespace webviewer.Models
 
         public string Custom5 {get; set;}
 
-        public string CasNumber { get; set; }
+        public string Keywords {get; set;}
 
-        public string ComponentID { get; set; }
+        public string CasNumbers { get; set; }
+
+        public string ComponentIDs { get; set; }
+
+        public int AuthorizationLevel { get; set; }
+
+        public float RevisionNumber { get; set; }
+
+        public bool IsS3 { get; set; }
 
     }
 }

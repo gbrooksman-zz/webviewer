@@ -11,10 +11,5 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink" Version="2.0.0"/>
     <PackageReference Include="System.Net.Http" Version="4.3.2"/>
     <PackageReference Include="Newtonsoft.Json" Version="10.0.3"/>
-    <PackageReference Include="MongoDB.Driver" Version="2.4.4"/>
-    <PackageReference Include="MongoDB.Driver.Core" Version="2.4.4"/>
-    <PackageReference Include="MongoDB.Bson" Version="2.4.4"/>
-    <PackageReference Include="MongoDB.Driver.GridFS" Version="2.4.4"/>
-    <PackageReference Include="mongocsharpdriver" Version="2.4.4"/>
   </ItemGroup>
 </Project>

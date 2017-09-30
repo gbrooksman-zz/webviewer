@@ -18,7 +18,7 @@ namespace webviewer.Managers
 
         public ControlManager(IConfiguration _iconfiguration)
         {
-            dataMgr = new DataManager(_iconfiguration);
+            dataMgr = new DataManager();
         }
 
         public  string CreateTextBox(WebViewerControl control )
@@ -108,10 +108,10 @@ namespace webviewer.Managers
         private  void AddFilterDropdown(StringBuilder sb, string modelItemName)
         {
             sb.AppendFormat("<select id = '{0}' name = '{1}'  asp-for = '{2}'>","ddFilter" +  modelItemName, modelItemName + "Filter", modelItemName + "Filter");
-            sb.AppendFormat("<option selected = 'selected' value = '{0}'>{1}</option>","sw", "Starts With");
+            sb.AppendFormat("<option selected = 'selected' value = '{0}'>{1}</option>","eq","Equals");
+            sb.AppendFormat("<option value = '{0}'>{1}</option>","sw", "Starts With");
             sb.AppendFormat("<option value = '{0}'>{1}</option>","ew","Ends With");
             sb.AppendFormat("<option value = '{0}'>{1}</option>","ct","Contains");
-            sb.AppendFormat("<option value = '{0}'>{1}</option>","me","Matches Exactly");
             sb.Append("</select>");
         }
 

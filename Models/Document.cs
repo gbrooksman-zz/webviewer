@@ -2,9 +2,9 @@ using System;
 
 namespace webviewer.Models
 {
-    public class PDFEntity
+    public class Document
     {
-        public PDFEntity(){}
+        public Document(){}
 
         public Guid RecordID {get; set;}
 
@@ -40,7 +40,7 @@ namespace webviewer.Models
 
         public string UserUpdated {get; set;}
 
-        public string Document {get; set;}
+        public byte[] Content {get; set;}
 
         public string Custom1 {get; set;}
 

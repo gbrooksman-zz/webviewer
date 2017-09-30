@@ -2,7 +2,7 @@ using System;
 
 namespace webviewer.Models
 {
-    public class SearchParameters : PDFEntity
+    public class SearchParameters : Document
     {
         //what to search for
         public SearchParameters() { }

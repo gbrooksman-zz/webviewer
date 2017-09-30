@@ -11,9 +11,9 @@ namespace webviewer.Managers
 
         List<Subformat> GetSubformats();
 
-        PDFEntity GetDocument(SearchParameters searchParams);
+        Document GetDocument(SearchParameters searchParams);
 
-        List<PDFEntity> GetDocuments(SearchParameters searchParams);    
+        List<Document> GetDocuments(SearchParameters searchParams);    
 
     }
 

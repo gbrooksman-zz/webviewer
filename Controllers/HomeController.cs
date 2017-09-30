@@ -26,7 +26,7 @@ namespace webviewer.Controllers
         public HomeController(IOptions<ControlConfig> controlConfigAccessor, IConfiguration iconfiguration)
         {
             _config = controlConfigAccessor.Value;
-             dataMgr = new DataManager(iconfiguration);
+             dataMgr = new DataManager();
              _iconfiguration = iconfiguration;
         }
 

@@ -158,6 +158,58 @@ namespace webviewer.Managers
             return docs;
         }
 
+		// public List<Filter> GetFilterCollection(SearchParameters searchParams)
+		// {
+		// 	List<Filter> filters = new List<Filter>();			
+
+		// 	if (!string.IsNullOrEmpty(searchParams.ProductID))
+		// 	{
+		// 		Filter filter = new Filter();
+		// 		filter.FieldName = "F_PRODUCT";
+		// 		filter.SearchType = searchParams.ProductIDFilter;
+		// 		filter.SearchText = searchParams.ProductID;	
+		// 		filters.Add(filter);		
+		// 	}
+
+		// 	if (!string.IsNullOrEmpty(searchParams.ProductName))
+		// 	{
+		// 		Filter filter = new Filter();
+		// 		filter.FieldName = "F_PRODUCT_NAME";
+		// 		filter.SearchType = searchParams.ProductNameFilter;
+		// 		filter.SearchText = searchParams.ProductID;	
+		// 		filters.Add(filter);		
+		// 	}
+
+		// 	if (searchParams.PublishedDate != DateTime.MinValue)
+		// 	{
+		// 		Filter filter = new Filter();
+		// 		filter.FieldName = "F_PUBLISHED_DATE";
+		// 		filter.SearchType = searchParams.PublishedDateFilter;
+		// 		filter.SearchText = searchParams.PublishedDate.ToString();	
+		// 		filters.Add(filter);		
+		// 	}			
+
+		// 	if (!string.IsNullOrEmpty(searchParams.Format))
+		// 	{
+		// 		Filter filter = new Filter();
+		// 		filter.FieldName = "F_FORMAT";
+		// 		filter.SearchType = "eq";
+		// 		filter.SearchText = searchParams.Format;	
+		// 		filters.Add(filter);		
+		// 	}
+
+		// 	if (!string.IsNullOrEmpty(searchParams.Subformat))
+		// 	{
+		// 		Filter filter = new Filter();
+		// 		filter.FieldName = "F_SUBFORMAT";
+		// 		filter.SearchType = "eq";
+		// 		filter.SearchText = searchParams.Subformat;	
+		// 		filters.Add(filter);		
+		// 	}
+
+		// 	return filters;
+		// }
+
 
         private SqlCommand BuildSQLForSearch(SearchParameters searchParams, string sql)
         {
@@ -167,27 +219,23 @@ namespace webviewer.Managers
             {
                 SqlParameter param = new SqlParameter();
                 param.SqlDbType = SqlDbType.VarChar;
-                param.Size = 50;                
+                param.Size = 50; 
 
-                switch(searchParams.ProductIDFilter)                
-                {
-                    case "eq":
-                        sql += " AND F_PRODUCT = ? ";
-                        param.SqlValue = searchParams.ProductID;
-                        break;
-                    case "sw":
-                        sql += " AND F_PRODUCT LIKE ? ";
-                        param.SqlValue = searchParams.ProductID + "%";
-                        break;
-                    case "ew":
-                        sql += " AND F_PRODUCT LIKE ? ";
-                        param.SqlValue = "%" + searchParams.ProductID;
-                        break;
-                    case "ct":
-                        sql += " AND F_PRODUCT LIKE ? ";
-                        param.SqlValue = "%" + searchParams.ProductID + "%";
-                        break;
-                }
+				sql += GetSQLFilterFragment(param,searchParams.ProductID,
+											searchParams.ProductIDFilter,"F_PRDDUCT") ; 
+               
+                command.Parameters.Add(param);
+            }
+
+
+            if (!string.IsNullOrEmpty(searchParams.ProductName))
+            {
+                SqlParameter param = new SqlParameter();
+                param.SqlDbType = SqlDbType.VarChar;
+                param.Size = 2000;                
+
+               	sql += GetSQLFilterFragment(param,searchParams.ProductName,
+											searchParams.ProductNameFilter,"F_PRDDUCT_NAME") ;            
                
                 command.Parameters.Add(param);
             }
@@ -202,11 +250,37 @@ namespace webviewer.Managers
                 command.Parameters.Add(param);
             }
 
-
-
              return command;
 
         }
+
+		private string GetSQLFilterFragment(SqlParameter param, string searchValue,
+											string filterCondition , string fieldName)
+		{
+			StringBuilder sb = new StringBuilder();;
+
+			switch(filterCondition)                
+			{
+				case "eq":
+					sb.AppendFormat(" AND {0} = ? ", fieldName);
+					param.SqlValue = searchValue;
+					break;
+				case "sw":
+					sb.AppendFormat(" AND {0} LIKE ? ", fieldName);
+					param.SqlValue = "%" + searchValue;
+					break;
+				case "ew":
+						sb.AppendFormat(" AND {0} LIKE ? ", fieldName);
+					param.SqlValue = searchValue + "%";
+					break;
+				case "ct":
+					sb.AppendFormat(" AND {0} LIKE ? ", fieldName);
+					param.SqlValue = "%" + searchValue + "%";
+					break;
+			}
+
+			return sb.ToString();
+		}
 
 
         private Document GetDocumentFromReader(SqlDataReader reader)

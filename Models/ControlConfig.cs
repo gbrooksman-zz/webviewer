@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace webviewer
+namespace webviewer.Models
 {
     public class ControlConfig
     {
@@ -29,6 +29,8 @@ namespace webviewer
         public string Name { get; set; }
 
         public string DisplayName { get; set; }
+
+         public string FieldName { get; set; }
 
         public bool HasFilterDropDown  { get; set; }
     }

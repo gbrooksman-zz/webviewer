@@ -87,6 +87,9 @@ namespace webviewer.Controllers
                     case "TextBox":
                         searchParams += controlMgr.CreateTextBox(control);
                         break;
+                    case "DatePicker":
+                        searchParams += controlMgr.CreateDatePcker(control);
+                        break;
 
                     case "Button":  //always a submit type
                         searchParams += controlMgr.CreateButton(control);

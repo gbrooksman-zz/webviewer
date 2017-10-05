@@ -56,6 +56,13 @@
         "TextCode": "WUI00000"
       },
       {
+        "Name": "DisposalDate",
+        "DisplayName": "Disposal Date",
+        "Size": 0,
+        "Type": "DatePicker",
+        "TextCode": "WUI00000"
+      },
+      {
         "Name": "Authorization",
         "DisplayName": "Authorization Level",
         "Size": 0,

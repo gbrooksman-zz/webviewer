@@ -13,6 +13,8 @@ namespace webviewer.Models
 
         public string PublishedDateFilter {get; set;}
 
+        public string DisposalDateFilter {get; set;}
+
         public string CASNumberFilter {get; set;}
 
         public string ComponentIDFilter {get; set;}

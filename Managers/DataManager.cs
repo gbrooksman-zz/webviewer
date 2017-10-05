@@ -13,6 +13,7 @@ using System.Data.SqlClient;
 using System.Data.Common;
 using System.Data.SqlTypes;
 
+
 namespace webviewer.Managers
 {
 
@@ -71,9 +72,14 @@ namespace webviewer.Managers
                 con.Open();
                 try 
                 {
-                    using (SqlCommand command = new SqlCommand(@"SELECT F_MSDSTYPE , F_MSDSTYPE_DESC
-                                                                 FROM T_MSDSTYPES", con)) 
-                    {
+                    using (SqlCommand command = new SqlCommand(@"SELECT F_MSDSTYPE, F_MSDSTYPE_DESC
+                                                                 FROM T_MSDSTYPES
+																 WHERE F_FORMAT = @FMT ", con)) 
+					{
+						SqlParameter param = new SqlParameter("@FMT",SqlDbType.VarChar,3);
+						param.Value = formatCode;
+						command.Parameters.Add(param);
+
                         SqlDataReader reader  = command.ExecuteReader();
 
                         while (reader.Read())
@@ -87,9 +93,10 @@ namespace webviewer.Managers
                         reader.Close();
                     }
                 }
-                catch 
+                catch (Exception ex)
                 {
-                    Console.WriteLine("Something went wrong");
+					
+                    Console.WriteLine("Something went wrong: " + ex.Message);
                 }
              }          
 
@@ -221,7 +228,7 @@ namespace webviewer.Managers
                 param.SqlDbType = SqlDbType.VarChar;
                 param.Size = 50; 
 
-				sql += GetSQLFilterFragment(param,searchParams.ProductID,
+				sql += GetSQLTextFilterFragment(param,searchParams.ProductID,
 											searchParams.ProductIDFilter,"F_PRDDUCT") ; 
                
                 command.Parameters.Add(param);
@@ -234,8 +241,29 @@ namespace webviewer.Managers
                 param.SqlDbType = SqlDbType.VarChar;
                 param.Size = 2000;                
 
-               	sql += GetSQLFilterFragment(param,searchParams.ProductName,
+               	sql += GetSQLTextFilterFragment(param,searchParams.ProductName,
 											searchParams.ProductNameFilter,"F_PRDDUCT_NAME") ;            
+               
+                command.Parameters.Add(param);
+            }
+
+			if (searchParams.Authorization > 0)
+            {
+                SqlParameter param = new SqlParameter();
+                param.SqlDbType = SqlDbType.Int;                             
+				param.Value = searchParams.Authorization;
+               	sql += " AND F_AUTHORIZATION = ? ";         
+               
+                command.Parameters.Add(param);
+            }
+
+			if (searchParams.PublishedDate != DateTime.MinValue)
+            {
+                SqlParameter param = new SqlParameter();
+                param.SqlDbType = SqlDbType.DateTime;                             
+
+				sql += GetSQLDateFilterFragment(param,searchParams.PublishedDate.ToString(),
+						searchParams.PublishedDateFilter,"F_PUBLISHED_DATE")  ;   
                
                 command.Parameters.Add(param);
             }
@@ -250,11 +278,63 @@ namespace webviewer.Managers
                 command.Parameters.Add(param);
             }
 
-             return command;
+			if (!string.IsNullOrEmpty(searchParams.Format))
+            {
+                SqlParameter param = new SqlParameter();
+                param.SqlDbType = SqlDbType.VarChar;
+                param.Size = 3;    
+                sql += " AND F_FORMAT = ? ";
+                param.SqlValue = searchParams.Format;
+                command.Parameters.Add(param);
+            }
 
+			if (!string.IsNullOrEmpty(searchParams.Subformat))
+            {
+                SqlParameter param = new SqlParameter();
+                param.SqlDbType = SqlDbType.VarChar;
+                param.Size = 4;    
+                sql += " AND F_SUBFORMAT = ? ";
+                param.SqlValue = searchParams.Subformat;
+                command.Parameters.Add(param);
+            }
+
+			if (searchParams.DisposalDate != DateTime.MinValue)
+            {
+                SqlParameter param = new SqlParameter();
+                param.SqlDbType = SqlDbType.DateTime;                             
+
+				sql += GetSQLDateFilterFragment(param,searchParams.DisposalDate.ToString(),
+						searchParams.DisposalDateFilter,"F_DISPOSAL_DATE")  ;   
+               
+                command.Parameters.Add(param);
+            }
+
+            return command;
         }
 
-		private string GetSQLFilterFragment(SqlParameter param, string searchValue,
+		private string GetSQLDateFilterFragment(SqlParameter param, string searchValue,
+											string filterCondition , string fieldName)
+		{
+			StringBuilder sb = new StringBuilder();;
+
+			switch(filterCondition)                
+			{
+				case "on":
+					sb.AppendFormat(" AND {0} = ? ", fieldName);
+					break;
+				case "ob":
+					sb.AppendFormat(" AND {0} <= ", fieldName);					
+					break;
+				case "oa":
+						sb.AppendFormat(" AND {0} >= ", fieldName);
+					break;
+			}
+			param.SqlValue = searchValue;
+
+			return sb.ToString();
+		}
+
+		private string GetSQLTextFilterFragment(SqlParameter param, string searchValue,
 											string filterCondition , string fieldName)
 		{
 			StringBuilder sb = new StringBuilder();;

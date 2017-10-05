@@ -39,6 +39,26 @@ namespace webviewer.Managers
             return builder.ToString();
         }
 
+
+        public  string CreateDatePcker(WebViewerControl control )
+        {
+            StringBuilder builder = new StringBuilder();
+
+            AddLabel(builder, control.Name);            
+            builder.AppendFormat("<input asp-for = '{0}' ", control.Name);
+            builder.AppendFormat("id = 'txt{0}' ", control.Name);
+            builder.AppendFormat("name = '{0}' ", control.Name);
+            builder.Append("type = 'date' ");
+            builder.Append("</input>");
+            if (control.HasFilterDropDown)
+            {
+                AddFilterDropdown(builder, control.Name);
+            }
+            AddBreak(builder);
+            return builder.ToString();
+        }
+
+
         public  string CreateButton(WebViewerControl control)
         {
             StringBuilder builder = new StringBuilder();

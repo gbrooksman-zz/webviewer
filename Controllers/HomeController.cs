@@ -46,6 +46,8 @@ namespace webviewer.Controllers
 
            // List<Filter> filters = dataMgr.GetFilterCollection(searchParams);
 
+           List<Document> docs = dataMgr.GetDocuments(searchParams);
+
             ViewData["resultString"] = "";  
 
             return View("/Views/Home/Result.cshtml");

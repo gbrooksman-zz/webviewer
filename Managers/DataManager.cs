@@ -12,6 +12,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Data.Common;
 using System.Data.SqlTypes;
+using Serilog;
 
 
 namespace webviewer.Managers
@@ -19,14 +20,12 @@ namespace webviewer.Managers
 
     public class DataManager
     {
-        string connString = string.Empty;
-
-        
+        string connString = string.Empty;        
 
         public DataManager()
         {
-            connString = @"Server=10.34.4.146;Initial Catalog=QA_P;User Id=wercs;Password=wercs;";
-
+           // connString = @"Server=10.34.4.146;Initial Catalog=QA_P;User Id=wercs;Password=wercs;";
+			connString = @"Server=10.0.2.2;Initial Catalog=SVT_DEV;User Id=wercs;Password=wercs;";
         }   
 
         public List<Format> GetFormats()
@@ -112,10 +111,13 @@ namespace webviewer.Managers
                 con.Open();
                 try 
                 {
-                    using (SqlCommand command = new SqlCommand(@"SELECT *
-                                                                 FROM T_PDF_MSDS
-                                               WHERE F_GUID = ? ", con)) 
+                    using (SqlCommand command = new SqlCommand(@"	SELECT *
+                                                                	FROM T_PDF_MSDS
+                                               						WHERE F_GUID = ? ", con)) 
                     {
+
+						Log.Information(command.CommandText);
+
                         SqlDataReader reader = command.ExecuteReader();
 
                         while (reader.Read())
@@ -139,11 +141,11 @@ namespace webviewer.Managers
         {
             List<Document> docs = new List<Document>();
 
-            string sql = "SELECT * FROM T_PDF_MSDS WHERE 1 = 1 ";
+            //string sql = "SELECT * FROM T_PDF_MSDS WHERE 1 = 1 ";
 
-            SqlCommand command = BuildSQLForSearch(searchParams,sql);
+            SqlCommand command = BuildSQLForSearch(searchParams);
 
-            using (SqlConnection con = new SqlConnection(connString)) 
+			using (SqlConnection con = new SqlConnection(connString)) 
             {
                 con.Open();
                 try 
@@ -156,9 +158,10 @@ namespace webviewer.Managers
                     }
                     reader.Close();                    
                 }
-                catch 
+                catch (Exception ex)
                 {
-                    Console.WriteLine("Something went wrong");
+					
+                    Log.Error("Error in DataManager.GetDocuments: " + ex.Message);
                 }
             }          
 
@@ -218,9 +221,11 @@ namespace webviewer.Managers
 		// }
 
 
-        private SqlCommand BuildSQLForSearch(SearchParameters searchParams, string sql)
+        private SqlCommand BuildSQLForSearch(SearchParameters searchParams)
         {
             SqlCommand command = new SqlCommand();
+
+			string sql = "SELECT * FROM T_PDF_MSDS WHERE 1 = 1 ";
 
             if (!string.IsNullOrEmpty(searchParams.ProductID))
             {
@@ -320,13 +325,13 @@ namespace webviewer.Managers
 			switch(filterCondition)                
 			{
 				case "on":
-					sb.AppendFormat(" AND {0} = ? ", fieldName);
+					sb.AppendFormat(" AND {0} = @[1] ", fieldName,fieldName);
 					break;
 				case "ob":
-					sb.AppendFormat(" AND {0} <= ", fieldName);					
+					sb.AppendFormat(" AND {0} <=  @{1}", fieldName,fieldName);					
 					break;
 				case "oa":
-						sb.AppendFormat(" AND {0} >= ", fieldName);
+						sb.AppendFormat(" AND {0} >= @{1}", fieldName,fieldName);
 					break;
 			}
 			param.SqlValue = searchValue;
@@ -342,19 +347,19 @@ namespace webviewer.Managers
 			switch(filterCondition)                
 			{
 				case "eq":
-					sb.AppendFormat(" AND {0} = ? ", fieldName);
+					sb.AppendFormat(" AND {0} = @{1} ", fieldName,fieldName);
 					param.SqlValue = searchValue;
 					break;
 				case "sw":
-					sb.AppendFormat(" AND {0} LIKE ? ", fieldName);
+					sb.AppendFormat(" AND {0} LIKE @{1} ", fieldName,fieldName);
 					param.SqlValue = "%" + searchValue;
 					break;
 				case "ew":
-						sb.AppendFormat(" AND {0} LIKE ? ", fieldName);
+						sb.AppendFormat(" AND {0} LIKE @{1} ", fieldName, fieldName);
 					param.SqlValue = searchValue + "%";
 					break;
 				case "ct":
-					sb.AppendFormat(" AND {0} LIKE ? ", fieldName);
+					sb.AppendFormat(" AND {0} LIKE @{1} ", fieldName,fieldName);
 					param.SqlValue = "%" + searchValue + "%";
 					break;
 			}

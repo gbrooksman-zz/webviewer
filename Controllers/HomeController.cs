@@ -32,20 +32,7 @@ namespace webviewer.Controllers
 
         [HttpPost]
         public IActionResult Result(SearchParameters searchParams)
-        {
-           // string resultParams = string.Empty;
-
-           // resultParams = _config.ResultGridTitle;
-
-          //  ResultGrid grid = _config.Grid;
-
-           // foreach (Column col in grid.Columns)
-           // {
-          //    resultParams += col.DisplayName + "<br/>";                 
-          //  }
-
-           // List<Filter> filters = dataMgr.GetFilterCollection(searchParams);
-
+        {     
            List<Document> docs = dataMgr.GetDocuments(searchParams);
 
             ViewData["resultString"] = "";  

@@ -47,7 +47,7 @@ namespace webviewer.Managers
                             formats.Add( new Format()
                             {
                                 Code = reader[0].ToString(),
-                                Name = reader[1].ToString()
+                                Name = reader[0].ToString()
                             });
                         }
                         reader.Close();
@@ -68,7 +68,7 @@ namespace webviewer.Managers
 
              using (SqlConnection con = new SqlConnection(connString)) 
              {
-                con.Open();
+                
                 try 
                 {
                     using (SqlCommand command = new SqlCommand(@"SELECT F_MSDSTYPE, F_MSDSTYPE_DESC
@@ -78,6 +78,7 @@ namespace webviewer.Managers
 						SqlParameter param = new SqlParameter("@FMT",SqlDbType.VarChar,3);
 						param.Value = formatCode;
 						command.Parameters.Add(param);
+						con.Open();
 
                         SqlDataReader reader  = command.ExecuteReader();
 
@@ -86,10 +87,11 @@ namespace webviewer.Managers
                             subFormats.Add( new Subformat()
                             {
                                 Code = reader[0].ToString(),
-                                Name = reader[1].ToString()
+                                Name = reader[0].ToString()
                             });
                         }
                         reader.Close();
+						con.Close();
                     }
                 }
                 catch (Exception ex)
@@ -113,8 +115,14 @@ namespace webviewer.Managers
                 {
                     using (SqlCommand command = new SqlCommand(@"	SELECT *
                                                                 	FROM T_PDF_MSDS
-                                               						WHERE F_GUID = ? ", con)) 
+                                               						WHERE F_GUID = @GUID ", con)) 
                     {
+
+						SqlParameter param = new SqlParameter();
+						param.SqlDbType = SqlDbType.UniqueIdentifier;
+						param.ParameterName = "@GUID";
+						param.Value = RecordGuid;						
+						command.Parameters.Add(param);
 
 						Log.Information(command.CommandText);
 
@@ -136,90 +144,40 @@ namespace webviewer.Managers
             return doc;
         }
 
-
         public List<Document> GetDocuments(SearchParameters searchParams)
         {
             List<Document> docs = new List<Document>();
 
-            //string sql = "SELECT * FROM T_PDF_MSDS WHERE 1 = 1 ";
-
-            SqlCommand command = BuildSQLForSearch(searchParams);
-
-			using (SqlConnection con = new SqlConnection(connString)) 
+ 			using (SqlConnection con = new SqlConnection(connString)) 
             {
-                con.Open();
+				SqlCommand command = new SqlCommand ();				
+			
+				command = BuildSQLForSearch(searchParams);
+				command.Connection = con;
+               
                 try 
-                {                    
+                {     
+					con.Open();               
                     SqlDataReader reader = command.ExecuteReader();
 
                     while (reader.Read())
                     {
                         docs.Add(GetDocumentFromReader(reader));                           
                     }
-                    reader.Close();                    
+                    reader.Close();                  
                 }
                 catch (Exception ex)
-                {
-					
+                {					
                     Log.Error("Error in DataManager.GetDocuments: " + ex.Message);
                 }
+				finally
+				{					
+					con.Close();
+				}
             }          
 
             return docs;
         }
-
-		// public List<Filter> GetFilterCollection(SearchParameters searchParams)
-		// {
-		// 	List<Filter> filters = new List<Filter>();			
-
-		// 	if (!string.IsNullOrEmpty(searchParams.ProductID))
-		// 	{
-		// 		Filter filter = new Filter();
-		// 		filter.FieldName = "F_PRODUCT";
-		// 		filter.SearchType = searchParams.ProductIDFilter;
-		// 		filter.SearchText = searchParams.ProductID;	
-		// 		filters.Add(filter);		
-		// 	}
-
-		// 	if (!string.IsNullOrEmpty(searchParams.ProductName))
-		// 	{
-		// 		Filter filter = new Filter();
-		// 		filter.FieldName = "F_PRODUCT_NAME";
-		// 		filter.SearchType = searchParams.ProductNameFilter;
-		// 		filter.SearchText = searchParams.ProductID;	
-		// 		filters.Add(filter);		
-		// 	}
-
-		// 	if (searchParams.PublishedDate != DateTime.MinValue)
-		// 	{
-		// 		Filter filter = new Filter();
-		// 		filter.FieldName = "F_PUBLISHED_DATE";
-		// 		filter.SearchType = searchParams.PublishedDateFilter;
-		// 		filter.SearchText = searchParams.PublishedDate.ToString();	
-		// 		filters.Add(filter);		
-		// 	}			
-
-		// 	if (!string.IsNullOrEmpty(searchParams.Format))
-		// 	{
-		// 		Filter filter = new Filter();
-		// 		filter.FieldName = "F_FORMAT";
-		// 		filter.SearchType = "eq";
-		// 		filter.SearchText = searchParams.Format;	
-		// 		filters.Add(filter);		
-		// 	}
-
-		// 	if (!string.IsNullOrEmpty(searchParams.Subformat))
-		// 	{
-		// 		Filter filter = new Filter();
-		// 		filter.FieldName = "F_SUBFORMAT";
-		// 		filter.SearchType = "eq";
-		// 		filter.SearchText = searchParams.Subformat;	
-		// 		filters.Add(filter);		
-		// 	}
-
-		// 	return filters;
-		// }
-
 
         private SqlCommand BuildSQLForSearch(SearchParameters searchParams)
         {
@@ -234,11 +192,10 @@ namespace webviewer.Managers
                 param.Size = 50; 
 
 				sql += GetSQLTextFilterFragment(param,searchParams.ProductID,
-											searchParams.ProductIDFilter,"F_PRDDUCT") ; 
+											searchParams.ProductIDFilter,"F_PRODUCT") ; 
                
                 command.Parameters.Add(param);
             }
-
 
             if (!string.IsNullOrEmpty(searchParams.ProductName))
             {
@@ -247,7 +204,7 @@ namespace webviewer.Managers
                 param.Size = 2000;                
 
                	sql += GetSQLTextFilterFragment(param,searchParams.ProductName,
-											searchParams.ProductNameFilter,"F_PRDDUCT_NAME") ;            
+											searchParams.ProductNameFilter,"F_PRODUCT_NAME") ;            
                
                 command.Parameters.Add(param);
             }
@@ -257,10 +214,14 @@ namespace webviewer.Managers
                 SqlParameter param = new SqlParameter();
                 param.SqlDbType = SqlDbType.Int;                             
 				param.Value = searchParams.Authorization;
-               	sql += " AND F_AUTHORIZATION = ? ";         
+               	sql += " AND F_AUTHORIZED = ? ";         
                
                 command.Parameters.Add(param);
             }
+			else
+			{
+               	sql += " AND F_AUTHORIZED  > 0 ";         
+			}
 
 			if (searchParams.PublishedDate != DateTime.MinValue)
             {
@@ -278,8 +239,9 @@ namespace webviewer.Managers
                 SqlParameter param = new SqlParameter();
                 param.SqlDbType = SqlDbType.VarChar;
                 param.Size = 2;    
-                sql += " AND F_LANGUAGE = ? ";
+                sql += " AND F_LANGUAGE = @LNG ";
                 param.SqlValue = searchParams.Language;
+				param.ParameterName = "@LNG";
                 command.Parameters.Add(param);
             }
 
@@ -288,8 +250,9 @@ namespace webviewer.Managers
                 SqlParameter param = new SqlParameter();
                 param.SqlDbType = SqlDbType.VarChar;
                 param.Size = 3;    
-                sql += " AND F_FORMAT = ? ";
+                sql += " AND F_FORMAT = @FMT ";
                 param.SqlValue = searchParams.Format;
+				param.ParameterName = "@FMT";
                 command.Parameters.Add(param);
             }
 
@@ -298,8 +261,9 @@ namespace webviewer.Managers
                 SqlParameter param = new SqlParameter();
                 param.SqlDbType = SqlDbType.VarChar;
                 param.Size = 4;    
-                sql += " AND F_SUBFORMAT = ? ";
+                sql += " AND F_SUBFORMAT = @SFMT ";
                 param.SqlValue = searchParams.Subformat;
+				param.ParameterName = "@SFMT";
                 command.Parameters.Add(param);
             }
 
@@ -314,6 +278,7 @@ namespace webviewer.Managers
                 command.Parameters.Add(param);
             }
 
+			command.CommandText = sql;
             return command;
         }
 
@@ -331,10 +296,11 @@ namespace webviewer.Managers
 					sb.AppendFormat(" AND {0} <=  @{1}", fieldName,fieldName);					
 					break;
 				case "oa":
-						sb.AppendFormat(" AND {0} >= @{1}", fieldName,fieldName);
+					sb.AppendFormat(" AND {0} >= @{1}", fieldName,fieldName);
 					break;
 			}
 			param.SqlValue = searchValue;
+			param.ParameterName = "@" + fieldName;
 
 			return sb.ToString();
 		}
@@ -348,7 +314,7 @@ namespace webviewer.Managers
 			{
 				case "eq":
 					sb.AppendFormat(" AND {0} = @{1} ", fieldName,fieldName);
-					param.SqlValue = searchValue;
+					param.SqlValue = searchValue;					
 					break;
 				case "sw":
 					sb.AppendFormat(" AND {0} LIKE @{1} ", fieldName,fieldName);
@@ -364,6 +330,7 @@ namespace webviewer.Managers
 					break;
 			}
 
+			param.ParameterName = "@" + fieldName;
 			return sb.ToString();
 		}
 

@@ -23,24 +23,7 @@ namespace webviewer.Controllers
         {
             _config = controlConfigAccessor.Value;
         }
-
-        // // [HttpGet]
-        // // public IActionResult Index()
-        // // {
-        // //     string resultParams = string.Empty;
-
-        // //    // ResultGrid grid = _config.Grid;
-
-        // //    // resultParams = grid.Title;
-
-        // //     ViewData["resultString"] = resultParams;   
-
-
-        // //     return View("Shared/Result.cshtml");
-
-        // // }
+       
     }
-
-
 
 }

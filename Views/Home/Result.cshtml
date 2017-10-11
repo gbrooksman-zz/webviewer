@@ -1,14 +1,25 @@
 
 @model webviewer.Models.SearchParameters
 
-@{
-    Layout = null;
-}
-
 <div id="resultContainer">
     
     This is the result page
 
         @Html.Raw(ViewData["resultString"])
+          
+            <div class="card">
+                <div class="card-image image1"></div>
+                <h1>Oh my, an image!</h1>
+                <p>Yep, just some simple content ecapsulated in this card.</p>
+            </div>
+            
+            
+            <div class="card">
+                <div class="card-image image2">
+                    <div class="banner"></div>
+                    <h2>Image, Banner, &amp; HTML</h2>
+                </div>
+                <p>All standard HTML structures, styled with CSS.</p>
+            </div>
     
 </div>

@@ -22,35 +22,79 @@ namespace webviewer.Controllers
 
         private IConfiguration _iconfiguration;
         private DataManager dataMgr;
+        private CardManager cardMgr;
 
         public HomeController(IOptions<ControlConfig> controlConfigAccessor, IConfiguration iconfiguration)
         {
             _config = controlConfigAccessor.Value;
              dataMgr = new DataManager();
              _iconfiguration = iconfiguration;
+             cardMgr = new CardManager();
         }
 
         [HttpPost]
         public IActionResult Result(SearchParameters searchParams)
         {     
-           List<Document> docs = dataMgr.GetDocuments(searchParams);
 
-            ViewData["resultString"] = "";  
+            // for DEV only
+            searchParams.ProductID = "DTE73";
+            searchParams.Format = "MTR";
+            searchParams.Subformat = "DATA";
+            // for DEV only
+
+            var controlMgr = new ControlManager(_iconfiguration);
+
+            ViewData["headerString"] = RenderHeader( _config.Header, controlMgr);
+
+            List<Document> docs = dataMgr.GetDocuments(searchParams);
+            ViewData["resultString"] = cardMgr.RenderResults(docs,searchParams);
+
+            ViewData["footerString"] = RenderFooter(_config.Footer,controlMgr );
 
             return View("/Views/Home/Result.cshtml");
         }
 
         public IActionResult Index()
         {
-            string header = string.Empty;
-            string searchParams = string.Empty;
-            string footer = string.Empty;
+            string searchControls = string.Empty;
 
             var controlMgr = new ControlManager(_iconfiguration);
-            List<WebViewerControl> headerControls = _config.Header;
-            List<WebViewerControl> footerControls = _config.Footer;
 
-            //render header
+            ViewData["headerString"] = RenderHeader( _config.Header, controlMgr);
+
+            foreach (WebViewerControl control in _config.Controls)
+            {
+                switch (control.Type)
+                {
+                    case "TextBox":
+                        searchControls += controlMgr.CreateTextBox(control);
+                        break;
+                    case "DatePicker":
+                        searchControls += controlMgr.CreateDatePcker(control);
+                        break;
+
+                    case "Button":  //always a submit type
+                        searchControls += controlMgr.CreateButton(control);
+                        break;
+
+                    case "DropDown":
+                        searchControls += controlMgr.CreateDropDown(control);
+                        break;
+                }
+            }
+
+            ViewData["paramsString"] = searchControls;
+
+            ViewData["footerString"] = RenderFooter(_config.Footer,controlMgr );
+
+            return View();
+        }
+
+        private string RenderHeader(List<WebViewerControl> headerControls, ControlManager controlMgr)
+        {
+            string header = string.Empty;
+
+             //render header
             if (headerControls.Count > 0)
             {
                 foreach (WebViewerControl control in headerControls)
@@ -67,28 +111,13 @@ namespace webviewer.Controllers
                 }
             }
 
-            //render body
+            return header;
+        }
 
-            foreach (WebViewerControl control in _config.Controls)
-            {
-                switch (control.Type)
-                {
-                    case "TextBox":
-                        searchParams += controlMgr.CreateTextBox(control);
-                        break;
-                    case "DatePicker":
-                        searchParams += controlMgr.CreateDatePcker(control);
-                        break;
 
-                    case "Button":  //always a submit type
-                        searchParams += controlMgr.CreateButton(control);
-                        break;
-
-                    case "DropDown":
-                        searchParams += controlMgr.CreateDropDown(control);
-                        break;
-                }
-            }
+        private string RenderFooter(List<WebViewerControl> footerControls,  ControlManager controlMgr)
+        {
+            string footer = string.Empty;
 
             //render footer
             if (footerControls.Count > 0)
@@ -107,11 +136,8 @@ namespace webviewer.Controllers
                 }
             }
 
-            ViewData["headerString"] = header; 
-            ViewData["paramsString"] = searchParams;           
-            ViewData["footerString"] = footer; 
+            return footer;
 
-            return View();
         }
     }
 }

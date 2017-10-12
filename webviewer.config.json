@@ -10,14 +10,14 @@
       {
         "Name": "pyramid.jpg",
         "DisplayName": "Pyramid Logo",
-        "Size": 60,
+        "Size": 40,
         "Type": "CompanyLogo",
         "TextCode": "WUI00000"
       },
       {
         "Name": "CompanyTitle",
         "DisplayName": "Pyramid Chemical Company",
-        "Size": 30,
+        "Size": 20,
         "Type": "Label",
         "TextCode": "WUI00000"
       }
@@ -26,7 +26,7 @@
       {
       "Name": "Copyright",
       "DisplayName": "Copyright 2017 - Pyramid Chemical Company",
-      "Size": 10,
+      "Size": 15,
       "Type": "Label",
       "TextCode": "WUI00000"
       }

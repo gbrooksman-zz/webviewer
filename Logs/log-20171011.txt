@@ -1,0 +1,1566 @@
+2017-10-11 07:44:56.940 -04:00 [Information] Starting web host
+2017-10-11 07:44:57.256 -04:00 [Information] User profile is available. Using '"/home/geoff/.aspnet/DataProtection-Keys"' as key repository; keys will not be encrypted at rest.
+2017-10-11 07:45:07.754 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/  
+2017-10-11 07:45:07.865 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Index (webviewer)" with arguments (null) - ModelState is Valid
+2017-10-11 07:45:09.601 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Index.cshtml".
+2017-10-11 07:45:09.674 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Index (webviewer)" in 1828.5787ms
+2017-10-11 07:45:09.676 -04:00 [Information] Request finished in 1924.4781ms 200 text/html; charset=utf-8
+2017-10-11 07:45:13.103 -04:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/Home/Result application/x-www-form-urlencoded 319
+2017-10-11 07:45:13.187 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Result (webviewer)" with arguments (["webviewer.Models.SearchParameters"]) - ModelState is Invalid
+2017-10-11 07:45:13.276 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Result.cshtml".
+2017-10-11 07:45:13.477 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Result (webviewer)" in 334.9159ms
+2017-10-11 07:45:13.479 -04:00 [Information] Request finished in 376.3779ms 200 text/html; charset=utf-8
+2017-10-11 07:45:13.485 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 07:45:13.486 -04:00 [Information] Request finished in 1.0643ms 404 
+2017-10-11 07:45:13.486 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.js  
+2017-10-11 07:45:13.487 -04:00 [Information] Request finished in 0.5016ms 404 
+2017-10-11 07:45:13.497 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/css/styles.css  
+2017-10-11 07:45:13.497 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2017-10-11 07:45:13.497 -04:00 [Information] Request finished in 0.2165ms 404 
+2017-10-11 07:45:13.499 -04:00 [Information] Sending file. Request path: '"/css/styles.css"'. Physical path: '"/home/geoff/Wercs/WebViewer/Wercs.DTE.WebViewerCore/wwwroot/css/styles.css"'
+2017-10-11 07:45:13.507 -04:00 [Information] Request finished in 9.7392ms 200 text/css
+2017-10-11 07:45:13.507 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 07:45:13.507 -04:00 [Information] Request finished in 0.112ms 404 
+2017-10-11 07:45:13.514 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/images/new.png  
+2017-10-11 07:45:13.515 -04:00 [Information] Request finished in 0.4441ms 404 
+2017-10-11 07:46:36.802 -04:00 [Information] Starting web host
+2017-10-11 07:46:36.993 -04:00 [Information] User profile is available. Using '"/home/geoff/.aspnet/DataProtection-Keys"' as key repository; keys will not be encrypted at rest.
+2017-10-11 07:46:41.549 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/  
+2017-10-11 07:46:41.622 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Index (webviewer)" with arguments (null) - ModelState is Valid
+2017-10-11 07:46:42.930 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Index.cshtml".
+2017-10-11 07:46:42.987 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Index (webviewer)" in 1381.1298ms
+2017-10-11 07:46:42.990 -04:00 [Information] Request finished in 1444.4055ms 200 text/html; charset=utf-8
+2017-10-11 07:46:48.475 -04:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/Home/Result application/x-www-form-urlencoded 319
+2017-10-11 07:46:48.544 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Result (webviewer)" with arguments (["webviewer.Models.SearchParameters"]) - ModelState is Invalid
+2017-10-11 07:46:48.617 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Result.cshtml".
+2017-10-11 07:46:48.827 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Result (webviewer)" in 316.8941ms
+2017-10-11 07:46:48.828 -04:00 [Information] Request finished in 352.991ms 200 text/html; charset=utf-8
+2017-10-11 07:46:48.833 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2017-10-11 07:46:48.834 -04:00 [Information] Request finished in 1.1159ms 404 
+2017-10-11 07:46:48.834 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.js  
+2017-10-11 07:46:48.834 -04:00 [Information] Request finished in 0.1447ms 404 
+2017-10-11 07:46:48.837 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/css/styles.css  
+2017-10-11 07:46:48.837 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 07:46:48.837 -04:00 [Information] Request finished in 0.3298ms 404 
+2017-10-11 07:46:48.839 -04:00 [Information] Sending file. Request path: '"/css/styles.css"'. Physical path: '"/home/geoff/Wercs/WebViewer/Wercs.DTE.WebViewerCore/wwwroot/css/styles.css"'
+2017-10-11 07:46:48.845 -04:00 [Information] Request finished in 7.8714ms 200 text/css
+2017-10-11 07:46:48.845 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 07:46:48.845 -04:00 [Information] Request finished in 0.1867ms 404 
+2017-10-11 07:46:48.848 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/images/new.png  
+2017-10-11 07:46:48.849 -04:00 [Information] Request finished in 0.5047ms 404 
+2017-10-11 07:47:37.354 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/  
+2017-10-11 07:47:37.354 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Index (webviewer)" with arguments (null) - ModelState is Valid
+2017-10-11 07:47:37.356 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Index.cshtml".
+2017-10-11 07:47:37.357 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Index (webviewer)" in 2.4009ms
+2017-10-11 07:47:37.357 -04:00 [Information] Request finished in 2.8137ms 200 text/html; charset=utf-8
+2017-10-11 07:47:39.741 -04:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/Home/Result application/x-www-form-urlencoded 319
+2017-10-11 07:47:39.742 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Result (webviewer)" with arguments (["webviewer.Models.SearchParameters"]) - ModelState is Invalid
+2017-10-11 07:47:39.750 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Result.cshtml".
+2017-10-11 07:47:39.751 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Result (webviewer)" in 9.7119ms
+2017-10-11 07:47:39.751 -04:00 [Information] Request finished in 10.1442ms 200 text/html; charset=utf-8
+2017-10-11 07:47:39.757 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/css/styles.css  
+2017-10-11 07:47:39.757 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2017-10-11 07:47:39.758 -04:00 [Information] Request finished in 0.2421ms 404 
+2017-10-11 07:47:39.758 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.js  
+2017-10-11 07:47:39.757 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 07:47:39.758 -04:00 [Information] Request finished in 0.0762ms 404 
+2017-10-11 07:47:39.758 -04:00 [Information] The file "/css/styles.css" was not modified
+2017-10-11 07:47:39.758 -04:00 [Information] Request finished in 0.4418ms 404 
+2017-10-11 07:47:39.759 -04:00 [Information] Request finished in 1.2453ms 304 text/css
+2017-10-11 07:47:39.766 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 07:47:39.767 -04:00 [Information] Request finished in 0.237ms 404 
+2017-10-11 07:47:39.771 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/images/new.png  
+2017-10-11 07:47:39.771 -04:00 [Information] Request finished in 0.2885ms 404 
+2017-10-11 07:57:57.517 -04:00 [Information] Starting web host
+2017-10-11 07:57:57.716 -04:00 [Information] User profile is available. Using '"/home/geoff/.aspnet/DataProtection-Keys"' as key repository; keys will not be encrypted at rest.
+2017-10-11 07:58:07.289 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/  
+2017-10-11 07:58:07.362 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Index (webviewer)" with arguments (null) - ModelState is Valid
+2017-10-11 07:58:08.718 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Index.cshtml".
+2017-10-11 07:58:08.787 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Index (webviewer)" in 1438.2721ms
+2017-10-11 07:58:08.790 -04:00 [Information] Request finished in 1504.4472ms 200 text/html; charset=utf-8
+2017-10-11 07:58:14.197 -04:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/Home/Result application/x-www-form-urlencoded 324
+2017-10-11 07:58:14.265 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Result (webviewer)" with arguments (["webviewer.Models.SearchParameters"]) - ModelState is Invalid
+2017-10-11 07:58:14.347 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Result.cshtml".
+2017-10-11 07:58:14.540 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Result (webviewer)" in 310.3425ms
+2017-10-11 07:58:14.542 -04:00 [Information] Request finished in 345.3975ms 200 text/html; charset=utf-8
+2017-10-11 07:58:14.545 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.js  
+2017-10-11 07:58:14.545 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2017-10-11 07:58:14.546 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/css/styles.css  
+2017-10-11 07:58:14.546 -04:00 [Information] Request finished in 1.1028ms 404 
+2017-10-11 07:58:14.546 -04:00 [Information] Request finished in 1.0994ms 404 
+2017-10-11 07:58:14.547 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 07:58:14.547 -04:00 [Information] Request finished in 0.1203ms 404 
+2017-10-11 07:58:14.550 -04:00 [Information] The file "/css/styles.css" was not modified
+2017-10-11 07:58:14.552 -04:00 [Information] Request finished in 6.6357ms 304 text/css
+2017-10-11 07:58:14.561 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/images/new.png  
+2017-10-11 07:58:14.562 -04:00 [Information] Request finished in 0.4975ms 404 
+2017-10-11 07:58:14.562 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 07:58:14.562 -04:00 [Information] Request finished in 0.1098ms 404 
+2017-10-11 07:58:17.497 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/  
+2017-10-11 07:58:17.497 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Index (webviewer)" with arguments (null) - ModelState is Valid
+2017-10-11 07:58:17.500 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Index.cshtml".
+2017-10-11 07:58:17.501 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Index (webviewer)" in 4.0794ms
+2017-10-11 07:58:17.501 -04:00 [Information] Request finished in 4.4215ms 200 text/html; charset=utf-8
+2017-10-11 08:01:02.973 -04:00 [Information] Starting web host
+2017-10-11 08:01:03.161 -04:00 [Information] User profile is available. Using '"/home/geoff/.aspnet/DataProtection-Keys"' as key repository; keys will not be encrypted at rest.
+2017-10-11 08:01:07.676 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/  
+2017-10-11 08:01:07.750 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Index (webviewer)" with arguments (null) - ModelState is Valid
+2017-10-11 08:01:09.048 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Index.cshtml".
+2017-10-11 08:01:09.116 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Index (webviewer)" in 1383.9459ms
+2017-10-11 08:01:09.120 -04:00 [Information] Request finished in 1446.6995ms 200 text/html; charset=utf-8
+2017-10-11 08:01:28.035 -04:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/Home/Result application/x-www-form-urlencoded 324
+2017-10-11 08:01:28.106 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Result (webviewer)" with arguments (["webviewer.Models.SearchParameters"]) - ModelState is Invalid
+2017-10-11 08:01:28.176 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Result.cshtml".
+2017-10-11 08:01:28.384 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Result (webviewer)" in 314.3605ms
+2017-10-11 08:01:28.386 -04:00 [Information] Request finished in 350.4988ms 200 text/html; charset=utf-8
+2017-10-11 08:01:28.405 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.js  
+2017-10-11 08:01:28.405 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/css/styles.css  
+2017-10-11 08:01:28.406 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 08:01:28.407 -04:00 [Information] Request finished in 0.7115ms 404 
+2017-10-11 08:01:28.407 -04:00 [Information] Request finished in 1.6082ms 404 
+2017-10-11 08:01:28.407 -04:00 [Information] The file "/css/styles.css" was not modified
+2017-10-11 08:01:28.408 -04:00 [Information] Request finished in 3.0038ms 304 text/css
+2017-10-11 08:01:28.414 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2017-10-11 08:01:28.414 -04:00 [Information] Request finished in 0.2357ms 404 
+2017-10-11 08:01:28.419 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 08:01:28.419 -04:00 [Information] Request finished in 0.1922ms 404 
+2017-10-11 08:02:51.058 -04:00 [Information] Starting web host
+2017-10-11 08:02:51.244 -04:00 [Information] User profile is available. Using '"/home/geoff/.aspnet/DataProtection-Keys"' as key repository; keys will not be encrypted at rest.
+2017-10-11 08:02:58.734 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/  
+2017-10-11 08:02:58.820 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Index (webviewer)" with arguments (null) - ModelState is Valid
+2017-10-11 08:03:00.258 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Index.cshtml".
+2017-10-11 08:03:00.317 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Index (webviewer)" in 1516.0364ms
+2017-10-11 08:03:00.319 -04:00 [Information] Request finished in 1588.3048ms 200 text/html; charset=utf-8
+2017-10-11 08:03:15.240 -04:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/Home/Result application/x-www-form-urlencoded 324
+2017-10-11 08:03:15.319 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Result (webviewer)" with arguments (["webviewer.Models.SearchParameters"]) - ModelState is Invalid
+2017-10-11 08:03:15.385 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Result.cshtml".
+2017-10-11 08:03:15.547 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Result (webviewer)" in 268.7218ms
+2017-10-11 08:03:15.549 -04:00 [Information] Request finished in 308.6676ms 200 text/html; charset=utf-8
+2017-10-11 08:03:15.553 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2017-10-11 08:03:15.555 -04:00 [Information] Request finished in 1.6791ms 404 
+2017-10-11 08:03:15.555 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/css/styles.css  
+2017-10-11 08:03:15.556 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 08:03:15.556 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.js  
+2017-10-11 08:03:15.557 -04:00 [Information] Request finished in 0.164ms 404 
+2017-10-11 08:03:15.557 -04:00 [Information] Request finished in 0.1983ms 404 
+2017-10-11 08:03:15.558 -04:00 [Information] The file "/css/styles.css" was not modified
+2017-10-11 08:03:15.559 -04:00 [Information] Request finished in 4.0542ms 304 text/css
+2017-10-11 08:03:15.563 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 08:03:15.564 -04:00 [Information] Request finished in 0.2184ms 404 
+2017-10-11 08:07:09.672 -04:00 [Information] Starting web host
+2017-10-11 08:07:09.883 -04:00 [Information] User profile is available. Using '"/home/geoff/.aspnet/DataProtection-Keys"' as key repository; keys will not be encrypted at rest.
+2017-10-11 08:07:16.656 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/  
+2017-10-11 08:07:16.759 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Index (webviewer)" with arguments (null) - ModelState is Valid
+2017-10-11 08:07:18.131 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Index.cshtml".
+2017-10-11 08:07:18.198 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Index (webviewer)" in 1455.3971ms
+2017-10-11 08:07:18.200 -04:00 [Information] Request finished in 1546.9319ms 200 text/html; charset=utf-8
+2017-10-11 08:07:36.327 -04:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/Home/Result application/x-www-form-urlencoded 324
+2017-10-11 08:07:36.407 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Result (webviewer)" with arguments (["webviewer.Models.SearchParameters"]) - ModelState is Invalid
+2017-10-11 08:07:36.473 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Result.cshtml".
+2017-10-11 08:07:36.699 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Result (webviewer)" in 335.8216ms
+2017-10-11 08:07:36.701 -04:00 [Information] Request finished in 374.558ms 200 text/html; charset=utf-8
+2017-10-11 08:07:36.710 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2017-10-11 08:07:36.711 -04:00 [Information] Request finished in 1.117ms 404 
+2017-10-11 08:07:36.725 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/css/styles.css  
+2017-10-11 08:07:36.725 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 08:07:36.725 -04:00 [Information] Request finished in 0.3114ms 404 
+2017-10-11 08:07:36.726 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.js  
+2017-10-11 08:07:36.726 -04:00 [Information] Request finished in 0.1427ms 404 
+2017-10-11 08:07:36.727 -04:00 [Information] The file "/css/styles.css" was not modified
+2017-10-11 08:07:36.728 -04:00 [Information] Request finished in 2.8805ms 304 text/css
+2017-10-11 08:07:36.735 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 08:07:36.735 -04:00 [Information] Request finished in 0.2202ms 404 
+2017-10-11 08:10:21.684 -04:00 [Information] Starting web host
+2017-10-11 08:10:21.898 -04:00 [Information] User profile is available. Using '"/home/geoff/.aspnet/DataProtection-Keys"' as key repository; keys will not be encrypted at rest.
+2017-10-11 08:10:26.506 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/  
+2017-10-11 08:10:26.583 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Index (webviewer)" with arguments (null) - ModelState is Valid
+2017-10-11 08:10:27.986 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Index.cshtml".
+2017-10-11 08:10:28.048 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Index (webviewer)" in 1480.7855ms
+2017-10-11 08:10:28.051 -04:00 [Information] Request finished in 1548.3337ms 200 text/html; charset=utf-8
+2017-10-11 08:10:30.668 -04:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/Home/Result application/x-www-form-urlencoded 319
+2017-10-11 08:10:30.735 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Result (webviewer)" with arguments (["webviewer.Models.SearchParameters"]) - ModelState is Invalid
+2017-10-11 08:10:30.834 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Result.cshtml".
+2017-10-11 08:10:30.999 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Result (webviewer)" in 299.8411ms
+2017-10-11 08:10:31.000 -04:00 [Information] Request finished in 331.8247ms 200 text/html; charset=utf-8
+2017-10-11 08:10:31.008 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/css/styles.css  
+2017-10-11 08:10:31.008 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2017-10-11 08:10:31.009 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.js  
+2017-10-11 08:10:31.010 -04:00 [Information] Request finished in 0.4457ms 404 
+2017-10-11 08:10:31.010 -04:00 [Information] Request finished in 1.7855ms 404 
+2017-10-11 08:10:31.010 -04:00 [Information] The file "/css/styles.css" was not modified
+2017-10-11 08:10:31.011 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 08:10:31.011 -04:00 [Information] Request finished in 0.1729ms 404 
+2017-10-11 08:10:31.011 -04:00 [Information] Request finished in 3.2176ms 304 text/css
+2017-10-11 08:10:31.018 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 08:10:31.018 -04:00 [Information] Request finished in 0.2718ms 404 
+2017-10-11 08:11:53.056 -04:00 [Information] Starting web host
+2017-10-11 08:11:53.247 -04:00 [Information] User profile is available. Using '"/home/geoff/.aspnet/DataProtection-Keys"' as key repository; keys will not be encrypted at rest.
+2017-10-11 08:12:14.263 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/  
+2017-10-11 08:12:14.344 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Index (webviewer)" with arguments (null) - ModelState is Valid
+2017-10-11 08:12:15.738 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Index.cshtml".
+2017-10-11 08:12:15.797 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Index (webviewer)" in 1469.3414ms
+2017-10-11 08:12:15.799 -04:00 [Information] Request finished in 1542.6329ms 200 text/html; charset=utf-8
+2017-10-11 08:12:18.827 -04:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/Home/Result application/x-www-form-urlencoded 319
+2017-10-11 08:12:18.906 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Result (webviewer)" with arguments (["webviewer.Models.SearchParameters"]) - ModelState is Invalid
+2017-10-11 08:12:19.005 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Result.cshtml".
+2017-10-11 08:12:19.204 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Result (webviewer)" in 338.7062ms
+2017-10-11 08:12:19.205 -04:00 [Information] Request finished in 378.0929ms 200 text/html; charset=utf-8
+2017-10-11 08:12:19.212 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2017-10-11 08:12:19.213 -04:00 [Information] Request finished in 1.0205ms 404 
+2017-10-11 08:12:19.213 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.js  
+2017-10-11 08:12:19.213 -04:00 [Information] Request finished in 0.1566ms 404 
+2017-10-11 08:12:19.215 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 08:12:19.215 -04:00 [Information] Request finished in 0.2111ms 404 
+2017-10-11 08:12:19.220 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 08:12:19.221 -04:00 [Information] Request finished in 0.2062ms 404 
+2017-10-11 08:13:37.805 -04:00 [Information] Starting web host
+2017-10-11 08:13:37.995 -04:00 [Information] User profile is available. Using '"/home/geoff/.aspnet/DataProtection-Keys"' as key repository; keys will not be encrypted at rest.
+2017-10-11 08:13:42.988 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/  
+2017-10-11 08:13:43.065 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Index (webviewer)" with arguments (null) - ModelState is Valid
+2017-10-11 08:13:44.392 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Index.cshtml".
+2017-10-11 08:13:44.468 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Index (webviewer)" in 1419.6039ms
+2017-10-11 08:13:44.471 -04:00 [Information] Request finished in 1485.1255ms 200 text/html; charset=utf-8
+2017-10-11 08:13:47.238 -04:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/Home/Result application/x-www-form-urlencoded 319
+2017-10-11 08:13:47.306 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Result (webviewer)" with arguments (["webviewer.Models.SearchParameters"]) - ModelState is Invalid
+2017-10-11 08:13:47.392 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Result.cshtml".
+2017-10-11 08:13:47.610 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Result (webviewer)" in 340.0271ms
+2017-10-11 08:13:47.611 -04:00 [Information] Request finished in 372.7295ms 200 text/html; charset=utf-8
+2017-10-11 08:13:47.615 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2017-10-11 08:13:47.615 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.js  
+2017-10-11 08:13:47.616 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/css/styles.css  
+2017-10-11 08:13:47.616 -04:00 [Information] Request finished in 1.1617ms 404 
+2017-10-11 08:13:47.617 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 08:13:47.617 -04:00 [Information] Request finished in 1.2701ms 404 
+2017-10-11 08:13:47.617 -04:00 [Information] Request finished in 0.1654ms 404 
+2017-10-11 08:13:47.619 -04:00 [Information] Sending file. Request path: '"/css/styles.css"'. Physical path: '"/home/geoff/Wercs/WebViewer/Wercs.DTE.WebViewerCore/wwwroot/css/styles.css"'
+2017-10-11 08:13:47.625 -04:00 [Information] Request finished in 9.1085ms 200 text/css
+2017-10-11 08:13:47.625 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 08:13:47.625 -04:00 [Information] Request finished in 0.1179ms 404 
+2017-10-11 08:14:39.264 -04:00 [Information] Starting web host
+2017-10-11 08:14:39.449 -04:00 [Information] User profile is available. Using '"/home/geoff/.aspnet/DataProtection-Keys"' as key repository; keys will not be encrypted at rest.
+2017-10-11 08:14:57.367 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/  
+2017-10-11 08:14:57.455 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Index (webviewer)" with arguments (null) - ModelState is Valid
+2017-10-11 08:14:58.848 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Index.cshtml".
+2017-10-11 08:14:58.917 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Index (webviewer)" in 1485.4237ms
+2017-10-11 08:14:58.921 -04:00 [Information] Request finished in 1560.3691ms 200 text/html; charset=utf-8
+2017-10-11 08:15:01.801 -04:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/Home/Result application/x-www-form-urlencoded 319
+2017-10-11 08:15:01.867 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Result (webviewer)" with arguments (["webviewer.Models.SearchParameters"]) - ModelState is Invalid
+2017-10-11 08:15:01.949 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Result.cshtml".
+2017-10-11 08:15:02.101 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Result (webviewer)" in 268.6739ms
+2017-10-11 08:15:02.102 -04:00 [Information] Request finished in 301.5032ms 200 text/html; charset=utf-8
+2017-10-11 08:15:02.108 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 08:15:02.108 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/css/styles.css  
+2017-10-11 08:15:02.108 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.js  
+2017-10-11 08:15:02.108 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2017-10-11 08:15:02.109 -04:00 [Information] Request finished in 1.174ms 404 
+2017-10-11 08:15:02.109 -04:00 [Information] Request finished in 1.3922ms 404 
+2017-10-11 08:15:02.109 -04:00 [Information] Request finished in 1.0676ms 404 
+2017-10-11 08:15:02.110 -04:00 [Information] The file "/css/styles.css" was not modified
+2017-10-11 08:15:02.111 -04:00 [Information] Request finished in 3.6525ms 304 text/css
+2017-10-11 08:15:02.114 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 08:15:02.114 -04:00 [Information] Request finished in 0.1788ms 404 
+2017-10-11 08:24:58.272 -04:00 [Information] Starting web host
+2017-10-11 08:24:58.463 -04:00 [Information] User profile is available. Using '"/home/geoff/.aspnet/DataProtection-Keys"' as key repository; keys will not be encrypted at rest.
+2017-10-11 08:25:23.373 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/  
+2017-10-11 08:25:23.448 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Index (webviewer)" with arguments (null) - ModelState is Valid
+2017-10-11 08:25:24.764 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Index.cshtml".
+2017-10-11 08:25:24.821 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Index (webviewer)" in 1388.2888ms
+2017-10-11 08:25:24.824 -04:00 [Information] Request finished in 1455.1752ms 200 text/html; charset=utf-8
+2017-10-11 08:25:27.653 -04:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/Home/Result application/x-www-form-urlencoded 319
+2017-10-11 08:25:27.726 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Result (webviewer)" with arguments (["webviewer.Models.SearchParameters"]) - ModelState is Invalid
+2017-10-11 08:25:27.822 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Result.cshtml".
+2017-10-11 08:25:28.025 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Result (webviewer)" in 339.7536ms
+2017-10-11 08:25:28.030 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/css/styles.css  
+2017-10-11 08:25:28.031 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.js  
+2017-10-11 08:25:28.033 -04:00 [Information] Request finished in 1.3203ms 404 
+2017-10-11 08:25:28.033 -04:00 [Information] The file "/css/styles.css" was not modified
+2017-10-11 08:25:28.035 -04:00 [Information] Request finished in 5.8971ms 304 text/css
+2017-10-11 08:25:28.036 -04:00 [Information] Request finished in 382.8656ms 200 text/html; charset=utf-8
+2017-10-11 08:25:28.036 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2017-10-11 08:25:28.036 -04:00 [Information] Request finished in 0.1375ms 404 
+2017-10-11 08:25:28.037 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/Home/images/pyramid.jpg  
+2017-10-11 08:25:28.038 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 08:25:28.038 -04:00 [Information] Request finished in 0.1584ms 404 
+2017-10-11 08:25:28.038 -04:00 [Information] Request finished in 0.4824ms 404 
+2017-10-11 08:29:13.595 -04:00 [Information] Starting web host
+2017-10-11 08:29:13.830 -04:00 [Information] User profile is available. Using '"/home/geoff/.aspnet/DataProtection-Keys"' as key repository; keys will not be encrypted at rest.
+2017-10-11 08:29:19.111 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/  
+2017-10-11 08:29:19.194 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Index (webviewer)" with arguments (null) - ModelState is Valid
+2017-10-11 08:29:20.557 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Index.cshtml".
+2017-10-11 08:29:20.623 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Index (webviewer)" in 1438.0856ms
+2017-10-11 08:29:20.627 -04:00 [Information] Request finished in 1518.7577ms 200 text/html; charset=utf-8
+2017-10-11 08:29:23.267 -04:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/Home/Result application/x-www-form-urlencoded 319
+2017-10-11 08:29:23.332 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Result (webviewer)" with arguments (["webviewer.Models.SearchParameters"]) - ModelState is Invalid
+2017-10-11 08:29:23.502 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Result.cshtml".
+2017-10-11 08:29:23.648 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Result (webviewer)" in 351.0525ms
+2017-10-11 08:29:23.650 -04:00 [Information] Request finished in 383.2915ms 200 text/html; charset=utf-8
+2017-10-11 08:29:23.652 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2017-10-11 08:29:23.653 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/css/styles.css  
+2017-10-11 08:29:23.653 -04:00 [Information] Request finished in 1.1283ms 404 
+2017-10-11 08:29:23.653 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.js  
+2017-10-11 08:29:23.654 -04:00 [Information] Request finished in 0.1346ms 404 
+2017-10-11 08:29:23.655 -04:00 [Information] The file "/css/styles.css" was not modified
+2017-10-11 08:29:23.655 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 08:29:23.656 -04:00 [Information] Request finished in 0.4693ms 404 
+2017-10-11 08:29:23.657 -04:00 [Information] Request finished in 3.9187ms 304 text/css
+2017-10-11 08:29:23.660 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/Home/images/pyramid.jpg  
+2017-10-11 08:29:23.660 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 08:29:23.660 -04:00 [Information] Request finished in 0.1251ms 404 
+2017-10-11 08:29:23.660 -04:00 [Information] Request finished in 0.4908ms 404 
+2017-10-11 08:29:45.493 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/  
+2017-10-11 08:29:45.495 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Index (webviewer)" with arguments (null) - ModelState is Valid
+2017-10-11 08:29:45.497 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Index.cshtml".
+2017-10-11 08:29:45.499 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Index (webviewer)" in 3.9336ms
+2017-10-11 08:29:45.499 -04:00 [Information] Request finished in 5.3817ms 200 text/html; charset=utf-8
+2017-10-11 08:29:49.228 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/  
+2017-10-11 08:29:49.229 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Index (webviewer)" with arguments (null) - ModelState is Valid
+2017-10-11 08:29:49.230 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Index.cshtml".
+2017-10-11 08:29:49.230 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Index (webviewer)" in 1.8051ms
+2017-10-11 08:29:49.231 -04:00 [Information] Request finished in 2.0796ms 200 text/html; charset=utf-8
+2017-10-11 08:29:58.455 -04:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/Home/Result application/x-www-form-urlencoded 319
+2017-10-11 08:29:58.456 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Result (webviewer)" with arguments (["webviewer.Models.SearchParameters"]) - ModelState is Invalid
+2017-10-11 08:29:58.466 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Result.cshtml".
+2017-10-11 08:29:58.467 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Result (webviewer)" in 11.9197ms
+2017-10-11 08:29:58.467 -04:00 [Information] Request finished in 12.2645ms 200 text/html; charset=utf-8
+2017-10-11 08:29:58.475 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.js  
+2017-10-11 08:29:58.475 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2017-10-11 08:29:58.475 -04:00 [Information] Request finished in 0.2006ms 404 
+2017-10-11 08:29:58.475 -04:00 [Information] Request finished in 0.1396ms 404 
+2017-10-11 08:29:58.476 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/Home/images/pyramid.jpg  
+2017-10-11 08:29:58.476 -04:00 [Information] Request finished in 0.1664ms 404 
+2017-10-11 08:29:58.477 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 08:29:58.477 -04:00 [Information] Request finished in 0.4411ms 404 
+2017-10-11 08:29:58.482 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 08:29:58.482 -04:00 [Information] Request finished in 0.2518ms 404 
+2017-10-11 08:31:13.688 -04:00 [Information] Starting web host
+2017-10-11 08:31:13.883 -04:00 [Information] User profile is available. Using '"/home/geoff/.aspnet/DataProtection-Keys"' as key repository; keys will not be encrypted at rest.
+2017-10-11 08:31:23.733 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/  
+2017-10-11 08:31:23.813 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Index (webviewer)" with arguments (null) - ModelState is Valid
+2017-10-11 08:31:25.184 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Index.cshtml".
+2017-10-11 08:31:25.248 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Index (webviewer)" in 1456.1499ms
+2017-10-11 08:31:25.251 -04:00 [Information] Request finished in 1521.393ms 200 text/html; charset=utf-8
+2017-10-11 08:31:28.644 -04:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/Home/Result application/x-www-form-urlencoded 319
+2017-10-11 08:31:28.724 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Result (webviewer)" with arguments (["webviewer.Models.SearchParameters"]) - ModelState is Invalid
+2017-10-11 08:31:28.820 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Result.cshtml".
+2017-10-11 08:31:29.002 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Result (webviewer)" in 317.2957ms
+2017-10-11 08:31:29.005 -04:00 [Information] Request finished in 360.667ms 200 text/html; charset=utf-8
+2017-10-11 08:31:29.007 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2017-10-11 08:31:29.007 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/css/styles.css  
+2017-10-11 08:31:29.008 -04:00 [Information] Request finished in 1.3102ms 404 
+2017-10-11 08:31:29.009 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.js  
+2017-10-11 08:31:29.009 -04:00 [Information] Request finished in 0.223ms 404 
+2017-10-11 08:31:29.009 -04:00 [Information] The file "/css/styles.css" was not modified
+2017-10-11 08:31:29.010 -04:00 [Information] Request finished in 2.9982ms 304 text/css
+2017-10-11 08:31:29.012 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 08:31:29.013 -04:00 [Information] Request finished in 0.8783ms 404 
+2017-10-11 08:31:29.015 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/Home/images/pyramid.jpg  
+2017-10-11 08:31:29.015 -04:00 [Information] Request finished in 0.4934ms 404 
+2017-10-11 20:01:10.232 -04:00 [Information] Starting web host
+2017-10-11 20:01:10.526 -04:00 [Information] User profile is available. Using '"/home/geoff/.aspnet/DataProtection-Keys"' as key repository; keys will not be encrypted at rest.
+2017-10-11 20:03:09.946 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/  
+2017-10-11 20:03:10.039 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Index (webviewer)" with arguments (null) - ModelState is Valid
+2017-10-11 20:03:12.250 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Index.cshtml".
+2017-10-11 20:03:12.305 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Index (webviewer)" in 2280.9258ms
+2017-10-11 20:03:12.308 -04:00 [Information] Request finished in 2364.8427ms 200 text/html; charset=utf-8
+2017-10-11 20:03:28.868 -04:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/Home/Result application/x-www-form-urlencoded 319
+2017-10-11 20:03:28.940 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Result (webviewer)" with arguments (["webviewer.Models.SearchParameters"]) - ModelState is Invalid
+2017-10-11 20:03:29.019 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Result.cshtml".
+2017-10-11 20:03:29.158 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Result (webviewer)" in 254.5094ms
+2017-10-11 20:03:29.159 -04:00 [Information] Request finished in 290.5197ms 200 text/html; charset=utf-8
+2017-10-11 20:03:29.180 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2017-10-11 20:03:29.180 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/css/styles.css  
+2017-10-11 20:03:29.181 -04:00 [Information] Request finished in 1.1759ms 404 
+2017-10-11 20:03:29.181 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.js  
+2017-10-11 20:03:29.181 -04:00 [Information] Request finished in 0.1505ms 404 
+2017-10-11 20:03:29.183 -04:00 [Information] The file "/css/styles.css" was not modified
+2017-10-11 20:03:29.195 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 20:03:29.196 -04:00 [Information] Request finished in 0.4184ms 404 
+2017-10-11 20:03:29.196 -04:00 [Information] Request finished in 15.4542ms 304 text/css
+2017-10-11 20:03:29.198 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 20:03:29.199 -04:00 [Information] Request finished in 0.2214ms 404 
+2017-10-11 20:03:29.200 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/Home/images/pyramid.jpg  
+2017-10-11 20:03:29.200 -04:00 [Information] Request finished in 0.5559ms 404 
+2017-10-11 20:08:13.212 -04:00 [Information] Starting web host
+2017-10-11 20:08:13.403 -04:00 [Information] User profile is available. Using '"/home/geoff/.aspnet/DataProtection-Keys"' as key repository; keys will not be encrypted at rest.
+2017-10-11 20:08:20.397 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/  
+2017-10-11 20:08:20.470 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Index (webviewer)" with arguments (null) - ModelState is Valid
+2017-10-11 20:08:21.921 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Index.cshtml".
+2017-10-11 20:08:21.990 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Index (webviewer)" in 1533.247ms
+2017-10-11 20:08:21.993 -04:00 [Information] Request finished in 1600.1741ms 200 text/html; charset=utf-8
+2017-10-11 20:08:24.836 -04:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/Home/Result application/x-www-form-urlencoded 319
+2017-10-11 20:08:24.926 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Result (webviewer)" with arguments (["webviewer.Models.SearchParameters"]) - ModelState is Invalid
+2017-10-11 20:08:25.022 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Result.cshtml".
+2017-10-11 20:08:25.409 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Result (webviewer)" in 528.7189ms
+2017-10-11 20:08:25.410 -04:00 [Information] Request finished in 574.5684ms 200 text/html; charset=utf-8
+2017-10-11 20:08:25.416 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2017-10-11 20:08:25.418 -04:00 [Information] Request finished in 1.3463ms 404 
+2017-10-11 20:08:25.420 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 20:08:25.420 -04:00 [Information] Request finished in 0.2628ms 404 
+2017-10-11 20:08:25.425 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.js  
+2017-10-11 20:08:25.425 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/Home/images/pyramid.jpg  
+2017-10-11 20:08:25.425 -04:00 [Information] Request finished in 0.2103ms 404 
+2017-10-11 20:08:25.425 -04:00 [Information] Request finished in 0.4855ms 404 
+2017-10-11 20:08:25.434 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 20:08:25.434 -04:00 [Information] Request finished in 0.175ms 404 
+2017-10-11 20:24:47.192 -04:00 [Information] Starting web host
+2017-10-11 20:24:47.390 -04:00 [Information] User profile is available. Using '"/home/geoff/.aspnet/DataProtection-Keys"' as key repository; keys will not be encrypted at rest.
+2017-10-11 20:24:55.626 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/  
+2017-10-11 20:24:55.733 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Index (webviewer)" with arguments (null) - ModelState is Valid
+2017-10-11 20:24:57.415 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Index.cshtml".
+2017-10-11 20:24:57.471 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Index (webviewer)" in 1752.9193ms
+2017-10-11 20:24:57.473 -04:00 [Information] Request finished in 1851.0848ms 200 text/html; charset=utf-8
+2017-10-11 20:25:00.986 -04:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/Home/Result application/x-www-form-urlencoded 319
+2017-10-11 20:25:01.054 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Result (webviewer)" with arguments (["webviewer.Models.SearchParameters"]) - ModelState is Invalid
+2017-10-11 20:25:01.144 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Result.cshtml".
+2017-10-11 20:25:01.284 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Result (webviewer)" in 264.9168ms
+2017-10-11 20:25:01.284 -04:00 [Information] Request finished in 298.3635ms 200 text/html; charset=utf-8
+2017-10-11 20:25:01.288 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2017-10-11 20:25:01.289 -04:00 [Information] Request finished in 1.0525ms 404 
+2017-10-11 20:25:01.292 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.js  
+2017-10-11 20:25:01.292 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/Home/images/pyramid.jpg  
+2017-10-11 20:25:01.293 -04:00 [Information] Request finished in 0.5728ms 404 
+2017-10-11 20:25:01.293 -04:00 [Information] Request finished in 0.7226ms 404 
+2017-10-11 20:25:01.292 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 20:25:01.293 -04:00 [Information] Request finished in 1.2071ms 404 
+2017-10-11 20:29:45.172 -04:00 [Information] Starting web host
+2017-10-11 20:29:45.357 -04:00 [Information] User profile is available. Using '"/home/geoff/.aspnet/DataProtection-Keys"' as key repository; keys will not be encrypted at rest.
+2017-10-11 20:29:50.072 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/  
+2017-10-11 20:29:50.169 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Index (webviewer)" with arguments (null) - ModelState is Valid
+2017-10-11 20:29:51.551 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Index.cshtml".
+2017-10-11 20:29:51.619 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Index (webviewer)" in 1468.749ms
+2017-10-11 20:29:51.623 -04:00 [Information] Request finished in 1554.7009ms 200 text/html; charset=utf-8
+2017-10-11 20:29:54.485 -04:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/Home/Result application/x-www-form-urlencoded 319
+2017-10-11 20:29:54.554 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Result (webviewer)" with arguments (["webviewer.Models.SearchParameters"]) - ModelState is Invalid
+2017-10-11 20:29:54.684 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Result.cshtml".
+2017-10-11 20:29:54.836 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Result (webviewer)" in 320.6613ms
+2017-10-11 20:29:54.840 -04:00 [Information] Request finished in 355.6922ms 200 text/html; charset=utf-8
+2017-10-11 20:29:54.841 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.js  
+2017-10-11 20:29:54.842 -04:00 [Information] Request finished in 0.9397ms 404 
+2017-10-11 20:29:54.842 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2017-10-11 20:29:54.842 -04:00 [Information] Request finished in 0.2422ms 404 
+2017-10-11 20:29:54.844 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 20:29:54.844 -04:00 [Information] Request finished in 0.2825ms 404 
+2017-10-11 20:29:54.845 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/Home/images/pyramid.jpg  
+2017-10-11 20:29:54.845 -04:00 [Information] Request finished in 0.5303ms 404 
+2017-10-11 20:31:58.500 -04:00 [Information] Starting web host
+2017-10-11 20:31:58.736 -04:00 [Information] User profile is available. Using '"/home/geoff/.aspnet/DataProtection-Keys"' as key repository; keys will not be encrypted at rest.
+2017-10-11 20:32:04.218 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/  
+2017-10-11 20:32:04.295 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Index (webviewer)" with arguments (null) - ModelState is Valid
+2017-10-11 20:32:05.874 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Index.cshtml".
+2017-10-11 20:32:05.943 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Index (webviewer)" in 1661.777ms
+2017-10-11 20:32:05.950 -04:00 [Information] Request finished in 1735.1717ms 200 text/html; charset=utf-8
+2017-10-11 20:32:08.183 -04:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/Home/Result application/x-www-form-urlencoded 319
+2017-10-11 20:32:08.256 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Result (webviewer)" with arguments (["webviewer.Models.SearchParameters"]) - ModelState is Invalid
+2017-10-11 20:32:08.345 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Result.cshtml".
+2017-10-11 20:32:08.488 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Result (webviewer)" in 270.4617ms
+2017-10-11 20:32:08.489 -04:00 [Information] Request finished in 305.8574ms 200 text/html; charset=utf-8
+2017-10-11 20:32:08.506 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2017-10-11 20:32:08.507 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.js  
+2017-10-11 20:32:08.507 -04:00 [Information] Request finished in 1.0385ms 404 
+2017-10-11 20:32:08.508 -04:00 [Information] Request finished in 0.7497ms 404 
+2017-10-11 20:32:08.509 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 20:32:08.509 -04:00 [Information] Request finished in 0.1767ms 404 
+2017-10-11 20:32:08.509 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/Home/images/pyramid.jpg  
+2017-10-11 20:32:08.510 -04:00 [Information] Request finished in 0.3803ms 404 
+2017-10-11 20:34:48.309 -04:00 [Information] Starting web host
+2017-10-11 20:34:48.508 -04:00 [Information] User profile is available. Using '"/home/geoff/.aspnet/DataProtection-Keys"' as key repository; keys will not be encrypted at rest.
+2017-10-11 20:34:53.281 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/  
+2017-10-11 20:34:53.354 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Index (webviewer)" with arguments (null) - ModelState is Valid
+2017-10-11 20:34:54.706 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Index.cshtml".
+2017-10-11 20:34:54.764 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Index (webviewer)" in 1422.3834ms
+2017-10-11 20:34:54.767 -04:00 [Information] Request finished in 1488.6164ms 200 text/html; charset=utf-8
+2017-10-11 20:34:59.386 -04:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/Home/Result application/x-www-form-urlencoded 319
+2017-10-11 20:34:59.460 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Result (webviewer)" with arguments (["webviewer.Models.SearchParameters"]) - ModelState is Invalid
+2017-10-11 20:34:59.549 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Result.cshtml".
+2017-10-11 20:34:59.748 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Result (webviewer)" in 322.1363ms
+2017-10-11 20:34:59.748 -04:00 [Information] Request finished in 362.1249ms 200 text/html; charset=utf-8
+2017-10-11 20:34:59.752 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2017-10-11 20:34:59.753 -04:00 [Information] Request finished in 1.2302ms 404 
+2017-10-11 20:34:59.755 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.js  
+2017-10-11 20:34:59.755 -04:00 [Information] Request finished in 0.2391ms 404 
+2017-10-11 20:34:59.755 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 20:34:59.755 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/Home/images/pyramid.jpg  
+2017-10-11 20:34:59.756 -04:00 [Information] Request finished in 0.1562ms 404 
+2017-10-11 20:34:59.756 -04:00 [Information] Request finished in 0.34ms 404 
+2017-10-11 20:39:52.351 -04:00 [Information] Starting web host
+2017-10-11 20:39:52.550 -04:00 [Information] User profile is available. Using '"/home/geoff/.aspnet/DataProtection-Keys"' as key repository; keys will not be encrypted at rest.
+2017-10-11 20:40:04.030 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/  
+2017-10-11 20:40:04.107 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Index (webviewer)" with arguments (null) - ModelState is Valid
+2017-10-11 20:40:05.686 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Index.cshtml".
+2017-10-11 20:40:05.754 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Index (webviewer)" in 1658.9618ms
+2017-10-11 20:40:05.757 -04:00 [Information] Request finished in 1730.2108ms 200 text/html; charset=utf-8
+2017-10-11 20:40:10.727 -04:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/Home/Result application/x-www-form-urlencoded 319
+2017-10-11 20:40:10.792 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Result (webviewer)" with arguments (["webviewer.Models.SearchParameters"]) - ModelState is Invalid
+2017-10-11 20:40:10.904 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Result.cshtml".
+2017-10-11 20:40:11.043 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Result (webviewer)" in 285.8769ms
+2017-10-11 20:40:11.044 -04:00 [Information] Request finished in 317.2029ms 200 text/html; charset=utf-8
+2017-10-11 20:40:11.047 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2017-10-11 20:40:11.048 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.js  
+2017-10-11 20:40:11.049 -04:00 [Information] Request finished in 1.1383ms 404 
+2017-10-11 20:40:11.049 -04:00 [Information] Request finished in 0.8044ms 404 
+2017-10-11 20:40:11.050 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 20:40:11.050 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/Home/images/pyramid.jpg  
+2017-10-11 20:40:11.050 -04:00 [Information] Request finished in 0.3383ms 404 
+2017-10-11 20:40:11.051 -04:00 [Information] Request finished in 0.7936ms 404 
+2017-10-11 20:40:11.055 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 20:40:11.055 -04:00 [Information] Request finished in 0.2509ms 404 
+2017-10-11 20:40:42.575 -04:00 [Information] Starting web host
+2017-10-11 20:40:42.759 -04:00 [Information] User profile is available. Using '"/home/geoff/.aspnet/DataProtection-Keys"' as key repository; keys will not be encrypted at rest.
+2017-10-11 20:40:53.794 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/  
+2017-10-11 20:40:53.873 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Index (webviewer)" with arguments (null) - ModelState is Valid
+2017-10-11 20:40:55.420 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Index.cshtml".
+2017-10-11 20:40:55.484 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Index (webviewer)" in 1628.2308ms
+2017-10-11 20:40:55.486 -04:00 [Information] Request finished in 1695.7697ms 200 text/html; charset=utf-8
+2017-10-11 20:40:57.654 -04:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/Home/Result application/x-www-form-urlencoded 319
+2017-10-11 20:40:57.718 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Result (webviewer)" with arguments (["webviewer.Models.SearchParameters"]) - ModelState is Invalid
+2017-10-11 20:40:57.820 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Result.cshtml".
+2017-10-11 20:40:57.971 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Result (webviewer)" in 286.4717ms
+2017-10-11 20:40:57.972 -04:00 [Information] Request finished in 318.3659ms 200 text/html; charset=utf-8
+2017-10-11 20:40:57.977 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2017-10-11 20:40:57.978 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.js  
+2017-10-11 20:40:57.978 -04:00 [Information] Request finished in 0.6774ms 404 
+2017-10-11 20:40:57.979 -04:00 [Information] Request finished in 1.3727ms 404 
+2017-10-11 20:40:57.981 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 20:40:57.981 -04:00 [Information] Request finished in 0.2296ms 404 
+2017-10-11 20:40:57.981 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/Home/images/pyramid.jpg  
+2017-10-11 20:40:57.982 -04:00 [Information] Request finished in 0.5842ms 404 
+2017-10-11 20:44:19.141 -04:00 [Information] Starting web host
+2017-10-11 20:44:19.351 -04:00 [Information] User profile is available. Using '"/home/geoff/.aspnet/DataProtection-Keys"' as key repository; keys will not be encrypted at rest.
+2017-10-11 20:44:31.599 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/  
+2017-10-11 20:44:31.670 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Index (webviewer)" with arguments (null) - ModelState is Valid
+2017-10-11 20:44:33.154 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Index.cshtml".
+2017-10-11 20:44:33.227 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Index (webviewer)" in 1567.6947ms
+2017-10-11 20:44:33.230 -04:00 [Information] Request finished in 1633.9803ms 200 text/html; charset=utf-8
+2017-10-11 20:44:37.733 -04:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/Home/Result application/x-www-form-urlencoded 319
+2017-10-11 20:44:37.800 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Result (webviewer)" with arguments (["webviewer.Models.SearchParameters"]) - ModelState is Invalid
+2017-10-11 20:44:37.890 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Result.cshtml".
+2017-10-11 20:44:38.033 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Result (webviewer)" in 269.8275ms
+2017-10-11 20:44:38.034 -04:00 [Information] Request finished in 300.8657ms 200 text/html; charset=utf-8
+2017-10-11 20:44:38.038 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2017-10-11 20:44:38.039 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.js  
+2017-10-11 20:44:38.040 -04:00 [Information] Request finished in 1.3521ms 404 
+2017-10-11 20:44:38.040 -04:00 [Information] Request finished in 0.7931ms 404 
+2017-10-11 20:44:38.041 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/Home/images/pyramid.jpg  
+2017-10-11 20:44:38.042 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 20:44:38.042 -04:00 [Information] Request finished in 0.473ms 404 
+2017-10-11 20:44:38.042 -04:00 [Information] Request finished in 0.2493ms 404 
+2017-10-11 20:51:17.080 -04:00 [Information] Starting web host
+2017-10-11 20:51:17.281 -04:00 [Information] User profile is available. Using '"/home/geoff/.aspnet/DataProtection-Keys"' as key repository; keys will not be encrypted at rest.
+2017-10-11 20:51:22.351 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/  
+2017-10-11 20:51:22.423 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Index (webviewer)" with arguments (null) - ModelState is Valid
+2017-10-11 20:51:23.847 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Index.cshtml".
+2017-10-11 20:51:23.909 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Index (webviewer)" in 1497.2213ms
+2017-10-11 20:51:23.911 -04:00 [Information] Request finished in 1563.3337ms 200 text/html; charset=utf-8
+2017-10-11 20:51:26.422 -04:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/Home/Result application/x-www-form-urlencoded 319
+2017-10-11 20:51:26.509 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Result (webviewer)" with arguments (["webviewer.Models.SearchParameters"]) - ModelState is Invalid
+2017-10-11 20:51:26.597 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Result.cshtml".
+2017-10-11 20:51:26.823 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Result (webviewer)" in 361.026ms
+2017-10-11 20:51:26.824 -04:00 [Information] Request finished in 401.1636ms 200 text/html; charset=utf-8
+2017-10-11 20:51:26.827 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2017-10-11 20:51:26.828 -04:00 [Information] Request finished in 1.1732ms 404 
+2017-10-11 20:51:26.829 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.js  
+2017-10-11 20:51:26.829 -04:00 [Information] Request finished in 0.1685ms 404 
+2017-10-11 20:51:26.829 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 20:51:26.830 -04:00 [Information] Request finished in 0.3284ms 404 
+2017-10-11 20:51:26.830 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/Home/images/pyramid.jpg  
+2017-10-11 20:51:26.830 -04:00 [Information] Request finished in 0.6625ms 404 
+2017-10-11 20:52:37.386 -04:00 [Information] Starting web host
+2017-10-11 20:52:37.574 -04:00 [Information] User profile is available. Using '"/home/geoff/.aspnet/DataProtection-Keys"' as key repository; keys will not be encrypted at rest.
+2017-10-11 20:52:43.043 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/  
+2017-10-11 20:52:43.121 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Index (webviewer)" with arguments (null) - ModelState is Valid
+2017-10-11 20:52:44.531 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Index.cshtml".
+2017-10-11 20:52:44.589 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Index (webviewer)" in 1482.4437ms
+2017-10-11 20:52:44.593 -04:00 [Information] Request finished in 1554.2292ms 200 text/html; charset=utf-8
+2017-10-11 20:52:46.838 -04:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/Home/Result application/x-www-form-urlencoded 319
+2017-10-11 20:52:46.905 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Result (webviewer)" with arguments (["webviewer.Models.SearchParameters"]) - ModelState is Invalid
+2017-10-11 20:52:47.002 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Result.cshtml".
+2017-10-11 20:52:47.143 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Result (webviewer)" in 271.9941ms
+2017-10-11 20:52:47.143 -04:00 [Information] Request finished in 305.5573ms 200 text/html; charset=utf-8
+2017-10-11 20:52:47.148 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2017-10-11 20:52:47.148 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.js  
+2017-10-11 20:52:47.149 -04:00 [Information] Request finished in 1.3388ms 404 
+2017-10-11 20:52:47.149 -04:00 [Information] Request finished in 1.0953ms 404 
+2017-10-11 20:52:47.151 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 20:52:47.151 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/Home/images/pyramid.jpg  
+2017-10-11 20:52:47.151 -04:00 [Information] Request finished in 0.2236ms 404 
+2017-10-11 20:52:47.151 -04:00 [Information] Request finished in 0.4718ms 404 
+2017-10-11 20:53:38.055 -04:00 [Information] Starting web host
+2017-10-11 20:53:38.237 -04:00 [Information] User profile is available. Using '"/home/geoff/.aspnet/DataProtection-Keys"' as key repository; keys will not be encrypted at rest.
+2017-10-11 20:53:45.531 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/  
+2017-10-11 20:53:45.617 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Index (webviewer)" with arguments (null) - ModelState is Valid
+2017-10-11 20:53:47.004 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Index.cshtml".
+2017-10-11 20:53:47.062 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Index (webviewer)" in 1462.5708ms
+2017-10-11 20:53:47.066 -04:00 [Information] Request finished in 1538.3047ms 200 text/html; charset=utf-8
+2017-10-11 20:53:49.157 -04:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/Home/Result application/x-www-form-urlencoded 319
+2017-10-11 20:53:49.228 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Result (webviewer)" with arguments (["webviewer.Models.SearchParameters"]) - ModelState is Invalid
+2017-10-11 20:53:49.314 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Result.cshtml".
+2017-10-11 20:53:49.459 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Result (webviewer)" in 266.2042ms
+2017-10-11 20:53:49.459 -04:00 [Information] Request finished in 302.3828ms 200 text/html; charset=utf-8
+2017-10-11 20:53:49.463 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2017-10-11 20:53:49.464 -04:00 [Information] Request finished in 1.0499ms 404 
+2017-10-11 20:53:49.466 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 20:53:49.466 -04:00 [Information] Request finished in 0.1956ms 404 
+2017-10-11 20:53:49.466 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.js  
+2017-10-11 20:53:49.466 -04:00 [Information] Request finished in 0.0827ms 404 
+2017-10-11 20:53:49.467 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/Home/images/pyramid.jpg  
+2017-10-11 20:53:49.468 -04:00 [Information] Request finished in 1.5001ms 404 
+2017-10-11 20:53:49.476 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 20:53:49.476 -04:00 [Information] Request finished in 0.311ms 404 
+2017-10-11 21:14:25.846 -04:00 [Information] Starting web host
+2017-10-11 21:14:26.030 -04:00 [Information] User profile is available. Using '"/home/geoff/.aspnet/DataProtection-Keys"' as key repository; keys will not be encrypted at rest.
+2017-10-11 21:14:33.874 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/  
+2017-10-11 21:14:33.948 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Index (webviewer)" with arguments (null) - ModelState is Valid
+2017-10-11 21:14:35.445 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Index.cshtml".
+2017-10-11 21:14:35.508 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Index (webviewer)" in 1571.8023ms
+2017-10-11 21:14:35.510 -04:00 [Information] Request finished in 1639.1894ms 200 text/html; charset=utf-8
+2017-10-11 21:14:36.657 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/  
+2017-10-11 21:14:36.658 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Index (webviewer)" with arguments (null) - ModelState is Valid
+2017-10-11 21:14:36.660 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Index.cshtml".
+2017-10-11 21:14:36.668 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Index (webviewer)" in 10.159ms
+2017-10-11 21:14:36.668 -04:00 [Information] Request finished in 11.0178ms 200 text/html; charset=utf-8
+2017-10-11 21:14:36.695 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/favicon.ico  
+2017-10-11 21:14:36.697 -04:00 [Information] Sending file. Request path: '"/favicon.ico"'. Physical path: '"/home/geoff/Wercs/WebViewer/Wercs.DTE.WebViewerCore/wwwroot/favicon.ico"'
+2017-10-11 21:14:36.705 -04:00 [Information] Request finished in 10.4463ms 200 image/x-icon
+2017-10-11 21:14:42.719 -04:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/Home/Result application/x-www-form-urlencoded 319
+2017-10-11 21:14:42.784 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Result (webviewer)" with arguments (["webviewer.Models.SearchParameters"]) - ModelState is Invalid
+2017-10-11 21:14:42.862 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Result.cshtml".
+2017-10-11 21:14:42.999 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Result (webviewer)" in 249.018ms
+2017-10-11 21:14:43.000 -04:00 [Information] Request finished in 280.2307ms 200 text/html; charset=utf-8
+2017-10-11 21:14:43.004 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2017-10-11 21:14:43.004 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/css/styles.css  
+2017-10-11 21:14:43.005 -04:00 [Information] Sending file. Request path: '"/css/styles.css"'. Physical path: '"/home/geoff/Wercs/WebViewer/Wercs.DTE.WebViewerCore/wwwroot/css/styles.css"'
+2017-10-11 21:14:43.005 -04:00 [Information] Request finished in 1.34ms 200 text/css
+2017-10-11 21:14:43.006 -04:00 [Information] Request finished in 2.3558ms 404 
+2017-10-11 21:14:43.007 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.js  
+2017-10-11 21:14:43.007 -04:00 [Information] Request finished in 0.1731ms 404 
+2017-10-11 21:14:43.008 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 21:14:43.008 -04:00 [Information] Request finished in 0.1637ms 404 
+2017-10-11 21:14:43.009 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/Home/images/pyramid.jpg  
+2017-10-11 21:14:43.009 -04:00 [Information] Request finished in 0.3197ms 404 
+2017-10-11 21:16:35.031 -04:00 [Information] Starting web host
+2017-10-11 21:16:35.226 -04:00 [Information] User profile is available. Using '"/home/geoff/.aspnet/DataProtection-Keys"' as key repository; keys will not be encrypted at rest.
+2017-10-11 21:16:42.627 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/  
+2017-10-11 21:16:42.712 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Index (webviewer)" with arguments (null) - ModelState is Valid
+2017-10-11 21:16:44.241 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Index.cshtml".
+2017-10-11 21:16:44.300 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Index (webviewer)" in 1604.8727ms
+2017-10-11 21:16:44.307 -04:00 [Information] Request finished in 1683.3048ms 200 text/html; charset=utf-8
+2017-10-11 21:16:47.575 -04:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/Home/Result application/x-www-form-urlencoded 319
+2017-10-11 21:16:47.641 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Result (webviewer)" with arguments (["webviewer.Models.SearchParameters"]) - ModelState is Invalid
+2017-10-11 21:16:47.773 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Result.cshtml".
+2017-10-11 21:16:47.921 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Result (webviewer)" in 313.8483ms
+2017-10-11 21:16:47.925 -04:00 [Information] Request finished in 349.8937ms 200 text/html; charset=utf-8
+2017-10-11 21:16:47.925 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.js  
+2017-10-11 21:16:47.927 -04:00 [Information] Request finished in 1.1015ms 404 
+2017-10-11 21:16:47.927 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2017-10-11 21:16:47.927 -04:00 [Information] Request finished in 0.2068ms 404 
+2017-10-11 21:16:47.929 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 21:16:47.929 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/Home/images/pyramid.jpg  
+2017-10-11 21:16:47.930 -04:00 [Information] Request finished in 0.4157ms 404 
+2017-10-11 21:16:47.930 -04:00 [Information] Request finished in 0.4283ms 404 
+2017-10-11 21:24:44.074 -04:00 [Information] Starting web host
+2017-10-11 21:24:44.266 -04:00 [Information] User profile is available. Using '"/home/geoff/.aspnet/DataProtection-Keys"' as key repository; keys will not be encrypted at rest.
+2017-10-11 21:24:49.140 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/  
+2017-10-11 21:24:49.219 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Index (webviewer)" with arguments (null) - ModelState is Valid
+2017-10-11 21:24:50.615 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Index.cshtml".
+2017-10-11 21:24:50.671 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Index (webviewer)" in 1468.6047ms
+2017-10-11 21:24:50.675 -04:00 [Information] Request finished in 1537.3612ms 200 text/html; charset=utf-8
+2017-10-11 21:24:58.927 -04:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/Home/Result application/x-www-form-urlencoded 319
+2017-10-11 21:24:58.997 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Result (webviewer)" with arguments (["webviewer.Models.SearchParameters"]) - ModelState is Invalid
+2017-10-11 21:24:59.080 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Result.cshtml".
+2017-10-11 21:24:59.298 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Result (webviewer)" in 340.812ms
+2017-10-11 21:24:59.305 -04:00 [Information] Request finished in 378.8606ms 200 text/html; charset=utf-8
+2017-10-11 21:24:59.308 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2017-10-11 21:24:59.309 -04:00 [Information] Request finished in 1.0306ms 404 
+2017-10-11 21:24:59.309 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.js  
+2017-10-11 21:24:59.309 -04:00 [Information] Request finished in 0.1393ms 404 
+2017-10-11 21:24:59.312 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/css/styles.css  
+2017-10-11 21:24:59.314 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 21:24:59.314 -04:00 [Information] Request finished in 0.1895ms 404 
+2017-10-11 21:24:59.315 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/Home/images/pyramid.jpg  
+2017-10-11 21:24:59.316 -04:00 [Information] Request finished in 0.6293ms 404 
+2017-10-11 21:24:59.317 -04:00 [Information] Sending file. Request path: '"/css/styles.css"'. Physical path: '"/home/geoff/Wercs/WebViewer/Wercs.DTE.WebViewerCore/wwwroot/css/styles.css"'
+2017-10-11 21:24:59.328 -04:00 [Information] Request finished in 15.8264ms 200 text/css
+2017-10-11 21:24:59.328 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 21:24:59.329 -04:00 [Information] Request finished in 0.4913ms 404 
+2017-10-11 21:26:09.282 -04:00 [Information] Starting web host
+2017-10-11 21:26:09.480 -04:00 [Information] User profile is available. Using '"/home/geoff/.aspnet/DataProtection-Keys"' as key repository; keys will not be encrypted at rest.
+2017-10-11 21:26:15.916 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/  
+2017-10-11 21:26:15.993 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Index (webviewer)" with arguments (null) - ModelState is Valid
+2017-10-11 21:26:17.399 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Index.cshtml".
+2017-10-11 21:26:17.464 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Index (webviewer)" in 1487.2981ms
+2017-10-11 21:26:17.466 -04:00 [Information] Request finished in 1553.9143ms 200 text/html; charset=utf-8
+2017-10-11 21:26:22.631 -04:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/Home/Result application/x-www-form-urlencoded 319
+2017-10-11 21:26:22.716 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Result (webviewer)" with arguments (["webviewer.Models.SearchParameters"]) - ModelState is Invalid
+2017-10-11 21:26:22.812 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Result.cshtml".
+2017-10-11 21:26:23.006 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Result (webviewer)" in 345.9824ms
+2017-10-11 21:26:23.007 -04:00 [Information] Request finished in 376.4159ms 200 text/html; charset=utf-8
+2017-10-11 21:26:23.012 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2017-10-11 21:26:23.012 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/css/styles.css  
+2017-10-11 21:26:23.013 -04:00 [Information] Request finished in 1.2923ms 404 
+2017-10-11 21:26:23.014 -04:00 [Information] Sending file. Request path: '"/css/styles.css"'. Physical path: '"/home/geoff/Wercs/WebViewer/Wercs.DTE.WebViewerCore/wwwroot/css/styles.css"'
+2017-10-11 21:26:23.017 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.js  
+2017-10-11 21:26:23.018 -04:00 [Information] Request finished in 0.2551ms 404 
+2017-10-11 21:26:23.019 -04:00 [Information] Request finished in 6.8188ms 200 text/css
+2017-10-11 21:26:23.028 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 21:26:23.029 -04:00 [Information] Request finished in 0.3404ms 404 
+2017-10-11 21:26:23.030 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/Home/images/pyramid.jpg  
+2017-10-11 21:26:23.030 -04:00 [Information] Request finished in 0.4295ms 404 
+2017-10-11 21:31:26.456 -04:00 [Information] Starting web host
+2017-10-11 21:31:26.650 -04:00 [Information] User profile is available. Using '"/home/geoff/.aspnet/DataProtection-Keys"' as key repository; keys will not be encrypted at rest.
+2017-10-11 21:31:35.250 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/  
+2017-10-11 21:31:35.349 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Index (webviewer)" with arguments (null) - ModelState is Valid
+2017-10-11 21:31:36.997 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Index.cshtml".
+2017-10-11 21:31:37.075 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Index (webviewer)" in 1750.5125ms
+2017-10-11 21:31:37.079 -04:00 [Information] Request finished in 1835.5107ms 200 text/html; charset=utf-8
+2017-10-11 21:31:42.261 -04:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/Home/Result application/x-www-form-urlencoded 319
+2017-10-11 21:31:42.342 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Result (webviewer)" with arguments (["webviewer.Models.SearchParameters"]) - ModelState is Invalid
+2017-10-11 21:31:42.527 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Result.cshtml".
+2017-10-11 21:31:42.772 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Result (webviewer)" in 475.2407ms
+2017-10-11 21:31:42.774 -04:00 [Information] Request finished in 512.8911ms 200 text/html; charset=utf-8
+2017-10-11 21:31:42.776 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2017-10-11 21:31:42.777 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.js  
+2017-10-11 21:31:42.778 -04:00 [Information] Request finished in 0.3916ms 404 
+2017-10-11 21:31:42.778 -04:00 [Information] Request finished in 1.3797ms 404 
+2017-10-11 21:31:42.779 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/css/styles.css  
+2017-10-11 21:31:42.783 -04:00 [Information] Sending file. Request path: '"/css/styles.css"'. Physical path: '"/home/geoff/Wercs/WebViewer/Wercs.DTE.WebViewerCore/wwwroot/css/styles.css"'
+2017-10-11 21:31:42.783 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 21:31:42.783 -04:00 [Information] Request finished in 0.5133ms 404 
+2017-10-11 21:31:42.786 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/Home/images/pyramid.jpg  
+2017-10-11 21:31:42.786 -04:00 [Information] Request finished in 0.4687ms 404 
+2017-10-11 21:31:42.792 -04:00 [Information] Request finished in 12.6932ms 200 text/css
+2017-10-11 21:31:42.794 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 21:31:42.794 -04:00 [Information] Request finished in 0.2538ms 404 
+2017-10-11 21:32:44.288 -04:00 [Information] Starting web host
+2017-10-11 21:32:44.473 -04:00 [Information] User profile is available. Using '"/home/geoff/.aspnet/DataProtection-Keys"' as key repository; keys will not be encrypted at rest.
+2017-10-11 21:32:51.481 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/  
+2017-10-11 21:32:51.556 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Index (webviewer)" with arguments (null) - ModelState is Valid
+2017-10-11 21:32:52.932 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Index.cshtml".
+2017-10-11 21:32:52.985 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Index (webviewer)" in 1448.8422ms
+2017-10-11 21:32:52.989 -04:00 [Information] Request finished in 1510.8915ms 200 text/html; charset=utf-8
+2017-10-11 21:32:55.654 -04:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/Home/Result application/x-www-form-urlencoded 319
+2017-10-11 21:32:55.722 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Result (webviewer)" with arguments (["webviewer.Models.SearchParameters"]) - ModelState is Invalid
+2017-10-11 21:32:55.847 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Result.cshtml".
+2017-10-11 21:32:55.996 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Result (webviewer)" in 308.1484ms
+2017-10-11 21:32:55.997 -04:00 [Information] Request finished in 342.5499ms 200 text/html; charset=utf-8
+2017-10-11 21:32:55.999 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2017-10-11 21:32:56.001 -04:00 [Information] Request finished in 1.3804ms 404 
+2017-10-11 21:32:56.003 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.js  
+2017-10-11 21:32:56.003 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/Home/images/pyramid.jpg  
+2017-10-11 21:32:56.003 -04:00 [Information] Request finished in 0.2469ms 404 
+2017-10-11 21:32:56.003 -04:00 [Information] Request finished in 0.4626ms 404 
+2017-10-11 21:32:56.006 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/css/styles.css  
+2017-10-11 21:32:56.008 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 21:32:56.008 -04:00 [Information] Request finished in 0.1592ms 404 
+2017-10-11 21:32:56.008 -04:00 [Information] The file "/css/styles.css" was not modified
+2017-10-11 21:32:56.009 -04:00 [Information] Request finished in 8.7707ms 304 text/css
+2017-10-11 21:32:56.015 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 21:32:56.015 -04:00 [Information] Request finished in 0.2758ms 404 
+2017-10-11 21:33:31.140 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/  
+2017-10-11 21:33:31.140 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Index (webviewer)" with arguments (null) - ModelState is Valid
+2017-10-11 21:33:31.142 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Index.cshtml".
+2017-10-11 21:33:31.143 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Index (webviewer)" in 3.0822ms
+2017-10-11 21:33:31.144 -04:00 [Information] Request finished in 3.595ms 200 text/html; charset=utf-8
+2017-10-11 21:33:35.542 -04:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/Home/Result application/x-www-form-urlencoded 319
+2017-10-11 21:33:35.543 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Result (webviewer)" with arguments (["webviewer.Models.SearchParameters"]) - ModelState is Invalid
+2017-10-11 21:33:35.611 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Result.cshtml".
+2017-10-11 21:33:35.617 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Result (webviewer)" in 74.3466ms
+2017-10-11 21:33:35.618 -04:00 [Information] Request finished in 76.2561ms 200 text/html; charset=utf-8
+2017-10-11 21:33:35.620 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2017-10-11 21:33:35.620 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/css/styles.css  
+2017-10-11 21:33:35.621 -04:00 [Information] Request finished in 0.1762ms 404 
+2017-10-11 21:33:35.621 -04:00 [Information] The file "/css/styles.css" was not modified
+2017-10-11 21:33:35.621 -04:00 [Information] Request finished in 0.3484ms 304 text/css
+2017-10-11 21:33:35.621 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.js  
+2017-10-11 21:33:35.621 -04:00 [Information] Request finished in 0.1071ms 404 
+2017-10-11 21:33:35.622 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 21:33:35.622 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/Home/images/pyramid.jpg  
+2017-10-11 21:33:35.622 -04:00 [Information] Request finished in 0.1035ms 404 
+2017-10-11 21:33:35.622 -04:00 [Information] Request finished in 0.1083ms 404 
+2017-10-11 21:33:35.634 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 21:33:35.634 -04:00 [Information] Request finished in 0.2787ms 404 
+2017-10-11 21:35:14.626 -04:00 [Information] Starting web host
+2017-10-11 21:35:14.827 -04:00 [Information] User profile is available. Using '"/home/geoff/.aspnet/DataProtection-Keys"' as key repository; keys will not be encrypted at rest.
+2017-10-11 21:35:26.252 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/  
+2017-10-11 21:35:26.328 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Index (webviewer)" with arguments (null) - ModelState is Valid
+2017-10-11 21:35:27.750 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Index.cshtml".
+2017-10-11 21:35:27.816 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Index (webviewer)" in 1501.3117ms
+2017-10-11 21:35:27.818 -04:00 [Information] Request finished in 1570.8913ms 200 text/html; charset=utf-8
+2017-10-11 21:35:32.525 -04:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/Home/Result application/x-www-form-urlencoded 319
+2017-10-11 21:35:32.593 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Result (webviewer)" with arguments (["webviewer.Models.SearchParameters"]) - ModelState is Invalid
+2017-10-11 21:35:32.727 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Result.cshtml".
+2017-10-11 21:35:32.886 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Result (webviewer)" in 326.485ms
+2017-10-11 21:35:32.886 -04:00 [Information] Request finished in 361.0232ms 200 text/html; charset=utf-8
+2017-10-11 21:35:32.890 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2017-10-11 21:35:32.890 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/css/styles.css  
+2017-10-11 21:35:32.890 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.js  
+2017-10-11 21:35:32.891 -04:00 [Information] Request finished in 0.6343ms 404 
+2017-10-11 21:35:32.891 -04:00 [Information] Request finished in 1.3003ms 404 
+2017-10-11 21:35:32.894 -04:00 [Information] The file "/css/styles.css" was not modified
+2017-10-11 21:35:32.895 -04:00 [Information] Request finished in 4.7301ms 304 text/css
+2017-10-11 21:35:32.899 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 21:35:32.899 -04:00 [Information] Request finished in 0.2169ms 404 
+2017-10-11 21:35:32.904 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/Home/images/pyramid.jpg  
+2017-10-11 21:35:32.905 -04:00 [Information] Request finished in 0.5929ms 404 
+2017-10-11 21:41:23.147 -04:00 [Information] Starting web host
+2017-10-11 21:41:23.333 -04:00 [Information] User profile is available. Using '"/home/geoff/.aspnet/DataProtection-Keys"' as key repository; keys will not be encrypted at rest.
+2017-10-11 21:41:36.971 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/  
+2017-10-11 21:41:37.048 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Index (webviewer)" with arguments (null) - ModelState is Valid
+2017-10-11 21:41:38.438 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Index.cshtml".
+2017-10-11 21:41:38.510 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Index (webviewer)" in 1464.9688ms
+2017-10-11 21:41:38.513 -04:00 [Information] Request finished in 1545.6984ms 200 text/html; charset=utf-8
+2017-10-11 21:41:42.283 -04:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/Home/Result application/x-www-form-urlencoded 319
+2017-10-11 21:41:42.360 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Result (webviewer)" with arguments (["webviewer.Models.SearchParameters"]) - ModelState is Invalid
+2017-10-11 21:41:42.456 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Result.cshtml".
+2017-10-11 21:41:42.650 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Result (webviewer)" in 329.3324ms
+2017-10-11 21:41:42.651 -04:00 [Information] Request finished in 368.007ms 200 text/html; charset=utf-8
+2017-10-11 21:41:42.653 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2017-10-11 21:41:42.654 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.js  
+2017-10-11 21:41:42.655 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/css/styles.css  
+2017-10-11 21:41:42.655 -04:00 [Information] Request finished in 1.476ms 404 
+2017-10-11 21:41:42.657 -04:00 [Information] The file "/css/styles.css" was not modified
+2017-10-11 21:41:42.658 -04:00 [Information] Request finished in 3.2899ms 304 text/css
+2017-10-11 21:41:42.658 -04:00 [Information] Request finished in 0.3311ms 404 
+2017-10-11 21:41:42.658 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 21:41:42.658 -04:00 [Information] Request finished in 0.1605ms 404 
+2017-10-11 21:41:42.661 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/Home/images/pyramid.jpg  
+2017-10-11 21:41:42.662 -04:00 [Information] Request finished in 0.6315ms 404 
+2017-10-11 21:41:42.669 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 21:41:42.669 -04:00 [Information] Request finished in 0.2188ms 404 
+2017-10-11 21:41:51.144 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/  
+2017-10-11 21:41:51.145 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Index (webviewer)" with arguments (null) - ModelState is Valid
+2017-10-11 21:41:51.146 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Index.cshtml".
+2017-10-11 21:41:51.148 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Index (webviewer)" in 3.3474ms
+2017-10-11 21:41:51.148 -04:00 [Information] Request finished in 3.7077ms 200 text/html; charset=utf-8
+2017-10-11 21:42:59.419 -04:00 [Information] Starting web host
+2017-10-11 21:42:59.686 -04:00 [Information] User profile is available. Using '"/home/geoff/.aspnet/DataProtection-Keys"' as key repository; keys will not be encrypted at rest.
+2017-10-11 21:43:14.675 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/  
+2017-10-11 21:43:14.770 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Index (webviewer)" with arguments (null) - ModelState is Valid
+2017-10-11 21:43:16.807 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Index.cshtml".
+2017-10-11 21:43:17.068 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Index (webviewer)" in 2323.6519ms
+2017-10-11 21:43:17.072 -04:00 [Information] Request finished in 2400.178ms 200 text/html; charset=utf-8
+2017-10-11 21:43:17.079 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/css/styles.css  
+2017-10-11 21:43:17.083 -04:00 [Information] The file "/css/styles.css" was not modified
+2017-10-11 21:43:17.084 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2017-10-11 21:43:17.086 -04:00 [Information] Request finished in 1.1416ms 404 
+2017-10-11 21:43:17.086 -04:00 [Information] Request finished in 6.6621ms 304 text/css
+2017-10-11 21:43:17.091 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.js  
+2017-10-11 21:43:17.091 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 21:43:17.092 -04:00 [Information] Request finished in 0.3627ms 404 
+2017-10-11 21:43:17.092 -04:00 [Information] Request finished in 0.2655ms 404 
+2017-10-11 21:43:17.131 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 21:43:17.132 -04:00 [Information] Request finished in 0.4217ms 404 
+2017-10-11 21:43:26.730 -04:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/Home/Result application/x-www-form-urlencoded 319
+2017-10-11 21:43:26.807 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Result (webviewer)" with arguments (["webviewer.Models.SearchParameters"]) - ModelState is Invalid
+2017-10-11 21:43:26.896 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Result.cshtml".
+2017-10-11 21:43:26.904 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Result (webviewer)" in 136.9378ms
+2017-10-11 21:43:26.905 -04:00 [Information] Request finished in 174.8734ms 200 text/html; charset=utf-8
+2017-10-11 21:43:26.911 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2017-10-11 21:43:26.911 -04:00 [Information] Request finished in 0.2309ms 404 
+2017-10-11 21:43:26.911 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.js  
+2017-10-11 21:43:26.912 -04:00 [Information] Request finished in 0.1163ms 404 
+2017-10-11 21:43:26.913 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 21:43:26.913 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/Home/images/pyramid.jpg  
+2017-10-11 21:43:26.913 -04:00 [Information] Request finished in 0.1706ms 404 
+2017-10-11 21:43:26.913 -04:00 [Information] Request finished in 0.4656ms 404 
+2017-10-11 21:43:26.915 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 21:43:26.915 -04:00 [Information] Request finished in 0.2288ms 404 
+2017-10-11 21:43:31.519 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/  
+2017-10-11 21:43:31.519 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Index (webviewer)" with arguments (null) - ModelState is Valid
+2017-10-11 21:43:31.521 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Index.cshtml".
+2017-10-11 21:43:31.523 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Index (webviewer)" in 3.815ms
+2017-10-11 21:43:31.523 -04:00 [Information] Request finished in 4.2702ms 200 text/html; charset=utf-8
+2017-10-11 21:45:00.031 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/  
+2017-10-11 21:45:00.032 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Index (webviewer)" with arguments (null) - ModelState is Valid
+2017-10-11 21:45:00.033 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Index.cshtml".
+2017-10-11 21:45:00.034 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Index (webviewer)" in 2.9566ms
+2017-10-11 21:45:00.034 -04:00 [Information] Request finished in 3.3028ms 200 text/html; charset=utf-8
+2017-10-11 21:45:00.043 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2017-10-11 21:45:00.043 -04:00 [Information] Request finished in 0.207ms 404 
+2017-10-11 21:45:00.044 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/css/styles.css  
+2017-10-11 21:45:00.044 -04:00 [Information] The file "/css/styles.css" was not modified
+2017-10-11 21:45:00.044 -04:00 [Information] Request finished in 0.5425ms 304 text/css
+2017-10-11 21:45:00.047 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.js  
+2017-10-11 21:45:00.047 -04:00 [Information] Request finished in 0.2045ms 404 
+2017-10-11 21:45:00.057 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 21:45:00.058 -04:00 [Information] Request finished in 0.2808ms 404 
+2017-10-11 21:45:00.074 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 21:45:00.074 -04:00 [Information] Request finished in 0.2553ms 404 
+2017-10-11 21:45:03.572 -04:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/Home/Result application/x-www-form-urlencoded 319
+2017-10-11 21:45:03.573 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Result (webviewer)" with arguments (["webviewer.Models.SearchParameters"]) - ModelState is Invalid
+2017-10-11 21:45:03.584 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Result.cshtml".
+2017-10-11 21:45:03.585 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Result (webviewer)" in 12.4552ms
+2017-10-11 21:45:03.585 -04:00 [Information] Request finished in 12.8525ms 200 text/html; charset=utf-8
+2017-10-11 21:45:03.592 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2017-10-11 21:45:03.592 -04:00 [Information] Request finished in 0.2372ms 404 
+2017-10-11 21:45:03.593 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.js  
+2017-10-11 21:45:03.593 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 21:45:03.593 -04:00 [Information] Request finished in 0.1049ms 404 
+2017-10-11 21:45:03.593 -04:00 [Information] Request finished in 0.1597ms 404 
+2017-10-11 21:45:03.594 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/Home/images/pyramid.jpg  
+2017-10-11 21:45:03.594 -04:00 [Information] Request finished in 0.135ms 404 
+2017-10-11 21:45:03.595 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 21:45:03.596 -04:00 [Information] Request finished in 0.1454ms 404 
+2017-10-11 21:45:32.845 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/Home/images/pyramid.jpg  
+2017-10-11 21:45:32.845 -04:00 [Information] Request finished in 0.1818ms 404 
+2017-10-11 21:45:47.077 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/  
+2017-10-11 21:45:47.078 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Index (webviewer)" with arguments (null) - ModelState is Valid
+2017-10-11 21:45:47.079 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Index.cshtml".
+2017-10-11 21:45:47.080 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Index (webviewer)" in 2.323ms
+2017-10-11 21:45:47.080 -04:00 [Information] Request finished in 2.7084ms 200 text/html; charset=utf-8
+2017-10-11 21:45:51.934 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/  
+2017-10-11 21:45:51.934 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Index (webviewer)" with arguments (null) - ModelState is Valid
+2017-10-11 21:45:51.935 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Index.cshtml".
+2017-10-11 21:45:51.936 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Index (webviewer)" in 1.962ms
+2017-10-11 21:45:51.936 -04:00 [Information] Request finished in 2.2007ms 200 text/html; charset=utf-8
+2017-10-11 21:47:22.712 -04:00 [Information] Starting web host
+2017-10-11 21:47:22.909 -04:00 [Information] User profile is available. Using '"/home/geoff/.aspnet/DataProtection-Keys"' as key repository; keys will not be encrypted at rest.
+2017-10-11 21:47:34.302 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/  
+2017-10-11 21:47:34.373 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Index (webviewer)" with arguments (null) - ModelState is Valid
+2017-10-11 21:47:35.764 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Index.cshtml".
+2017-10-11 21:47:36.008 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Index (webviewer)" in 1648.3764ms
+2017-10-11 21:47:36.009 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/css/styles.css  
+2017-10-11 21:47:36.009 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2017-10-11 21:47:36.011 -04:00 [Information] Request finished in 1.266ms 404 
+2017-10-11 21:47:36.023 -04:00 [Information] The file "/css/styles.css" was not modified
+2017-10-11 21:47:36.024 -04:00 [Information] Request finished in 1725.5058ms 200 text/html; charset=utf-8
+2017-10-11 21:47:36.028 -04:00 [Information] Request finished in 19.3547ms 304 text/css
+2017-10-11 21:47:36.034 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.js  
+2017-10-11 21:47:36.034 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 21:47:36.034 -04:00 [Information] Request finished in 0.2307ms 404 
+2017-10-11 21:47:36.034 -04:00 [Information] Request finished in 0.2811ms 404 
+2017-10-11 21:47:36.035 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/~/images/pyramid.jpg  
+2017-10-11 21:47:36.036 -04:00 [Information] Request finished in 0.5597ms 404 
+2017-10-11 21:47:42.512 -04:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/Home/Result application/x-www-form-urlencoded 319
+2017-10-11 21:47:42.578 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Result (webviewer)" with arguments (["webviewer.Models.SearchParameters"]) - ModelState is Invalid
+2017-10-11 21:47:42.642 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Result.cshtml".
+2017-10-11 21:47:42.649 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Result (webviewer)" in 105.342ms
+2017-10-11 21:47:42.649 -04:00 [Information] Request finished in 137.2087ms 200 text/html; charset=utf-8
+2017-10-11 21:47:42.655 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2017-10-11 21:47:42.655 -04:00 [Information] Request finished in 0.1907ms 404 
+2017-10-11 21:47:42.657 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.js  
+2017-10-11 21:47:42.657 -04:00 [Information] Request finished in 0.1753ms 404 
+2017-10-11 21:47:42.658 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/Home/~/images/pyramid.jpg  
+2017-10-11 21:47:42.658 -04:00 [Information] Request finished in 0.1072ms 404 
+2017-10-11 21:47:42.658 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 21:47:42.658 -04:00 [Information] Request finished in 0.0836ms 404 
+2017-10-11 21:48:11.615 -04:00 [Information] Starting web host
+2017-10-11 21:48:11.815 -04:00 [Information] User profile is available. Using '"/home/geoff/.aspnet/DataProtection-Keys"' as key repository; keys will not be encrypted at rest.
+2017-10-11 21:48:28.410 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/  
+2017-10-11 21:48:28.494 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Index (webviewer)" with arguments (null) - ModelState is Valid
+2017-10-11 21:48:29.964 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Index.cshtml".
+2017-10-11 21:48:30.203 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Index (webviewer)" in 1727.3685ms
+2017-10-11 21:48:30.206 -04:00 [Information] Request finished in 1799.0675ms 200 text/html; charset=utf-8
+2017-10-11 21:48:30.210 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2017-10-11 21:48:30.210 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.js  
+2017-10-11 21:48:30.211 -04:00 [Information] Request finished in 0.7084ms 404 
+2017-10-11 21:48:30.211 -04:00 [Information] Request finished in 1.4525ms 404 
+2017-10-11 21:48:30.213 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/wwwroot/images/pyramid.jpg  
+2017-10-11 21:48:30.213 -04:00 [Information] Request finished in 0.6376ms 404 
+2017-10-11 21:48:30.213 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 21:48:30.214 -04:00 [Information] Request finished in 0.1869ms 404 
+2017-10-11 21:48:30.231 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 21:48:30.231 -04:00 [Information] Request finished in 0.2111ms 404 
+2017-10-11 21:48:36.075 -04:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/Home/Result application/x-www-form-urlencoded 319
+2017-10-11 21:48:36.146 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Result (webviewer)" with arguments (["webviewer.Models.SearchParameters"]) - ModelState is Invalid
+2017-10-11 21:48:36.211 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Result.cshtml".
+2017-10-11 21:48:36.215 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Result (webviewer)" in 106.5609ms
+2017-10-11 21:48:36.216 -04:00 [Information] Request finished in 140.8772ms 200 text/html; charset=utf-8
+2017-10-11 21:48:36.223 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2017-10-11 21:48:36.223 -04:00 [Information] Request finished in 0.2221ms 404 
+2017-10-11 21:48:36.224 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/wwwroot/images/pyramid.jpg  
+2017-10-11 21:48:36.224 -04:00 [Information] Request finished in 0.1792ms 404 
+2017-10-11 21:48:36.225 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.js  
+2017-10-11 21:48:36.225 -04:00 [Information] Request finished in 0.1474ms 404 
+2017-10-11 21:48:36.227 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 21:48:36.227 -04:00 [Information] Request finished in 0.1647ms 404 
+2017-10-11 21:48:36.230 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.js  
+2017-10-11 21:48:36.230 -04:00 [Information] Request finished in 0.1825ms 404 
+2017-10-11 21:48:36.233 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 21:48:36.233 -04:00 [Information] Request finished in 0.2072ms 404 
+2017-10-11 21:48:59.440 -04:00 [Information] Starting web host
+2017-10-11 21:48:59.625 -04:00 [Information] User profile is available. Using '"/home/geoff/.aspnet/DataProtection-Keys"' as key repository; keys will not be encrypted at rest.
+2017-10-11 21:49:10.988 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/  
+2017-10-11 21:49:11.087 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Index (webviewer)" with arguments (null) - ModelState is Valid
+2017-10-11 21:49:12.464 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Index.cshtml".
+2017-10-11 21:49:12.706 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Index (webviewer)" in 1636.0287ms
+2017-10-11 21:49:12.709 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2017-10-11 21:49:12.710 -04:00 [Information] Request finished in 1.0213ms 404 
+2017-10-11 21:49:12.710 -04:00 [Information] Request finished in 1725.9023ms 200 text/html; charset=utf-8
+2017-10-11 21:49:12.719 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.js  
+2017-10-11 21:49:12.719 -04:00 [Information] Request finished in 0.2954ms 404 
+2017-10-11 21:49:12.719 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 21:49:12.719 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/wwwroot/images/pyramid.jpg  
+2017-10-11 21:49:12.719 -04:00 [Information] Request finished in 0.13ms 404 
+2017-10-11 21:49:12.720 -04:00 [Information] Request finished in 0.6109ms 404 
+2017-10-11 21:49:18.555 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/  
+2017-10-11 21:49:18.555 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Index (webviewer)" with arguments (null) - ModelState is Valid
+2017-10-11 21:49:18.557 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Index.cshtml".
+2017-10-11 21:49:18.561 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Index (webviewer)" in 6.0688ms
+2017-10-11 21:49:18.561 -04:00 [Information] Request finished in 6.5778ms 200 text/html; charset=utf-8
+2017-10-11 21:49:20.713 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/wwwroot/images/pyramid.jpg  
+2017-10-11 21:49:20.713 -04:00 [Information] Request finished in 0.2281ms 404 
+2017-10-11 21:49:51.782 -04:00 [Information] Starting web host
+2017-10-11 21:49:51.979 -04:00 [Information] User profile is available. Using '"/home/geoff/.aspnet/DataProtection-Keys"' as key repository; keys will not be encrypted at rest.
+2017-10-11 21:49:58.933 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/  
+2017-10-11 21:49:59.006 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Index (webviewer)" with arguments (null) - ModelState is Valid
+2017-10-11 21:50:00.460 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Index.cshtml".
+2017-10-11 21:50:00.740 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2017-10-11 21:50:00.740 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.js  
+2017-10-11 21:50:00.742 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/css/styles.css  
+2017-10-11 21:50:00.742 -04:00 [Information] Request finished in 1.4161ms 404 
+2017-10-11 21:50:00.743 -04:00 [Information] Request finished in 2.2002ms 404 
+2017-10-11 21:50:00.744 -04:00 [Information] The file "/css/styles.css" was not modified
+2017-10-11 21:50:00.745 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Index (webviewer)" in 1745.155ms
+2017-10-11 21:50:00.746 -04:00 [Information] Request finished in 4.0649ms 304 text/css
+2017-10-11 21:50:00.747 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/~/wwwroot/images/pyramid.jpg  
+2017-10-11 21:50:00.747 -04:00 [Information] Request finished in 0.1427ms 404 
+2017-10-11 21:50:00.747 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 21:50:00.747 -04:00 [Information] Request finished in 0.1062ms 404 
+2017-10-11 21:50:00.748 -04:00 [Information] Request finished in 1818.3112ms 200 text/html; charset=utf-8
+2017-10-11 21:50:00.762 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 21:50:00.762 -04:00 [Information] Request finished in 0.2516ms 404 
+2017-10-11 21:50:04.000 -04:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/Home/Result application/x-www-form-urlencoded 319
+2017-10-11 21:50:04.069 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Result (webviewer)" with arguments (["webviewer.Models.SearchParameters"]) - ModelState is Invalid
+2017-10-11 21:50:04.130 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Result.cshtml".
+2017-10-11 21:50:04.135 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Result (webviewer)" in 104.7088ms
+2017-10-11 21:50:04.136 -04:00 [Information] Request finished in 136.227ms 200 text/html; charset=utf-8
+2017-10-11 21:50:04.142 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2017-10-11 21:50:04.142 -04:00 [Information] Request finished in 0.2143ms 404 
+2017-10-11 21:50:04.144 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/Home/~/wwwroot/images/pyramid.jpg  
+2017-10-11 21:50:04.144 -04:00 [Information] Request finished in 0.2098ms 404 
+2017-10-11 21:50:04.144 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.js  
+2017-10-11 21:50:04.145 -04:00 [Information] Request finished in 0.1833ms 404 
+2017-10-11 21:50:04.146 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 21:50:04.146 -04:00 [Information] Request finished in 0.2877ms 404 
+2017-10-11 21:50:24.209 -04:00 [Information] Starting web host
+2017-10-11 21:50:24.394 -04:00 [Information] User profile is available. Using '"/home/geoff/.aspnet/DataProtection-Keys"' as key repository; keys will not be encrypted at rest.
+2017-10-11 21:50:30.968 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/  
+2017-10-11 21:50:31.038 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Index (webviewer)" with arguments (null) - ModelState is Valid
+2017-10-11 21:50:32.505 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Index.cshtml".
+2017-10-11 21:50:32.754 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Index (webviewer)" in 1730.0318ms
+2017-10-11 21:50:32.755 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2017-10-11 21:50:32.757 -04:00 [Information] Request finished in 1.5239ms 404 
+2017-10-11 21:50:32.760 -04:00 [Information] Request finished in 1792.1562ms 200 text/html; charset=utf-8
+2017-10-11 21:50:32.770 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 21:50:32.770 -04:00 [Information] Request finished in 0.278ms 404 
+2017-10-11 21:50:32.770 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.js  
+2017-10-11 21:50:32.771 -04:00 [Information] Request finished in 0.7189ms 404 
+2017-10-11 21:50:32.784 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 21:50:32.784 -04:00 [Information] Request finished in 0.2947ms 404 
+2017-10-11 21:50:36.167 -04:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/Home/Result application/x-www-form-urlencoded 319
+2017-10-11 21:50:36.231 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Result (webviewer)" with arguments (["webviewer.Models.SearchParameters"]) - ModelState is Invalid
+2017-10-11 21:50:36.296 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Result.cshtml".
+2017-10-11 21:50:36.305 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Result (webviewer)" in 107.5041ms
+2017-10-11 21:50:36.306 -04:00 [Information] Request finished in 138.8781ms 200 text/html; charset=utf-8
+2017-10-11 21:50:36.312 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2017-10-11 21:50:36.312 -04:00 [Information] Request finished in 0.3453ms 404 
+2017-10-11 21:50:36.314 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.js  
+2017-10-11 21:50:36.314 -04:00 [Information] Request finished in 0.1932ms 404 
+2017-10-11 21:50:36.315 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 21:50:36.315 -04:00 [Information] Request finished in 0.1897ms 404 
+2017-10-11 21:50:50.052 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/  
+2017-10-11 21:50:50.052 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Index (webviewer)" with arguments (null) - ModelState is Valid
+2017-10-11 21:50:50.054 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Index.cshtml".
+2017-10-11 21:50:50.056 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Index (webviewer)" in 3.711ms
+2017-10-11 21:50:50.056 -04:00 [Information] Request finished in 4.5537ms 200 text/html; charset=utf-8
+2017-10-11 21:52:43.509 -04:00 [Information] Starting web host
+2017-10-11 21:52:43.694 -04:00 [Information] User profile is available. Using '"/home/geoff/.aspnet/DataProtection-Keys"' as key repository; keys will not be encrypted at rest.
+2017-10-11 21:52:54.471 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/  
+2017-10-11 21:52:54.540 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Index (webviewer)" with arguments (null) - ModelState is Valid
+2017-10-11 21:52:55.839 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Index.cshtml".
+2017-10-11 21:52:56.112 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2017-10-11 21:52:56.112 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.js  
+2017-10-11 21:52:56.113 -04:00 [Information] Request finished in 1.2747ms 404 
+2017-10-11 21:52:56.114 -04:00 [Information] Request finished in 1.2653ms 404 
+2017-10-11 21:52:56.114 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/css/styles.css  
+2017-10-11 21:52:56.128 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Index (webviewer)" in 1583.2601ms
+2017-10-11 21:52:56.129 -04:00 [Information] Sending file. Request path: '"/css/styles.css"'. Physical path: '"/home/geoff/Wercs/WebViewer/Wercs.DTE.WebViewerCore/wwwroot/css/styles.css"'
+2017-10-11 21:52:56.131 -04:00 [Information] Request finished in 1664.0214ms 200 text/html; charset=utf-8
+2017-10-11 21:52:56.132 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 21:52:56.132 -04:00 [Information] Request finished in 0.1823ms 404 
+2017-10-11 21:52:56.134 -04:00 [Information] Request finished in 19.3153ms 200 text/css
+2017-10-11 21:52:56.150 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 21:52:56.150 -04:00 [Information] Request finished in 0.211ms 404 
+2017-10-11 21:52:59.125 -04:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/Home/Result application/x-www-form-urlencoded 319
+2017-10-11 21:52:59.191 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Result (webviewer)" with arguments (["webviewer.Models.SearchParameters"]) - ModelState is Invalid
+2017-10-11 21:52:59.281 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Result.cshtml".
+2017-10-11 21:52:59.286 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Result (webviewer)" in 129.3117ms
+2017-10-11 21:52:59.286 -04:00 [Information] Request finished in 160.9895ms 200 text/html; charset=utf-8
+2017-10-11 21:52:59.293 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2017-10-11 21:52:59.293 -04:00 [Information] Request finished in 0.2676ms 404 
+2017-10-11 21:52:59.294 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/css/styles.css  
+2017-10-11 21:52:59.294 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.js  
+2017-10-11 21:52:59.294 -04:00 [Information] Request finished in 0.2611ms 404 
+2017-10-11 21:52:59.294 -04:00 [Information] The file "/css/styles.css" was not modified
+2017-10-11 21:52:59.295 -04:00 [Information] Request finished in 1.2326ms 304 text/css
+2017-10-11 21:52:59.295 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 21:52:59.295 -04:00 [Information] Request finished in 0.1228ms 404 
+2017-10-11 21:52:59.301 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 21:52:59.301 -04:00 [Information] Request finished in 0.193ms 404 
+2017-10-11 21:53:09.125 -04:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/Home/Result application/x-www-form-urlencoded 319
+2017-10-11 21:53:09.126 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Result (webviewer)" with arguments (["webviewer.Models.SearchParameters"]) - ModelState is Invalid
+2017-10-11 21:53:09.131 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Result.cshtml".
+2017-10-11 21:53:09.132 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Result (webviewer)" in 6.7181ms
+2017-10-11 21:53:09.132 -04:00 [Information] Request finished in 7.1378ms 200 text/html; charset=utf-8
+2017-10-11 21:53:09.141 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2017-10-11 21:53:09.141 -04:00 [Information] Request finished in 0.1934ms 404 
+2017-10-11 21:53:09.141 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/css/styles.css  
+2017-10-11 21:53:09.141 -04:00 [Information] The file "/css/styles.css" was not modified
+2017-10-11 21:53:09.141 -04:00 [Information] Request finished in 0.2423ms 304 text/css
+2017-10-11 21:53:09.143 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.js  
+2017-10-11 21:53:09.143 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 21:53:09.143 -04:00 [Information] Request finished in 0.1387ms 404 
+2017-10-11 21:53:09.143 -04:00 [Information] Request finished in 0.1894ms 404 
+2017-10-11 21:53:09.145 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 21:53:09.145 -04:00 [Information] Request finished in 0.1806ms 404 
+2017-10-11 21:53:09.160 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/favicon.ico  
+2017-10-11 21:53:09.160 -04:00 [Information] Sending file. Request path: '"/favicon.ico"'. Physical path: '"/home/geoff/Wercs/WebViewer/Wercs.DTE.WebViewerCore/wwwroot/favicon.ico"'
+2017-10-11 21:53:09.161 -04:00 [Information] Request finished in 0.4644ms 200 image/x-icon
+2017-10-11 21:53:23.700 -04:00 [Information] Starting web host
+2017-10-11 21:53:23.957 -04:00 [Information] User profile is available. Using '"/home/geoff/.aspnet/DataProtection-Keys"' as key repository; keys will not be encrypted at rest.
+2017-10-11 21:54:15.815 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/  
+2017-10-11 21:54:15.888 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Index (webviewer)" with arguments (null) - ModelState is Valid
+2017-10-11 21:54:17.244 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Index.cshtml".
+2017-10-11 21:54:17.537 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Index (webviewer)" in 1664.217ms
+2017-10-11 21:54:17.540 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/css/styles.css  
+2017-10-11 21:54:17.542 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2017-10-11 21:54:17.544 -04:00 [Information] The file "/css/styles.css" was not modified
+2017-10-11 21:54:17.545 -04:00 [Information] Request finished in 1733.0648ms 200 text/html; charset=utf-8
+2017-10-11 21:54:17.546 -04:00 [Information] Request finished in 4.5037ms 404 
+2017-10-11 21:54:17.548 -04:00 [Information] Request finished in 8.0019ms 304 text/css
+2017-10-11 21:54:17.550 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.js  
+2017-10-11 21:54:17.550 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/images/pyramid.jpg  
+2017-10-11 21:54:17.550 -04:00 [Information] Request finished in 0.4404ms 404 
+2017-10-11 21:54:17.550 -04:00 [Information] The file "/images/pyramid.jpg" was not modified
+2017-10-11 21:54:17.550 -04:00 [Information] Request finished in 0.7799ms 304 image/jpeg
+2017-10-11 21:54:17.550 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 21:54:17.552 -04:00 [Information] Request finished in 2.1965ms 404 
+2017-10-11 21:54:21.228 -04:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/Home/Result application/x-www-form-urlencoded 319
+2017-10-11 21:54:21.292 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Result (webviewer)" with arguments (["webviewer.Models.SearchParameters"]) - ModelState is Invalid
+2017-10-11 21:54:21.358 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Result.cshtml".
+2017-10-11 21:54:21.362 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Result (webviewer)" in 102.839ms
+2017-10-11 21:54:21.363 -04:00 [Information] Request finished in 135.0044ms 200 text/html; charset=utf-8
+2017-10-11 21:54:21.370 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2017-10-11 21:54:21.370 -04:00 [Information] Request finished in 0.2011ms 404 
+2017-10-11 21:54:21.371 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 21:54:21.371 -04:00 [Information] Request finished in 0.1253ms 404 
+2017-10-11 21:54:21.372 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.js  
+2017-10-11 21:54:21.373 -04:00 [Information] Request finished in 0.2942ms 404 
+2017-10-11 21:54:21.376 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 21:54:21.376 -04:00 [Information] Request finished in 0.2493ms 404 
+2017-10-11 21:54:54.983 -04:00 [Information] Starting web host
+2017-10-11 21:54:55.220 -04:00 [Information] User profile is available. Using '"/home/geoff/.aspnet/DataProtection-Keys"' as key repository; keys will not be encrypted at rest.
+2017-10-11 21:54:58.655 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/  
+2017-10-11 21:54:58.727 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Index (webviewer)" with arguments (null) - ModelState is Valid
+2017-10-11 21:55:00.026 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Index.cshtml".
+2017-10-11 21:55:00.353 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Index (webviewer)" in 1641.1783ms
+2017-10-11 21:55:00.354 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2017-10-11 21:55:00.355 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/css/styles.css  
+2017-10-11 21:55:00.355 -04:00 [Information] Request finished in 1.1156ms 404 
+2017-10-11 21:55:00.356 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.js  
+2017-10-11 21:55:00.356 -04:00 [Information] Request finished in 0.2667ms 404 
+2017-10-11 21:55:00.359 -04:00 [Information] Request finished in 1707.474ms 200 text/html; charset=utf-8
+2017-10-11 21:55:00.359 -04:00 [Information] Sending file. Request path: '"/css/styles.css"'. Physical path: '"/home/geoff/Wercs/WebViewer/Wercs.DTE.WebViewerCore/wwwroot/css/styles.css"'
+2017-10-11 21:55:00.365 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 21:55:00.365 -04:00 [Information] Request finished in 0.5393ms 404 
+2017-10-11 21:55:00.367 -04:00 [Information] Request finished in 12.8102ms 200 text/css
+2017-10-11 21:55:00.386 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 21:55:00.387 -04:00 [Information] Request finished in 0.2164ms 404 
+2017-10-11 21:55:03.957 -04:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/Home/Result application/x-www-form-urlencoded 319
+2017-10-11 21:55:04.042 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Result (webviewer)" with arguments (["webviewer.Models.SearchParameters"]) - ModelState is Invalid
+2017-10-11 21:55:04.142 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Result.cshtml".
+2017-10-11 21:55:04.148 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Result (webviewer)" in 148.7104ms
+2017-10-11 21:55:04.149 -04:00 [Information] Request finished in 191.6615ms 200 text/html; charset=utf-8
+2017-10-11 21:55:04.153 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2017-10-11 21:55:04.154 -04:00 [Information] Request finished in 0.3387ms 404 
+2017-10-11 21:55:04.154 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.js  
+2017-10-11 21:55:04.155 -04:00 [Information] Request finished in 0.1258ms 404 
+2017-10-11 21:55:04.154 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/css/styles.css  
+2017-10-11 21:55:04.155 -04:00 [Information] The file "/css/styles.css" was not modified
+2017-10-11 21:55:04.155 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 21:55:04.155 -04:00 [Information] Request finished in 0.123ms 404 
+2017-10-11 21:55:04.156 -04:00 [Information] Request finished in 1.7549ms 304 text/css
+2017-10-11 21:55:04.160 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 21:55:04.160 -04:00 [Information] Request finished in 0.1951ms 404 
+2017-10-11 21:56:49.571 -04:00 [Information] Starting web host
+2017-10-11 21:56:49.753 -04:00 [Information] User profile is available. Using '"/home/geoff/.aspnet/DataProtection-Keys"' as key repository; keys will not be encrypted at rest.
+2017-10-11 21:56:56.545 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/  
+2017-10-11 21:56:56.619 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Index (webviewer)" with arguments (null) - ModelState is Valid
+2017-10-11 21:56:58.034 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Index.cshtml".
+2017-10-11 21:56:58.255 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Index (webviewer)" in 1650.163ms
+2017-10-11 21:56:58.257 -04:00 [Information] Request finished in 1715.1573ms 200 text/html; charset=utf-8
+2017-10-11 21:56:58.260 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2017-10-11 21:56:58.261 -04:00 [Information] Request finished in 1.1589ms 404 
+2017-10-11 21:56:58.261 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.js  
+2017-10-11 21:56:58.262 -04:00 [Information] Request finished in 0.1252ms 404 
+2017-10-11 21:56:58.264 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/css/styles.css  
+2017-10-11 21:56:58.267 -04:00 [Information] Sending file. Request path: '"/css/styles.css"'. Physical path: '"/home/geoff/Wercs/WebViewer/Wercs.DTE.WebViewerCore/wwwroot/css/styles.css"'
+2017-10-11 21:56:58.270 -04:00 [Information] Request finished in 5.3002ms 200 text/css
+2017-10-11 21:56:58.270 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 21:56:58.270 -04:00 [Information] Request finished in 0.1187ms 404 
+2017-10-11 21:56:58.289 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 21:56:58.289 -04:00 [Information] Request finished in 0.2043ms 404 
+2017-10-11 21:57:01.098 -04:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/Home/Result application/x-www-form-urlencoded 319
+2017-10-11 21:57:01.166 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Result (webviewer)" with arguments (["webviewer.Models.SearchParameters"]) - ModelState is Invalid
+2017-10-11 21:57:01.230 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Result.cshtml".
+2017-10-11 21:57:01.236 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Result (webviewer)" in 106.1847ms
+2017-10-11 21:57:01.237 -04:00 [Information] Request finished in 139.1537ms 200 text/html; charset=utf-8
+2017-10-11 21:57:01.242 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/css/styles.css  
+2017-10-11 21:57:01.242 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2017-10-11 21:57:01.243 -04:00 [Information] Request finished in 0.479ms 404 
+2017-10-11 21:57:01.243 -04:00 [Information] The file "/css/styles.css" was not modified
+2017-10-11 21:57:01.243 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.js  
+2017-10-11 21:57:01.243 -04:00 [Information] Request finished in 0.1414ms 404 
+2017-10-11 21:57:01.244 -04:00 [Information] Request finished in 1.7404ms 304 text/css
+2017-10-11 21:57:01.245 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 21:57:01.245 -04:00 [Information] Request finished in 0.1966ms 404 
+2017-10-11 21:57:01.247 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 21:57:01.247 -04:00 [Information] Request finished in 0.2122ms 404 
+2017-10-11 21:57:51.669 -04:00 [Information] Starting web host
+2017-10-11 21:57:51.861 -04:00 [Information] User profile is available. Using '"/home/geoff/.aspnet/DataProtection-Keys"' as key repository; keys will not be encrypted at rest.
+2017-10-11 21:57:58.281 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/  
+2017-10-11 21:57:58.357 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Index (webviewer)" with arguments (null) - ModelState is Valid
+2017-10-11 21:57:59.709 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Index.cshtml".
+2017-10-11 21:58:00.007 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2017-10-11 21:58:00.007 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/css/styles.css  
+2017-10-11 21:58:00.007 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Index (webviewer)" in 1664.7666ms
+2017-10-11 21:58:00.008 -04:00 [Information] Request finished in 1.1942ms 404 
+2017-10-11 21:58:00.011 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.js  
+2017-10-11 21:58:00.012 -04:00 [Information] Request finished in 0.2785ms 404 
+2017-10-11 21:58:00.012 -04:00 [Information] The file "/css/styles.css" was not modified
+2017-10-11 21:58:00.013 -04:00 [Information] Request finished in 6.2051ms 304 text/css
+2017-10-11 21:58:00.014 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 21:58:00.014 -04:00 [Information] Request finished in 0.2038ms 404 
+2017-10-11 21:58:00.015 -04:00 [Information] Request finished in 1736.9092ms 200 text/html; charset=utf-8
+2017-10-11 21:58:00.046 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 21:58:00.047 -04:00 [Information] Request finished in 0.2318ms 404 
+2017-10-11 21:58:04.604 -04:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/Home/Result application/x-www-form-urlencoded 319
+2017-10-11 21:58:04.671 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Result (webviewer)" with arguments (["webviewer.Models.SearchParameters"]) - ModelState is Invalid
+2017-10-11 21:58:04.765 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Result.cshtml".
+2017-10-11 21:58:04.772 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Result (webviewer)" in 137.3516ms
+2017-10-11 21:58:04.773 -04:00 [Information] Request finished in 169.2657ms 200 text/html; charset=utf-8
+2017-10-11 21:58:04.778 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.js  
+2017-10-11 21:58:04.778 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2017-10-11 21:58:04.778 -04:00 [Information] Request finished in 0.1484ms 404 
+2017-10-11 21:58:04.778 -04:00 [Information] Request finished in 0.2428ms 404 
+2017-10-11 21:58:04.779 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 21:58:04.779 -04:00 [Information] Request finished in 0.1084ms 404 
+2017-10-11 21:59:50.187 -04:00 [Information] Starting web host
+2017-10-11 21:59:50.375 -04:00 [Information] User profile is available. Using '"/home/geoff/.aspnet/DataProtection-Keys"' as key repository; keys will not be encrypted at rest.
+2017-10-11 22:00:05.069 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/  
+2017-10-11 22:00:05.142 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Index (webviewer)" with arguments (null) - ModelState is Valid
+2017-10-11 22:00:06.506 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Index.cshtml".
+2017-10-11 22:00:06.783 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2017-10-11 22:00:06.785 -04:00 [Information] Request finished in 1.2354ms 404 
+2017-10-11 22:00:06.785 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.js  
+2017-10-11 22:00:06.785 -04:00 [Information] Request finished in 0.1872ms 404 
+2017-10-11 22:00:06.786 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/css/styles.css  
+2017-10-11 22:00:06.789 -04:00 [Information] Sending file. Request path: '"/css/styles.css"'. Physical path: '"/home/geoff/Wercs/WebViewer/Wercs.DTE.WebViewerCore/wwwroot/css/styles.css"'
+2017-10-11 22:00:06.795 -04:00 [Information] Request finished in 9.4258ms 200 text/css
+2017-10-11 22:00:06.801 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 22:00:06.802 -04:00 [Information] Request finished in 0.2136ms 404 
+2017-10-11 22:00:06.802 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Index (webviewer)" in 1654.7662ms
+2017-10-11 22:00:06.804 -04:00 [Information] Request finished in 1738.384ms 200 text/html; charset=utf-8
+2017-10-11 22:00:06.823 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 22:00:06.823 -04:00 [Information] Request finished in 0.2462ms 404 
+2017-10-11 22:00:13.643 -04:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/Home/Result application/x-www-form-urlencoded 319
+2017-10-11 22:00:13.708 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Result (webviewer)" with arguments (["webviewer.Models.SearchParameters"]) - ModelState is Invalid
+2017-10-11 22:00:13.776 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Result.cshtml".
+2017-10-11 22:00:13.782 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Result (webviewer)" in 108.3701ms
+2017-10-11 22:00:13.786 -04:00 [Information] Request finished in 143.0978ms 200 text/html; charset=utf-8
+2017-10-11 22:00:13.788 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2017-10-11 22:00:13.789 -04:00 [Information] Request finished in 0.3476ms 404 
+2017-10-11 22:00:13.789 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/css/styles.css  
+2017-10-11 22:00:13.789 -04:00 [Information] The file "/css/styles.css" was not modified
+2017-10-11 22:00:13.790 -04:00 [Information] Request finished in 1.3028ms 304 text/css
+2017-10-11 22:00:13.790 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.js  
+2017-10-11 22:00:13.790 -04:00 [Information] Request finished in 0.1537ms 404 
+2017-10-11 22:00:13.791 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 22:00:13.791 -04:00 [Information] Request finished in 0.1127ms 404 
+2017-10-11 22:08:46.855 -04:00 [Information] Starting web host
+2017-10-11 22:08:47.046 -04:00 [Information] User profile is available. Using '"/home/geoff/.aspnet/DataProtection-Keys"' as key repository; keys will not be encrypted at rest.
+2017-10-11 22:08:58.086 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/  
+2017-10-11 22:08:58.162 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Index (webviewer)" with arguments (null) - ModelState is Valid
+2017-10-11 22:08:59.551 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Index.cshtml".
+2017-10-11 22:09:00.103 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Index (webviewer)" in 1956.9896ms
+2017-10-11 22:09:00.107 -04:00 [Information] Request finished in 2023.3517ms 200 text/html; charset=utf-8
+2017-10-11 22:09:00.112 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/css/styles.css  
+2017-10-11 22:09:00.112 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2017-10-11 22:09:00.113 -04:00 [Information] Request finished in 1.2758ms 404 
+2017-10-11 22:09:00.114 -04:00 [Information] The file "/css/styles.css" was not modified
+2017-10-11 22:09:00.115 -04:00 [Information] Request finished in 2.8274ms 304 text/css
+2017-10-11 22:09:00.118 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 22:09:00.118 -04:00 [Information] Request finished in 0.329ms 404 
+2017-10-11 22:09:00.118 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.js  
+2017-10-11 22:09:00.118 -04:00 [Information] Request finished in 0.5858ms 404 
+2017-10-11 22:09:00.136 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 22:09:00.137 -04:00 [Information] Request finished in 0.4418ms 404 
+2017-10-11 22:09:06.633 -04:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/Home/Result application/x-www-form-urlencoded 319
+2017-10-11 22:09:06.704 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Result (webviewer)" with arguments (["webviewer.Models.SearchParameters"]) - ModelState is Invalid
+2017-10-11 22:09:06.781 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Result.cshtml".
+2017-10-11 22:09:06.786 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Result (webviewer)" in 120.5066ms
+2017-10-11 22:09:06.787 -04:00 [Information] Request finished in 153.9843ms 200 text/html; charset=utf-8
+2017-10-11 22:09:06.793 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2017-10-11 22:09:06.793 -04:00 [Information] Request finished in 0.1836ms 404 
+2017-10-11 22:09:06.795 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.js  
+2017-10-11 22:09:06.796 -04:00 [Information] Request finished in 0.2302ms 404 
+2017-10-11 22:09:06.798 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 22:09:06.798 -04:00 [Information] Request finished in 0.1832ms 404 
+2017-10-11 22:09:43.252 -04:00 [Information] Starting web host
+2017-10-11 22:09:43.438 -04:00 [Information] User profile is available. Using '"/home/geoff/.aspnet/DataProtection-Keys"' as key repository; keys will not be encrypted at rest.
+2017-10-11 22:09:51.999 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/  
+2017-10-11 22:09:52.071 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Index (webviewer)" with arguments (null) - ModelState is Valid
+2017-10-11 22:09:53.534 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Index.cshtml".
+2017-10-11 22:09:53.735 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Index (webviewer)" in 1681.0253ms
+2017-10-11 22:09:53.737 -04:00 [Information] Request finished in 1741.5334ms 200 text/html; charset=utf-8
+2017-10-11 22:09:53.742 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.js  
+2017-10-11 22:09:53.743 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2017-10-11 22:09:53.745 -04:00 [Information] Request finished in 1.8877ms 404 
+2017-10-11 22:09:53.745 -04:00 [Information] Request finished in 2.8529ms 404 
+2017-10-11 22:09:53.747 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 22:09:53.747 -04:00 [Information] Request finished in 0.2633ms 404 
+2017-10-11 22:09:53.763 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.js  
+2017-10-11 22:09:53.763 -04:00 [Information] Request finished in 0.2677ms 404 
+2017-10-11 22:09:53.768 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 22:09:53.769 -04:00 [Information] Request finished in 0.3383ms 404 
+2017-10-11 22:09:58.882 -04:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/Home/Result application/x-www-form-urlencoded 319
+2017-10-11 22:09:58.949 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Result (webviewer)" with arguments (["webviewer.Models.SearchParameters"]) - ModelState is Invalid
+2017-10-11 22:09:59.012 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Result.cshtml".
+2017-10-11 22:09:59.017 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Result (webviewer)" in 104.5728ms
+2017-10-11 22:09:59.018 -04:00 [Information] Request finished in 136.3049ms 200 text/html; charset=utf-8
+2017-10-11 22:09:59.024 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2017-10-11 22:09:59.024 -04:00 [Information] Request finished in 0.2068ms 404 
+2017-10-11 22:09:59.025 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/css/styles.css  
+2017-10-11 22:09:59.025 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.js  
+2017-10-11 22:09:59.025 -04:00 [Information] Request finished in 0.1322ms 404 
+2017-10-11 22:09:59.026 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 22:09:59.026 -04:00 [Information] Request finished in 0.1364ms 404 
+2017-10-11 22:09:59.027 -04:00 [Information] The file "/css/styles.css" was not modified
+2017-10-11 22:09:59.028 -04:00 [Information] Request finished in 3.0897ms 304 text/css
+2017-10-11 22:09:59.029 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 22:09:59.029 -04:00 [Information] Request finished in 0.1799ms 404 
+2017-10-11 22:11:08.304 -04:00 [Information] Starting web host
+2017-10-11 22:11:08.498 -04:00 [Information] User profile is available. Using '"/home/geoff/.aspnet/DataProtection-Keys"' as key repository; keys will not be encrypted at rest.
+2017-10-11 22:11:22.520 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/  
+2017-10-11 22:11:22.598 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Index (webviewer)" with arguments (null) - ModelState is Valid
+2017-10-11 22:11:24.009 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Index.cshtml".
+2017-10-11 22:11:24.261 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Index (webviewer)" in 1680.457ms
+2017-10-11 22:11:24.263 -04:00 [Information] Request finished in 1749.4432ms 200 text/html; charset=utf-8
+2017-10-11 22:11:24.270 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2017-10-11 22:11:24.271 -04:00 [Information] Request finished in 1.0491ms 404 
+2017-10-11 22:11:24.274 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/css/styles.css  
+2017-10-11 22:11:24.276 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.js  
+2017-10-11 22:11:24.276 -04:00 [Information] Request finished in 0.1983ms 404 
+2017-10-11 22:11:24.276 -04:00 [Information] The file "/css/styles.css" was not modified
+2017-10-11 22:11:24.277 -04:00 [Information] Request finished in 3.333ms 304 text/css
+2017-10-11 22:11:24.278 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 22:11:24.278 -04:00 [Information] Request finished in 0.172ms 404 
+2017-10-11 22:11:24.287 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 22:11:24.287 -04:00 [Information] Request finished in 0.2205ms 404 
+2017-10-11 22:11:29.121 -04:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/Home/Result application/x-www-form-urlencoded 319
+2017-10-11 22:11:29.191 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Result (webviewer)" with arguments (["webviewer.Models.SearchParameters"]) - ModelState is Invalid
+2017-10-11 22:11:29.293 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Result.cshtml".
+2017-10-11 22:11:29.300 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Result (webviewer)" in 146.0743ms
+2017-10-11 22:11:29.301 -04:00 [Information] Request finished in 180.3651ms 200 text/html; charset=utf-8
+2017-10-11 22:11:29.305 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2017-10-11 22:11:29.306 -04:00 [Information] Request finished in 0.2112ms 404 
+2017-10-11 22:11:29.308 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 22:11:29.308 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.js  
+2017-10-11 22:11:29.308 -04:00 [Information] Request finished in 0.4561ms 404 
+2017-10-11 22:11:29.309 -04:00 [Information] Request finished in 0.347ms 404 
+2017-10-11 22:11:29.311 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 22:11:29.311 -04:00 [Information] Request finished in 0.1543ms 404 
+2017-10-11 22:22:40.094 -04:00 [Information] Starting web host
+2017-10-11 22:22:40.278 -04:00 [Information] User profile is available. Using '"/home/geoff/.aspnet/DataProtection-Keys"' as key repository; keys will not be encrypted at rest.
+2017-10-11 22:22:49.054 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/  
+2017-10-11 22:22:49.134 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Index (webviewer)" with arguments (null) - ModelState is Valid
+2017-10-11 22:22:50.546 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Index.cshtml".
+2017-10-11 22:22:50.827 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Index (webviewer)" in 1712.1463ms
+2017-10-11 22:22:50.831 -04:00 [Information] Request finished in 1779.7189ms 200 text/html; charset=utf-8
+2017-10-11 22:22:50.833 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2017-10-11 22:22:50.833 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.js  
+2017-10-11 22:22:50.834 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/css/styles.css  
+2017-10-11 22:22:50.834 -04:00 [Information] Request finished in 1.1811ms 404 
+2017-10-11 22:22:50.836 -04:00 [Information] The file "/css/styles.css" was not modified
+2017-10-11 22:22:50.836 -04:00 [Information] Request finished in 3.2795ms 404 
+2017-10-11 22:22:50.837 -04:00 [Information] Request finished in 3.2775ms 304 text/css
+2017-10-11 22:22:50.840 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/js/site.js?v=PMy5c_QaFHrhALII1aNYUu8WACFSQ_atnAKrptPORFs  
+2017-10-11 22:22:50.840 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 22:22:50.840 -04:00 [Information] Request finished in 0.2563ms 404 
+2017-10-11 22:22:50.840 -04:00 [Information] Sending file. Request path: '"/js/site.js"'. Physical path: '"/home/geoff/Wercs/WebViewer/Wercs.DTE.WebViewerCore/wwwroot/js/site.js"'
+2017-10-11 22:22:50.845 -04:00 [Information] Request finished in 5.0645ms 200 application/javascript
+2017-10-11 22:22:50.864 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 22:22:50.866 -04:00 [Information] Request finished in 1.3425ms 404 
+2017-10-11 22:22:54.078 -04:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/Home/Result application/x-www-form-urlencoded 319
+2017-10-11 22:22:54.146 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Result (webviewer)" with arguments (["webviewer.Models.SearchParameters"]) - ModelState is Invalid
+2017-10-11 22:22:54.250 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Result.cshtml".
+2017-10-11 22:22:54.255 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Result (webviewer)" in 145.6906ms
+2017-10-11 22:22:54.255 -04:00 [Information] Request finished in 177.7023ms 200 text/html; charset=utf-8
+2017-10-11 22:22:54.267 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.js  
+2017-10-11 22:22:54.267 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2017-10-11 22:22:54.267 -04:00 [Information] Request finished in 0.2187ms 404 
+2017-10-11 22:22:54.267 -04:00 [Information] Request finished in 0.1239ms 404 
+2017-10-11 22:22:54.269 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 22:22:54.269 -04:00 [Information] Request finished in 0.1719ms 404 
+2017-10-11 22:28:58.486 -04:00 [Information] Starting web host
+2017-10-11 22:28:58.673 -04:00 [Information] User profile is available. Using '"/home/geoff/.aspnet/DataProtection-Keys"' as key repository; keys will not be encrypted at rest.
+2017-10-11 22:29:43.108 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/  
+2017-10-11 22:29:43.194 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Index (webviewer)" with arguments (null) - ModelState is Valid
+2017-10-11 22:29:44.586 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Index.cshtml".
+2017-10-11 22:29:44.846 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Index (webviewer)" in 1670.4199ms
+2017-10-11 22:29:44.849 -04:00 [Information] Request finished in 1744.742ms 200 text/html; charset=utf-8
+2017-10-11 22:29:44.853 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2017-10-11 22:29:44.853 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/css/styles.css  
+2017-10-11 22:29:44.855 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.js  
+2017-10-11 22:29:44.856 -04:00 [Information] The file "/css/styles.css" was not modified
+2017-10-11 22:29:44.858 -04:00 [Information] Request finished in 5.3474ms 404 
+2017-10-11 22:29:44.858 -04:00 [Information] Request finished in 3.247ms 404 
+2017-10-11 22:29:44.859 -04:00 [Information] Request finished in 5.6898ms 304 text/css
+2017-10-11 22:29:44.861 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 22:29:44.861 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/js/site.js?v=PMy5c_QaFHrhALII1aNYUu8WACFSQ_atnAKrptPORFs  
+2017-10-11 22:29:44.861 -04:00 [Information] Request finished in 0.1997ms 404 
+2017-10-11 22:29:44.862 -04:00 [Information] The file "/js/site.js" was not modified
+2017-10-11 22:29:44.862 -04:00 [Information] Request finished in 1.1137ms 304 application/javascript
+2017-10-11 22:29:44.877 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 22:29:44.877 -04:00 [Information] Request finished in 0.2774ms 404 
+2017-10-11 22:29:47.517 -04:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/Home/Result application/x-www-form-urlencoded 319
+2017-10-11 22:29:47.585 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Result (webviewer)" with arguments (["webviewer.Models.SearchParameters"]) - ModelState is Invalid
+2017-10-11 22:29:47.684 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Result.cshtml".
+2017-10-11 22:29:47.688 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Result (webviewer)" in 138.758ms
+2017-10-11 22:29:47.689 -04:00 [Information] Request finished in 172.2131ms 200 text/html; charset=utf-8
+2017-10-11 22:29:47.697 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2017-10-11 22:29:47.697 -04:00 [Information] Request finished in 0.3706ms 404 
+2017-10-11 22:29:47.698 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.js  
+2017-10-11 22:29:47.698 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 22:29:47.698 -04:00 [Information] Request finished in 0.1343ms 404 
+2017-10-11 22:29:47.698 -04:00 [Information] Request finished in 0.192ms 404 
+2017-10-11 22:29:52.396 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2017-10-11 22:29:52.397 -04:00 [Information] Request finished in 0.3401ms 404 
+2017-10-11 22:38:22.437 -04:00 [Information] Starting web host
+2017-10-11 22:38:22.649 -04:00 [Information] User profile is available. Using '"/home/geoff/.aspnet/DataProtection-Keys"' as key repository; keys will not be encrypted at rest.
+2017-10-11 22:38:35.082 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/  
+2017-10-11 22:38:35.154 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Index (webviewer)" with arguments (null) - ModelState is Valid
+2017-10-11 22:38:36.505 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Index.cshtml".
+2017-10-11 22:38:36.816 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Index (webviewer)" in 1678.7156ms
+2017-10-11 22:38:36.818 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/css/styles.css  
+2017-10-11 22:38:36.818 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2017-10-11 22:38:36.820 -04:00 [Information] Request finished in 1.4504ms 404 
+2017-10-11 22:38:36.822 -04:00 [Information] The file "/css/styles.css" was not modified
+2017-10-11 22:38:36.823 -04:00 [Information] Request finished in 1744.8893ms 200 text/html; charset=utf-8
+2017-10-11 22:38:36.823 -04:00 [Information] Request finished in 5.4834ms 304 text/css
+2017-10-11 22:38:36.825 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.js  
+2017-10-11 22:38:36.826 -04:00 [Information] Request finished in 0.5621ms 404 
+2017-10-11 22:38:36.828 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 22:38:36.828 -04:00 [Information] Request finished in 0.2824ms 404 
+2017-10-11 22:38:36.828 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/js/site.js?v=PMy5c_QaFHrhALII1aNYUu8WACFSQ_atnAKrptPORFs  
+2017-10-11 22:38:36.828 -04:00 [Information] The file "/js/site.js" was not modified
+2017-10-11 22:38:36.829 -04:00 [Information] Request finished in 0.7474ms 304 application/javascript
+2017-10-11 22:38:39.949 -04:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/Home/Result application/x-www-form-urlencoded 319
+2017-10-11 22:38:40.027 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Result (webviewer)" with arguments (["webviewer.Models.SearchParameters"]) - ModelState is Invalid
+2017-10-11 22:38:40.118 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Result.cshtml".
+2017-10-11 22:38:40.123 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Result (webviewer)" in 138.4109ms
+2017-10-11 22:38:40.124 -04:00 [Information] Request finished in 175.4292ms 200 text/html; charset=utf-8
+2017-10-11 22:38:40.130 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2017-10-11 22:38:40.131 -04:00 [Information] Request finished in 0.3602ms 404 
+2017-10-11 22:38:40.131 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.js  
+2017-10-11 22:38:40.131 -04:00 [Information] Request finished in 0.3791ms 404 
+2017-10-11 22:38:40.132 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 22:38:40.132 -04:00 [Information] Request finished in 0.1636ms 404 
+2017-10-11 22:38:49.326 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2017-10-11 22:38:49.326 -04:00 [Information] Request finished in 0.1993ms 404 
+2017-10-11 22:51:54.660 -04:00 [Information] Starting web host
+2017-10-11 22:51:54.854 -04:00 [Information] User profile is available. Using '"/home/geoff/.aspnet/DataProtection-Keys"' as key repository; keys will not be encrypted at rest.
+2017-10-11 22:52:00.172 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/  
+2017-10-11 22:52:00.250 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Index (webviewer)" with arguments (null) - ModelState is Valid
+2017-10-11 22:52:01.633 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Index.cshtml".
+2017-10-11 22:52:01.893 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Index (webviewer)" in 1660.4957ms
+2017-10-11 22:52:01.895 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2017-10-11 22:52:01.896 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/css/styles.css  
+2017-10-11 22:52:01.897 -04:00 [Information] Request finished in 1729.9825ms 200 text/html; charset=utf-8
+2017-10-11 22:52:01.898 -04:00 [Information] The file "/css/styles.css" was not modified
+2017-10-11 22:52:01.901 -04:00 [Information] Sending file. Request path: '"/lib/bootstrap/dist/css/bootstrap.css"'. Physical path: '"/home/geoff/Wercs/WebViewer/Wercs.DTE.WebViewerCore/wwwroot/lib/bootstrap/dist/css/bootstrap.css"'
+2017-10-11 22:52:01.902 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.js  
+2017-10-11 22:52:01.902 -04:00 [Information] Request finished in 5.862ms 304 text/css
+2017-10-11 22:52:01.904 -04:00 [Information] Sending file. Request path: '"/lib/jquery/dist/jquery.js"'. Physical path: '"/home/geoff/Wercs/WebViewer/Wercs.DTE.WebViewerCore/wwwroot/lib/jquery/dist/jquery.js"'
+2017-10-11 22:52:01.912 -04:00 [Information] Request finished in 16.7134ms 200 text/css
+2017-10-11 22:52:01.912 -04:00 [Information] Request finished in 10.4917ms 200 application/javascript
+2017-10-11 22:52:01.914 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.js  
+2017-10-11 22:52:01.914 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/js/site.js?v=PMy5c_QaFHrhALII1aNYUu8WACFSQ_atnAKrptPORFs  
+2017-10-11 22:52:01.914 -04:00 [Information] Sending file. Request path: '"/lib/bootstrap/dist/js/bootstrap.js"'. Physical path: '"/home/geoff/Wercs/WebViewer/Wercs.DTE.WebViewerCore/wwwroot/lib/bootstrap/dist/js/bootstrap.js"'
+2017-10-11 22:52:01.914 -04:00 [Information] The file "/js/site.js" was not modified
+2017-10-11 22:52:01.914 -04:00 [Information] Request finished in 0.3232ms 304 application/javascript
+2017-10-11 22:52:01.914 -04:00 [Information] Request finished in 0.4116ms 200 application/javascript
+2017-10-11 22:52:07.579 -04:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/Home/Result application/x-www-form-urlencoded 319
+2017-10-11 22:52:07.648 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Result (webviewer)" with arguments (["webviewer.Models.SearchParameters"]) - ModelState is Invalid
+2017-10-11 22:52:07.715 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Result.cshtml".
+2017-10-11 22:52:07.722 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Result (webviewer)" in 111.2339ms
+2017-10-11 22:52:07.724 -04:00 [Information] Request finished in 145.006ms 200 text/html; charset=utf-8
+2017-10-11 22:52:14.520 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css.map  
+2017-10-11 22:52:14.521 -04:00 [Information] Sending file. Request path: '"/lib/bootstrap/dist/css/bootstrap.css.map"'. Physical path: '"/home/geoff/Wercs/WebViewer/Wercs.DTE.WebViewerCore/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map"'
+2017-10-11 22:52:14.522 -04:00 [Information] Request finished in 1.5978ms 200 text/plain
+2017-10-11 22:54:25.136 -04:00 [Information] Starting web host
+2017-10-11 22:54:25.321 -04:00 [Information] User profile is available. Using '"/home/geoff/.aspnet/DataProtection-Keys"' as key repository; keys will not be encrypted at rest.
+2017-10-11 22:54:33.607 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/  
+2017-10-11 22:54:33.679 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Index (webviewer)" with arguments (null) - ModelState is Valid
+2017-10-11 22:54:35.086 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Index.cshtml".
+2017-10-11 22:54:35.315 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Index (webviewer)" in 1652.7365ms
+2017-10-11 22:54:35.317 -04:00 [Information] Request finished in 1712.9808ms 200 text/html; charset=utf-8
+2017-10-11 22:54:35.327 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/js/site.js?v=H9xKZDWygNUhVv00ys1YzUxhVf691uGYYl0oQBUQ2A0  
+2017-10-11 22:54:35.329 -04:00 [Information] Sending file. Request path: '"/js/site.js"'. Physical path: '"/home/geoff/Wercs/WebViewer/Wercs.DTE.WebViewerCore/wwwroot/js/site.js"'
+2017-10-11 22:54:35.334 -04:00 [Information] Request finished in 6.525ms 200 application/javascript
+2017-10-11 22:54:41.505 -04:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/Home/Result application/x-www-form-urlencoded 319
+2017-10-11 22:54:41.593 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Result (webviewer)" with arguments (["webviewer.Models.SearchParameters"]) - ModelState is Invalid
+2017-10-11 22:54:41.667 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Result.cshtml".
+2017-10-11 22:54:41.671 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Result (webviewer)" in 125.3817ms
+2017-10-11 22:54:41.672 -04:00 [Information] Request finished in 166.7154ms 200 text/html; charset=utf-8
+2017-10-11 22:54:41.680 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/js/site.js?v=H9xKZDWygNUhVv00ys1YzUxhVf691uGYYl0oQBUQ2A0  
+2017-10-11 22:54:41.681 -04:00 [Information] The file "/js/site.js" was not modified
+2017-10-11 22:54:41.683 -04:00 [Information] Request finished in 3.3322ms 304 application/javascript
+2017-10-11 22:58:34.243 -04:00 [Information] Starting web host
+2017-10-11 22:58:34.476 -04:00 [Information] User profile is available. Using '"/home/geoff/.aspnet/DataProtection-Keys"' as key repository; keys will not be encrypted at rest.
+2017-10-11 22:58:40.132 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/  
+2017-10-11 22:58:40.215 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Index (webviewer)" with arguments (null) - ModelState is Valid
+2017-10-11 22:58:42.173 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Index.cshtml".
+2017-10-11 22:58:42.378 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Index (webviewer)" in 2179.0948ms
+2017-10-11 22:58:42.378 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/css/styles.css  
+2017-10-11 22:58:42.384 -04:00 [Information] The file "/css/styles.css" was not modified
+2017-10-11 22:58:42.386 -04:00 [Information] Request finished in 7.423ms 304 text/css
+2017-10-11 22:58:42.386 -04:00 [Information] Request finished in 2256.8389ms 200 text/html; charset=utf-8
+2017-10-11 22:58:42.407 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/js/site.js?v=-L4VAT_FWh-hnEN-0nKLLiHivOsB21FYI90V6z7r6TU  
+2017-10-11 22:58:42.408 -04:00 [Information] Sending file. Request path: '"/js/site.js"'. Physical path: '"/home/geoff/Wercs/WebViewer/Wercs.DTE.WebViewerCore/wwwroot/js/site.js"'
+2017-10-11 22:58:42.412 -04:00 [Information] Request finished in 4.9773ms 200 application/javascript
+2017-10-11 22:58:47.922 -04:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/Home/Result application/x-www-form-urlencoded 319
+2017-10-11 22:58:48.017 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Result (webviewer)" with arguments (["webviewer.Models.SearchParameters"]) - ModelState is Invalid
+2017-10-11 22:58:48.083 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Result.cshtml".
+2017-10-11 22:58:48.089 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Result (webviewer)" in 106.188ms
+2017-10-11 22:58:48.090 -04:00 [Information] Request finished in 168.4746ms 200 text/html; charset=utf-8
+2017-10-11 23:00:33.746 -04:00 [Information] Starting web host
+2017-10-11 23:00:33.944 -04:00 [Information] User profile is available. Using '"/home/geoff/.aspnet/DataProtection-Keys"' as key repository; keys will not be encrypted at rest.
+2017-10-11 23:00:44.672 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/  
+2017-10-11 23:00:44.763 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Index (webviewer)" with arguments (null) - ModelState is Valid
+2017-10-11 23:00:46.175 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Index.cshtml".
+2017-10-11 23:00:46.447 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Index (webviewer)" in 1701.5842ms
+2017-10-11 23:00:46.450 -04:00 [Information] Request finished in 1782.0789ms 200 text/html; charset=utf-8
+2017-10-11 23:00:46.454 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/js/site.js?v=-L4VAT_FWh-hnEN-0nKLLiHivOsB21FYI90V6z7r6TU  
+2017-10-11 23:00:46.456 -04:00 [Information] The file "/js/site.js" was not modified
+2017-10-11 23:00:46.458 -04:00 [Information] Request finished in 3.9986ms 304 application/javascript
+2017-10-11 23:00:49.346 -04:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/Home/Result application/x-www-form-urlencoded 319
+2017-10-11 23:00:49.421 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Result (webviewer)" with arguments (["webviewer.Models.SearchParameters"]) - ModelState is Invalid
+2017-10-11 23:00:49.525 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Result.cshtml".
+2017-10-11 23:00:49.530 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Result (webviewer)" in 150.857ms
+2017-10-11 23:00:49.531 -04:00 [Information] Request finished in 185.154ms 200 text/html; charset=utf-8
+2017-10-11 23:01:42.718 -04:00 [Information] Starting web host
+2017-10-11 23:01:42.920 -04:00 [Information] User profile is available. Using '"/home/geoff/.aspnet/DataProtection-Keys"' as key repository; keys will not be encrypted at rest.
+2017-10-11 23:01:49.809 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/  
+2017-10-11 23:01:49.905 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Index (webviewer)" with arguments (null) - ModelState is Valid
+2017-10-11 23:01:51.265 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Index.cshtml".
+2017-10-11 23:01:51.524 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Index (webviewer)" in 1653.3431ms
+2017-10-11 23:01:51.527 -04:00 [Information] Request finished in 1721.7555ms 200 text/html; charset=utf-8
+2017-10-11 23:01:51.529 -04:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/js/site.js?v=-L4VAT_FWh-hnEN-0nKLLiHivOsB21FYI90V6z7r6TU  
+2017-10-11 23:01:51.531 -04:00 [Information] The file "/js/site.js" was not modified
+2017-10-11 23:01:51.537 -04:00 [Information] Request finished in 8.424ms 304 application/javascript
+2017-10-11 23:01:58.564 -04:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/Home/Result application/x-www-form-urlencoded 319
+2017-10-11 23:01:58.631 -04:00 [Information] Executing action method "webviewer.Controllers.HomeController.Result (webviewer)" with arguments (["webviewer.Models.SearchParameters"]) - ModelState is Invalid
+2017-10-11 23:01:58.740 -04:00 [Information] Executing ViewResult, running view at path "/Views/Home/Result.cshtml".
+2017-10-11 23:01:58.745 -04:00 [Information] Executed action "webviewer.Controllers.HomeController.Result (webviewer)" in 150.0353ms
+2017-10-11 23:01:58.746 -04:00 [Information] Request finished in 181.804ms 200 text/html; charset=utf-8

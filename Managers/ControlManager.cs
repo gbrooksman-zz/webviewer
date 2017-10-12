@@ -99,7 +99,7 @@ namespace webviewer.Managers
         public string CreateLogo(WebViewerControl control)
         {
             StringBuilder builder = new StringBuilder();
-            builder.AppendFormat("<img src={0}  height='{1}' width='{2}' />", "./images/" + control.Name, control.Size, control.Size); 
+            builder.AppendFormat("<img src={0}  height='{1}' width='{2}' />", "../images/" + control.Name, control.Size, control.Size); 
             return builder.ToString();         
         }
 

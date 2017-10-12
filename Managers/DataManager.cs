@@ -14,7 +14,6 @@ using System.Data.Common;
 using System.Data.SqlTypes;
 using Serilog;
 
-
 namespace webviewer.Managers
 {
 
@@ -47,15 +46,15 @@ namespace webviewer.Managers
                             formats.Add( new Format()
                             {
                                 Code = reader[0].ToString(),
-                                Name = reader[0].ToString()
+                                Name = reader[1].ToString()
                             });
                         }
                         reader.Close();
                     }
                 }
-                catch 
+                catch (Exception ex)
                 {
-                    Console.WriteLine("Something went wrong");
+                      Log.Error("GetFormats: " + ex.Message);
                 }
              }           
 
@@ -87,7 +86,7 @@ namespace webviewer.Managers
                             subFormats.Add( new Subformat()
                             {
                                 Code = reader[0].ToString(),
-                                Name = reader[0].ToString()
+                                Name = reader[1].ToString()
                             });
                         }
                         reader.Close();
@@ -95,9 +94,8 @@ namespace webviewer.Managers
                     }
                 }
                 catch (Exception ex)
-                {
-					
-                    Console.WriteLine("Something went wrong: " + ex.Message);
+                {					
+                    Log.Error("GetSubFormats: " + ex.Message);
                 }
              }          
 

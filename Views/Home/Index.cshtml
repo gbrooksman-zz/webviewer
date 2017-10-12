@@ -1,20 +1,11 @@
 
 @model webviewer.Models.SearchParameters
 
-@{
-    Layout = null;
-}
-
 <form asp-controller="Home"  asp-action="Result" method="post">
     
     @Html.Raw(ViewData["headerString"])
-
-    <div id="paramContainer">
-        
-        @Html.Raw(ViewData["paramsString"])
-        
+    <div id="paramContainer">        
+        @Html.Raw(ViewData["paramsString"])        
     </div>
-
     @Html.Raw(ViewData["footerString"])
-
 </form>

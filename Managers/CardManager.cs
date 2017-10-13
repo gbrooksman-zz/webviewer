@@ -25,7 +25,8 @@ namespace webviewer.Managers
 
             foreach (Document doc in docs)
             {
-                sb.AppendFormat("<div class='card' style='display: inline-block;vertical-align: top;' onclick = docGuidClick('{0}')>", doc.RecordID);
+                sb.Append("<div class='card' style='display: inline-block;vertical-align: top;'");
+                sb.AppendFormat(" onclick = docGuidClick('{0}')>", doc.RecordID);
                 sb.AppendFormat("<p>Product Name: {0}</p>", doc.ProductName);
                 sb.Append("<br/><br/>");
                 sb.AppendFormat("<p>Template: {0}, Publoished on {1}</p>", doc.Subformat, doc.PublishedDate);

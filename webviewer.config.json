@@ -2,7 +2,9 @@
     "Settings":[
       {
         "PageSize":10,
-        "ShowLogin":true
+        "ShowLogin":true,
+        "HeaderHeight":100,
+        "FooterHeight":100
       }
     ],
     "Header":

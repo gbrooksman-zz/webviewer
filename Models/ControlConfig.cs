@@ -13,9 +13,6 @@ namespace webviewer.Models
         public List<WebViewerControl> Controls { get; set; }
         public List<WebViewerControl> Footer { get; set; }
 
-        public ResultGrid Grid { get; set; }
-
-        public string ResultGridTitle { get; set; }
     }
 
     public class WebViewerControl
@@ -33,27 +30,5 @@ namespace webviewer.Models
          public string FieldName { get; set; }
 
         public bool HasFilterDropDown  { get; set; }
-    }
-
-
-    public class ResultGrid
-    {
-       public ResultGrid(){}
-
-       public List<Column> Columns { get; set; }
-    }
-
-    public class Column
-    {
-        public Column(){}
-        public string Name { get; set; }
-
-        public string DisplayName { get; set; }
-
-         public string Type { get; set; }
-
-         public int Size { get; set; }
-
-        public string TextCode { get; set; }
-    }
+    } 
 }

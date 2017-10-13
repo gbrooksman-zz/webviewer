@@ -1,6 +1,8 @@
-body {
+html, body {
     padding-top: 10px;
     padding-bottom: 10px;
+    height: 100%;
+    min-height: 100%;
 }
 
 /* Wrapping element */
@@ -8,6 +10,8 @@ body {
 .body-content {
     padding-left: 5px;
     padding-right: 5px;
+    height: 100%;
+    min-height: 100%;
 }
 
 /* Set widths on the form inputs since otherwise they're 100% wide */
@@ -25,6 +29,14 @@ textarea {
     }
 }
 
+#divFooter {
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    height:30px;
+    width:100%;
+    background:#999;
+ }
 
 
 

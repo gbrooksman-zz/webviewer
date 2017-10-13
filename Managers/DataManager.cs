@@ -20,6 +20,7 @@ namespace webviewer.Managers
     public class DataManager
     {
         string connString = string.Empty;        
+		DBHelpers db = new DBHelpers();
 
         public DataManager()
         {
@@ -45,8 +46,8 @@ namespace webviewer.Managers
                         {
                             formats.Add( new Format()
                             {
-                                Code = reader[0].ToString(),
-                                Name = reader[1].ToString()
+                                Code = db.GetDBString(reader[0]),
+                                Name = db.GetDBString(reader[1])
                             });
                         }
                         reader.Close();
@@ -85,8 +86,8 @@ namespace webviewer.Managers
                         {
                             subFormats.Add( new Subformat()
                             {
-                                Code = reader[0].ToString(),
-                                Name = reader[1].ToString()
+                                Code = db.GetDBString(reader[0]),
+                                Name = db.GetDBString(reader[1])
                             });
                         }
                         reader.Close();
@@ -115,10 +116,7 @@ namespace webviewer.Managers
                                                                 	FROM T_PDF_MSDS
                                                						WHERE F_GUID = @GUID ", con)) 
                     {
-
-						SqlParameter param = new SqlParameter();
-						param.SqlDbType = SqlDbType.UniqueIdentifier;
-						param.ParameterName = "@GUID";
+						SqlParameter param = new SqlParameter("@GUID",SqlDbType.UniqueIdentifier);
 						param.Value = RecordGuid;						
 						command.Parameters.Add(param);
 
@@ -133,9 +131,9 @@ namespace webviewer.Managers
                         reader.Close();
                     }
                 }
-                catch 
+                catch (Exception ex)
                 {
-                    Console.WriteLine("Something went wrong");
+                    Log.Error("Error in GetDocument: " + ex.Message);
                 }
              }          
 
@@ -181,109 +179,93 @@ namespace webviewer.Managers
         {
             SqlCommand command = new SqlCommand();
 
-			string sql = "SELECT * FROM T_PDF_MSDS WHERE 1 = 1 ";
+			StringBuilder sb = new StringBuilder();
 
-            if (!string.IsNullOrEmpty(searchParams.ProductID))
-            {
-                SqlParameter param = new SqlParameter();
-                param.SqlDbType = SqlDbType.VarChar;
-                param.Size = 50; 
+			sb.Append("SELECT * FROM T_PDF_MSDS WHERE 1 = 1 ");
+			
+			try
+			{		
+				if (!string.IsNullOrEmpty(searchParams.ProductID))
+				{
+					SqlParameter param = new SqlParameter("@F_PRODUCT",SqlDbType.VarChar,50);
+					sb.Append( GetSQLTextFilterFragment(param,searchParams.ProductID,
+												searchParams.ProductIDFilter,"F_PRODUCT")) ; 
+					command.Parameters.Add(param);
+				}
 
-				sql += GetSQLTextFilterFragment(param,searchParams.ProductID,
-											searchParams.ProductIDFilter,"F_PRODUCT") ; 
-               
-                command.Parameters.Add(param);
-            }
+				if (!string.IsNullOrEmpty(searchParams.ProductName))
+				{
+					SqlParameter param = new SqlParameter("@F_PRODUCT_NAME", SqlDbType.VarChar, 2000);
+ 					sb.Append(GetSQLTextFilterFragment(param,searchParams.ProductName,
+												searchParams.ProductNameFilter,"F_PRODUCT_NAME"));            
+					command.Parameters.Add(param);
+				}
 
-            if (!string.IsNullOrEmpty(searchParams.ProductName))
-            {
-                SqlParameter param = new SqlParameter();
-                param.SqlDbType = SqlDbType.VarChar;
-                param.Size = 2000;                
+				if (searchParams.Authorization > 0)
+				{
+					SqlParameter param = new SqlParameter("@AUTH",SqlDbType.Int);                          
+					param.Value = searchParams.Authorization;
+					sb.Append( " AND F_AUTHORIZED = @AUTH "); 
+					command.Parameters.Add(param);
+				}
+				else
+				{
+					sb.Append(" AND F_AUTHORIZED  > 0 ");         
+				}
 
-               	sql += GetSQLTextFilterFragment(param,searchParams.ProductName,
-											searchParams.ProductNameFilter,"F_PRODUCT_NAME") ;            
-               
-                command.Parameters.Add(param);
-            }
+				if (searchParams.PublishedDate != DateTime.MinValue)
+				{
+					SqlParameter param = new SqlParameter("@F_PUBLISHED_DATE",SqlDbType.DateTime);
+					sb.Append(GetSQLDateFilterFragment(param,searchParams.PublishedDate.ToString(),
+							searchParams.PublishedDateFilter,"F_PUBLISHED_DATE"));   
+					command.Parameters.Add(param);
+				}
 
-			if (searchParams.Authorization > 0)
-            {
-                SqlParameter param = new SqlParameter();
-                param.SqlDbType = SqlDbType.Int;                             
-				param.Value = searchParams.Authorization;
-               	sql += " AND F_AUTHORIZED = ? ";         
-               
-                command.Parameters.Add(param);
-            }
-			else
+				if (!string.IsNullOrEmpty(searchParams.Language))
+				{
+					SqlParameter param = new SqlParameter("@LNG", SqlDbType.VarChar,2);
+					sb.Append(" AND F_LANGUAGE = @LNG ");
+					param.SqlValue = searchParams.Language;
+					command.Parameters.Add(param);
+				}
+
+				if (!string.IsNullOrEmpty(searchParams.Format))
+				{
+					SqlParameter param = new SqlParameter("@FMT",SqlDbType.VarChar,3);
+					sb.Append(" AND F_FORMAT = @FMT ");
+					param.SqlValue = searchParams.Format;
+					command.Parameters.Add(param);
+				}
+
+				if (!string.IsNullOrEmpty(searchParams.Subformat))
+				{
+					SqlParameter param = new SqlParameter("@SFMT",SqlDbType.VarChar,4);  
+					sb.Append(" AND F_SUBFORMAT = @SFMT ");
+					param.SqlValue = searchParams.Subformat;
+					command.Parameters.Add(param);
+				}
+
+				if (searchParams.DisposalDate != DateTime.MinValue)
+				{
+					SqlParameter param = new SqlParameter("@F_DISPOSAL_DATE",SqlDbType.DateTime);
+					sb.Append(GetSQLDateFilterFragment(param,searchParams.DisposalDate.ToString(),
+							searchParams.DisposalDateFilter,"F_DISPOSAL_DATE")) ;   
+					command.Parameters.Add(param);
+				}
+			}
+			catch(Exception ex)
 			{
-               	sql += " AND F_AUTHORIZED  > 0 ";         
+				Log.Error("Error in BuildSQLForSearch: " + ex.Message);
 			}
 
-			if (searchParams.PublishedDate != DateTime.MinValue)
-            {
-                SqlParameter param = new SqlParameter();
-                param.SqlDbType = SqlDbType.DateTime;                             
-
-				sql += GetSQLDateFilterFragment(param,searchParams.PublishedDate.ToString(),
-						searchParams.PublishedDateFilter,"F_PUBLISHED_DATE")  ;   
-               
-                command.Parameters.Add(param);
-            }
-
-            if (!string.IsNullOrEmpty(searchParams.Language))
-            {
-                SqlParameter param = new SqlParameter();
-                param.SqlDbType = SqlDbType.VarChar;
-                param.Size = 2;    
-                sql += " AND F_LANGUAGE = @LNG ";
-                param.SqlValue = searchParams.Language;
-				param.ParameterName = "@LNG";
-                command.Parameters.Add(param);
-            }
-
-			if (!string.IsNullOrEmpty(searchParams.Format))
-            {
-                SqlParameter param = new SqlParameter();
-                param.SqlDbType = SqlDbType.VarChar;
-                param.Size = 3;    
-                sql += " AND F_FORMAT = @FMT ";
-                param.SqlValue = searchParams.Format;
-				param.ParameterName = "@FMT";
-                command.Parameters.Add(param);
-            }
-
-			if (!string.IsNullOrEmpty(searchParams.Subformat))
-            {
-                SqlParameter param = new SqlParameter();
-                param.SqlDbType = SqlDbType.VarChar;
-                param.Size = 4;    
-                sql += " AND F_SUBFORMAT = @SFMT ";
-                param.SqlValue = searchParams.Subformat;
-				param.ParameterName = "@SFMT";
-                command.Parameters.Add(param);
-            }
-
-			if (searchParams.DisposalDate != DateTime.MinValue)
-            {
-                SqlParameter param = new SqlParameter();
-                param.SqlDbType = SqlDbType.DateTime;                             
-
-				sql += GetSQLDateFilterFragment(param,searchParams.DisposalDate.ToString(),
-						searchParams.DisposalDateFilter,"F_DISPOSAL_DATE")  ;   
-               
-                command.Parameters.Add(param);
-            }
-
-			command.CommandText = sql;
+			command.CommandText = sb.ToString();
             return command;
         }
 
 		private string GetSQLDateFilterFragment(SqlParameter param, string searchValue,
 											string filterCondition , string fieldName)
 		{
-			StringBuilder sb = new StringBuilder();;
+			StringBuilder sb = new StringBuilder();
 
 			switch(filterCondition)                
 			{
@@ -297,8 +279,7 @@ namespace webviewer.Managers
 					sb.AppendFormat(" AND {0} >= @{1}", fieldName,fieldName);
 					break;
 			}
-			param.SqlValue = searchValue;
-			param.ParameterName = "@" + fieldName;
+			param.SqlValue = searchValue;		
 
 			return sb.ToString();
 		}
@@ -328,381 +309,43 @@ namespace webviewer.Managers
 					break;
 			}
 
-			param.ParameterName = "@" + fieldName;
 			return sb.ToString();
 		}
-
-
         private Document GetDocumentFromReader(SqlDataReader reader)
         {
             Document doc = new Document()
             {
-                RecordID        = GetDBGuid(reader["F_GUID"]),
-                ProductID       = GetDBString(reader["F_PRODUCT"]),
-                Language        = GetDBString(reader["F_LANGUAGE"]),
-                Format          = GetDBString(reader["F_FORMAT"]),
-                Subformat       = GetDBString(reader["F_SUBFORMAT"]),
-                DateStamp       = GetDBDate(reader["F_DATE_STAMP"]),
-                Plant           = GetDBString(reader["F_PLANT"]),
-                Supplier        = GetDBString(reader["F_SUPPLIER"]),
-                ProductName     = GetDBString(reader["F_PRODUCT_NAME"]),
-                RevisedDate     = GetDBDate(reader["F_DATE_REVISED"]),
-                Content         = GetDBBlob(reader["F_PDF"]),
-                Authorization   = GetDBInt(reader["F_AUTHORIZED"]),
-                PublishedDate   = GetDBDate(reader["F_PUBLISHED_DATE"]),
-                CasNumbers      = GetDBString(reader["F_CAS_NUMBERS"]),
-                ComponentIDs    = GetDBString(reader["F_COMPONENT_IDS"]),
-                IssueDate       = GetDBDate(reader["F_ISSUE_DATE"]),
-                DisposalDate    = GetDBDate(reader["F_DISPOSAL_DATE"]),
-                DocType         = GetDBInt(reader["F_DOC_TYPE"]),
-                DocPath         = GetDBString(reader["F_DOC_PATH"]),
-                Keywords        = GetDBString(reader["F_KEYWORDS"]),
-                Custom1         = GetDBString(reader["F_CUSTOM1"]),
-                Custom2         = GetDBString(reader["F_CUSTOM2"]),
-                Custom3         = GetDBString(reader["F_CUSTOM3"]),
-                Custom4         = GetDBString(reader["F_CUSTOM4"]),
-                Custom5         = GetDBString(reader["F_CUSTOM5"]),
-                UserUpdated     = GetDBString(reader["F_USER_UPDATED"]),
-                RevisionNumber  = GetDBFloat(reader["F_REV_NUM"]),
-                IsS3            = GetDBBool(reader["F_IS_S3"])
+                RecordID        = db.GetDBGuid(reader["F_GUID"]),
+                ProductID       = db.GetDBString(reader["F_PRODUCT"]),
+                Language        = db.GetDBString(reader["F_LANGUAGE"]),
+                Format          = db.GetDBString(reader["F_FORMAT"]),
+                Subformat       = db.GetDBString(reader["F_SUBFORMAT"]),
+                DateStamp       = db.GetDBDate(reader["F_DATE_STAMP"]),
+                Plant           = db.GetDBString(reader["F_PLANT"]),
+                Supplier        = db.GetDBString(reader["F_SUPPLIER"]),
+                ProductName     = db.GetDBString(reader["F_PRODUCT_NAME"]),
+                RevisedDate     = db.GetDBDate(reader["F_DATE_REVISED"]),
+                Content         = db.GetDBBlob(reader["F_PDF"]),
+                Authorization   = db.GetDBInt(reader["F_AUTHORIZED"]),
+                PublishedDate   = db.GetDBDate(reader["F_PUBLISHED_DATE"]),
+                CasNumbers      = db.GetDBString(reader["F_CAS_NUMBERS"]),
+                ComponentIDs    = db.GetDBString(reader["F_COMPONENT_IDS"]),
+                IssueDate       = db.GetDBDate(reader["F_ISSUE_DATE"]),
+                DisposalDate    = db.GetDBDate(reader["F_DISPOSAL_DATE"]),
+                DocType         = db.GetDBInt(reader["F_DOC_TYPE"]),
+                DocPath         = db.GetDBString(reader["F_DOC_PATH"]),
+                Keywords        = db.GetDBString(reader["F_KEYWORDS"]),
+                Custom1         = db.GetDBString(reader["F_CUSTOM1"]),
+                Custom2         = db.GetDBString(reader["F_CUSTOM2"]),
+                Custom3         = db.GetDBString(reader["F_CUSTOM3"]),
+                Custom4         = db.GetDBString(reader["F_CUSTOM4"]),
+                Custom5         = db.GetDBString(reader["F_CUSTOM5"]),
+                UserUpdated     = db.GetDBString(reader["F_USER_UPDATED"]),
+                RevisionNumber  = db.GetDBFloat(reader["F_REV_NUM"]),
+                IsS3            = db.GetDBBool(reader["F_IS_S3"])
             };
 
             return doc;           
         }
-
-
-        #region Get helpers
-
-
-		public Guid GetDBGuid(object obj)
-		{
-			if (!(obj is DBNull) && obj != null)
-			{
-				return new Guid(System.Convert.ToString(obj));
-			}
-			else
-			{
-				return Guid.Empty;
-			}
-		}
-
-		public string GetDBString(object obj, string defaultValue)
-		{
-			string strValue = string.Empty;
-			if (!(obj is DBNull) && obj != null)
-			{
-				strValue = System.Convert.ToString(obj);
-			}
-			if (strValue == string.Empty)
-			{
-				return defaultValue;
-			}
-			else
-			{
-				return strValue;
-			}
-		}
-
-		public string GetDBString(object obj)
-		{
-			if (!(obj is DBNull) && obj != null)
-			{
-				return System.Convert.ToString(obj);
-			}
-			else
-			{
-				return string.Empty;
-			}
-		}
-
-		public char GetDBChar(object obj, char defaultValue)
-		{
-			char chValue = '\0';
-			if (!(obj is DBNull) && obj != null)
-			{
-				try
-				{
-					chValue = System.Convert.ToChar(obj);
-				}
-				catch
-				{
-					return defaultValue;
-				}
-			}
-			if (chValue == '\0')
-			{
-				return defaultValue;
-			}
-			else
-			{
-				return chValue;
-			}
-		}
-
-		public string GetDBNVarChar2String(object obj, string languageId, string defaultValue)
-		{
-			string strValue = string.Empty;
-			if (!(obj is DBNull) && obj != null)
-			{
-				strValue = System.Convert.ToString(obj);
-			}
-			if (strValue == string.Empty)
-			{
-				return defaultValue;
-			}
-			else
-			{
-				return strValue;
-			}
-		}
-
-		public string GetDBNVarChar2String(object obj, string languageId)
-		{
-			string strValue = string.Empty;
-			if (!(obj is DBNull) && obj != null)
-			{
-				strValue = System.Convert.ToString(obj);
-				return strValue;
-			}
-			else
-			{
-				return string.Empty;
-			}
-		}
-
-		public DateTime GetDBDate(object obj)
-		{
-			DateTime dtmResult = new DateTime(0);
-			if (!(obj is DBNull))
-			{
-				dtmResult = System.Convert.ToDateTime(obj);
-			}
-			return dtmResult;
-		}
-
-		public int GetDBInt(object value, int defaultValue)
-		{
-			if ((value is DBNull))
-			{
-				return defaultValue;
-			}
-
-			int intRetValue = 0;
-			try
-			{
-				intRetValue = System.Convert.ToInt32(value);
-			}
-			catch
-			{
-				intRetValue = defaultValue;
-			}
-
-			return intRetValue;
-		}
-
-		public int GetDBInt(object value)
-		{
-			if (value == DBNull.Value)
-				return 0;
-
-			int intRetValue = 0;
-
-			try
-			{
-				intRetValue = System.Convert.ToInt32(value);
-			}
-			catch
-			{
-			}
-
-			return intRetValue;
-		}
-
-		public long GetDBLong(object value)
-		{
-			long longRetValue = 0;
-			long.TryParse(GetDBString(value), out longRetValue);
-
-			return longRetValue;
-		}
-
-		public byte GetDBByte(object value, byte defaultValue)
-		{
-			if ((value is DBNull))
-			{
-				return defaultValue;
-			}
-			return System.Convert.ToByte(value);
-		}
-
-		public byte[] GetDBBlob(object value)
-		{
-			if ((value is DBNull))
-			{
-				return null;
-			}
-			return (byte[])value;
-		}
-
-		public short GetDBInt16(object value, short defaultValue)
-		{
-			if ((value is DBNull))
-			{
-				return defaultValue;
-			}
-			return System.Convert.ToInt16(value);
-		}
-
-		public short GetDBInt16(object value)
-		{
-			if ((value is DBNull))
-			{
-				return 0;
-			}
-			return System.Convert.ToInt16(value);
-		}
-
-		public float GetDBFloat(object value, float defaultValue)
-		{
-			if ((value is DBNull))
-			{
-				return defaultValue;
-			}
-
-			float sglRetVal = 0;
-			try
-			{
-				sglRetVal = System.Convert.ToSingle(value);
-			}
-			catch
-			{
-			}
-			return (float)sglRetVal;
-		}
-
-		public float GetDBFloat(object value)
-		{
-			if ((value is DBNull))
-			{
-				return 0;
-			}
-
-			if (string.Empty == value.ToString())
-			{
-				return 0;  
-			}
-
-			float sglRetVal = 0;
-			try
-			{
-				sglRetVal = System.Convert.ToSingle(value);
-			}
-			catch
-			{
-			}
-
-			return sglRetVal;
-		}
-
-		public decimal GetDBDecimal(object value, decimal defaultValue = 0)
-		{
-			if ((value is DBNull))
-			{
-				return defaultValue;
-			}
-
-			decimal sglRetVal = 0;
-			try
-			{
-				sglRetVal = System.Convert.ToDecimal(value);
-			}
-			catch
-			{
-			}
-			return (decimal)sglRetVal;
-		}
-
-		public bool GetDBBool(object value, bool defaultValue)
-		{
-			if (value is DBNull)
-			{
-				return defaultValue;
-			}
-			else
-			{
-				if (value is bool)
-				{
-					return (bool)value;
-				}
-				else
-				{
-					return (System.Convert.ToInt16(value)) != 0;
-				}
-			}
-		}
-
-		public bool GetDBBool(object value)
-		{
-			try
-			{
-				if (value is DBNull)
-				{
-					return false;
-				}
-				else
-				{
-					if (value is bool)
-					{
-						return (bool)value;
-					}
-					else
-					{
-						return (System.Convert.ToInt16(value)) != 0;
-					}
-				}
-			}
-			catch (Exception)
-			{
-				try
-				{
-					if (value != null)
-					{
-						if (value.ToString().Length > 0)
-						{
-							bool blnResult = false;
-							bool tryRet = bool.TryParse(value.ToString(), out blnResult);
-
-							if (tryRet)
-								return blnResult;
-							else
-								return false;
-						}
-					}
-					return false;
-				}
-				catch (Exception) { }
-			}
-			return false;
-		}
-
-		public short ToDBBit(bool value)
-		{
-			if (value == true)
-				return System.Convert.ToInt16(1);
-			else
-				return System.Convert.ToInt16(0);
-		}
-
-		public string GetDBShortDateString(System.DateTime date)
-		{
-			DateTime dt = DateTime.MinValue;
-			if (date == dt)	return null;
-			string strDate = date.ToString("MM/dd/yyyy");
-			return strDate;
-		}
-
-        #endregion
-
     }
-
 }

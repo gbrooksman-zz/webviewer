@@ -3,10 +3,16 @@
 
 
 
-<div id="resultContainer">    
-    @Html.Raw(ViewData["headerString"])
+<div id="resultContainer"> 
+
+     @Html.Raw(ViewData["headerString"])
     <p>Search Results:</p> 
-    @Html.Raw(ViewData["resultString"])  
-    <br/>
+
+    <div id="resultDetail" style="float:left;width:100%;height:100%">
+        @Html.Raw(ViewData["resultString"])
+    </div>  
+     <br/>
+
     @Html.Raw(ViewData["footerString"])
+
 </div>

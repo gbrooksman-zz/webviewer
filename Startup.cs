@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Caching;
 using webviewer.Managers;
 using webviewer.Models;
 
@@ -32,7 +33,7 @@ namespace webviewer
         {
             // Add framework services.
             services.AddMvc();
-
+            services.AddMemoryCache();
             services.AddOptions();
 
             services.Configure<ControlConfig>(Configuration);

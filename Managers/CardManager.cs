@@ -15,7 +15,6 @@ namespace webviewer.Managers
         public CardManager()
         {
 
-
         }
 
         public string RenderResults(List<Document> docs, SearchParameters searchParams)

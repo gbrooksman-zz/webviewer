@@ -14,12 +14,14 @@ using webviewer.Managers;
 using webviewer.Models;
 using System.Text;
 
-
 namespace webviewer.Managers
 {
     public  class RenderManager
     {
-        public RenderManager(){}
+        public RenderManager()
+        {
+
+        }
 
         public string RenderBody( ControlConfig _config, ControlManager controlMgr)
         {
@@ -113,8 +115,5 @@ namespace webviewer.Managers
 
             return sb.ToString();
         }
-
-
     }
-
 }

@@ -19,7 +19,6 @@ namespace webviewer.Managers
 {
     public  class RenderManager
     {
-
         public RenderManager(){}
 
         public string RenderBody( ControlConfig _config, ControlManager controlMgr)
@@ -27,6 +26,8 @@ namespace webviewer.Managers
             List<WebViewerControl> bodyControls = _config.Controls;
 
             StringBuilder sb = new StringBuilder();
+ 
+            sb.Append("<div id='divMain'>");
 
             foreach (WebViewerControl control in _config.Controls)
             {
@@ -49,6 +50,8 @@ namespace webviewer.Managers
                 }
             }
 
+            sb.Append("</div>");  //row 
+
             return sb.ToString();
         }
 
@@ -58,7 +61,7 @@ namespace webviewer.Managers
 
             StringBuilder sb = new StringBuilder();
 
-            sb.Append("<div id='divHeader' style='height:100px;>");
+            sb.Append("<div id='divHeader'>");
 
              //render header
             if (headerControls.Count > 0)
@@ -71,13 +74,13 @@ namespace webviewer.Managers
                             sb.Append(controlMgr.CreateLogo(control));
                             break;
                         case "Label":
-                            sb.Append(controlMgr.CreateLabel(control));
+                            sb.Append(controlMgr.CreateLabel(control,"2"));
                             break;
                     }
                 }
             }
 
-            sb.Append("</div>");
+            sb.Append("</div>");  
 
             return sb.ToString();
         }
@@ -89,7 +92,6 @@ namespace webviewer.Managers
             StringBuilder sb = new StringBuilder();
 
             sb.Append("<div id='divFooter'>");
-
             //render footer
             if (footerControls.Count > 0)
             {
@@ -101,13 +103,13 @@ namespace webviewer.Managers
                             sb.Append( controlMgr.CreateLogo(control));
                             break;
                         case "Label":
-                            sb.Append(controlMgr.CreateLabel(control));
+                            sb.Append(controlMgr.CreateLabel(control, null));
                             break;
                     }            
                 }
             }
 
-            sb.Append("</div>");
+            sb.Append("</div>");  //row
 
             return sb.ToString();
         }

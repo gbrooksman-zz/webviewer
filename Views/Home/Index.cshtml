@@ -3,9 +3,10 @@
 
 <form asp-controller="Home"  asp-action="Result" method="post">
     
-    @Html.Raw(ViewData["headerString"])
-    <div id="paramContainer">        
-        @Html.Raw(ViewData["bodyString"])        
-    </div>
+    @Html.Raw(ViewData["headerString"]) 
+
+    @Html.Raw(ViewData["bodyString"]) 
+
     @Html.Raw(ViewData["footerString"])
+    
 </form>

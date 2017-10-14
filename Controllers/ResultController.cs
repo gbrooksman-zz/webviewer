@@ -30,17 +30,9 @@ namespace webviewer.Controllers
         [HttpGet]
         public IActionResult GetDoc(string guid)
         {
-           // MemoryStream workStream = new MemoryStream();
-
             Document doc = dataMgr.GetDocument(db.GetDBGuid(guid));
-
-          //  workStream.Write(doc.Content, 0, doc.Content.Length);
-          //  workStream.Position = 0;
             
-            //Response.Headers.Add("content-disposition", "inline; filename=file.pdf");
-            
-            return new FileContentResult(doc.Content,"application/pdf");
-            
+            return new FileContentResult(doc.Content,"application/pdf");            
         }
        
     }

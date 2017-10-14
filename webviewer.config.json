@@ -2,23 +2,21 @@
     "Settings":[
       {
         "PageSize":10,
-        "ShowLogin":true,
-        "HeaderHeight":100,
-        "FooterHeight":100
-      }
+        "ShowLogin":true
+            }
     ],
     "Header":
     [
       {
         "Name": "pyramid.jpg",
         "DisplayName": "Pyramid Logo",
-        "Size": 40,
+        "Size": 60,
         "Type": "CompanyLogo",
         "TextCode": "WUI00000"
       },
       {
         "Name": "CompanyTitle",
-        "DisplayName": "Pyramid Chemical Company",
+        "DisplayName": "   Pyramid Chemical Company Web Viewer",
         "Size": 20,
         "Type": "Label",
         "TextCode": "WUI00000"
@@ -93,26 +91,6 @@
         "Action": "SearchMain",
         "TextCode": "WUI00000"
       }
-    ],
-    "ResultGridTitle":"The Results"  ,
-    "Grid":
-    {
-    "Columns": [
-      {
-        "Name": "F_PRODUCT",
-        "DisplayName": "Product ID",
-        "Size": 50,
-        "Type": "String",
-        "TextCode": "WUI00000"
-      },
-      {
-        "Name": "F_PRODUCT_NAME",
-        "DisplayName": "Product Name",
-        "Size": 200,
-        "Type": "String",
-        "TextCode": "WUI00000"
-      }
     ]
   }
-
 }

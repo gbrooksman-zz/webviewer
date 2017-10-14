@@ -1,18 +1,7 @@
 
-@model webviewer.Models.SearchParameters
+@Html.Raw(ViewData["headerString"])    
+        
+@Html.Raw(ViewData["resultString"])
 
+@Html.Raw(ViewData["footerString"])
 
-
-<div id="resultContainer"> 
-
-     @Html.Raw(ViewData["headerString"])
-    <p>Search Results:</p> 
-
-    <div id="resultDetail" style="float:left;width:100%;height:100%">
-        @Html.Raw(ViewData["resultString"])
-    </div>  
-     <br/>
-
-    @Html.Raw(ViewData["footerString"])
-
-</div>

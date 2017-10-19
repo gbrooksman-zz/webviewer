@@ -58,8 +58,6 @@ namespace webviewer.Models
 
         public string ComponentIDs { get; set; }
 
-        public int AuthorizationLevel { get; set; }
-
         public float RevisionNumber { get; set; }
 
         public bool IsS3 { get; set; }

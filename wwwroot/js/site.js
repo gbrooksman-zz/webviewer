@@ -12,3 +12,12 @@ function docGuidClick(docguid)
     $('#divMain').append(obj); 
 }
 
+
+
+$('#ddFormat').change(function(){
+    var newFmt = $(this).val();
+    
+})
+
+
+

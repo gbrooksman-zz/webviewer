@@ -65,7 +65,6 @@ namespace webviewer.Managers
 
             sb.Append("<div id='divHeader'>");
 
-             //render header
             if (headerControls.Count > 0)
             {
                 foreach (WebViewerControl control in headerControls)
@@ -94,7 +93,7 @@ namespace webviewer.Managers
             StringBuilder sb = new StringBuilder();
 
             sb.Append("<div id='divFooter'>");
-            //render footer
+
             if (footerControls.Count > 0)
             {
                 foreach (WebViewerControl control in footerControls)

@@ -8,7 +8,6 @@ using Newtonsoft.Json;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Configuration.Json;
 using Microsoft.Extensions.Options;
-using System.Dynamic;
 using Microsoft.AspNetCore.Http;
 using webviewer.Managers;
 using webviewer.Models;
@@ -18,13 +17,14 @@ using Microsoft.Extensions.Caching.Memory;
 namespace webviewer.Controllers
 {
     public class HomeController : Controller
-    {
- 
+    { 
         private IMemoryCache _cache;
         private readonly ControlConfig _config;
         private IConfiguration _iconfiguration;
-        private DataManager dataMgr = new DataManager();
+        private DataManager dataMgr;
+       
         private CardManager cardMgr = new CardManager();
+        
         private RenderManager renderMgr = new RenderManager();
 
         public HomeController(IOptions<ControlConfig> controlConfigAccessor, 
@@ -34,20 +34,24 @@ namespace webviewer.Controllers
             _config = controlConfigAccessor.Value;
             _iconfiguration = iconfiguration;
             _cache = memoryCache;
+            dataMgr = new DataManager(_cache,_iconfiguration);              
         }
 
         [HttpPost]
         public IActionResult Result(SearchParameters searchParams)
         {     
-            // for DEV only
+            // for DEV only _iconfiguration = iconfiguration;
             searchParams.ProductID = "DTE73";
             searchParams.Format = "MTR";
             searchParams.Subformat = "DATA";
             // for DEV only
 
-            var controlMgr = new ControlManager(_iconfiguration);
+            var controlMgr = new ControlManager(_iconfiguration, _cache);
 
             ViewData["headerString"] = GetOrSetCacheEntry("header",controlMgr);  
+
+            searchParams.AuthorizationDescription 
+                    = dataMgr.GetAuthDescription(searchParams.Authorization);
 
             List<Document> docs = dataMgr.GetDocuments(searchParams);
             ViewData["resultString"] = cardMgr.RenderResults(docs,searchParams);
@@ -61,7 +65,7 @@ namespace webviewer.Controllers
         {
             string searchControls = string.Empty;
 
-            var controlMgr = new ControlManager(_iconfiguration);
+            var controlMgr = new ControlManager(_iconfiguration, _cache);
 
             ViewData["headerString"] = GetOrSetCacheEntry("header",controlMgr);           
 
@@ -72,9 +76,13 @@ namespace webviewer.Controllers
             return View();
         }
 
-        private string GetOrSetCacheEntry(string cacheKey, ControlManager controlMgr )
-        {           
+        // public IActionResult FormatChange(string newFmt)
+        // {
 
+        // }
+
+        private string GetOrSetCacheEntry(string cacheKey, ControlManager controlMgr )
+        { 
             string cacheValue = string.Empty;
 
             if (!_cache.TryGetValue(cacheKey, out cacheValue))

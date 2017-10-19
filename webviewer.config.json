@@ -82,7 +82,21 @@
         "Type": "DropDown",
         "DisplayName": "Select Subformat",
         "TextCode": "WUI00000"  
-      },     
+      },  
+      {
+        "Name": "Language",
+        "Size": 0,
+        "Type": "DropDown",
+        "DisplayName": "Select Language",
+        "TextCode": "WUI00000"  
+      }, 
+      {
+        "Name": "Authorization",
+        "Size": 0,
+        "Type": "DropDown",
+        "DisplayName": "Select authorization Level",
+        "TextCode": "WUI00000"  
+      },           
       {
         "Name": "Search",
         "DisplayName": "Search Now",

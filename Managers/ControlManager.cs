@@ -6,7 +6,7 @@ using webviewer.Models;
 using System.Text;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Configuration;
-
+using Microsoft.Extensions.Caching.Memory;
 
 namespace webviewer.Managers
 {
@@ -14,11 +14,15 @@ namespace webviewer.Managers
     {
         //  when using taghelpers, for the value of the input to be submitted as form data, 
         //  it needs to have a 'name' attribute. not too obvious
-        DataManager dataMgr = new DataManager();
-
-        public ControlManager(IConfiguration _iconfiguration)
+        private DataManager dataMgr;
+        private IMemoryCache _cache;
+        private IConfiguration _iconfiguration;
+        public ControlManager(IConfiguration iconfiguration,
+                              IMemoryCache memoryCache)
         {
-
+            _cache = memoryCache;
+            _iconfiguration = iconfiguration;
+            dataMgr = new DataManager(_cache,_iconfiguration);
         }
 
         public  string CreateTextBox(WebViewerControl control )
@@ -91,7 +95,7 @@ namespace webviewer.Managers
                     AddLabel(sb, control.DisplayName);
                 sb.Append("</div>");  
                 sb.Append("<div class='col-sm-5'>");   
-                    sb.AppendFormat("<select asp-for = '{0}' name='{1}'>", control.Name,control.Name);
+                    sb.AppendFormat("<select asp-for = '{0}' name='{1}' id='dd{2}'>", control.Name,control.Name,control.Name);
                         if (control.Name == "Format")
                         {
                             foreach (var item in GetFormats())
@@ -99,9 +103,23 @@ namespace webviewer.Managers
                                 sb.AppendFormat("<option value = '{0}'>{1}</option>",item.Value, item.Text);
                             }
                         }
-                        else
+                        else if(control.Name == "Subformat")
                         {
                             foreach (var item in GetSubFormats())
+                            {
+                                sb.AppendFormat("<option value = '{0}'>{1}</option>",item.Value, item.Text);
+                            }
+                        }
+                        else if(control.Name == "Language")
+                        {
+                            foreach (var item in GetLanguages())
+                            {
+                                sb.AppendFormat("<option value = '{0}'>{1}</option>",item.Value, item.Text);
+                            }
+                        }
+                        else if(control.Name == "Authorization")
+                        {
+                        foreach (var item in GetAuthorizationLevels())
                             {
                                 sb.AppendFormat("<option value = '{0}'>{1}</option>",item.Value, item.Text);
                             }
@@ -135,14 +153,6 @@ namespace webviewer.Managers
             sb.Append(modelItemName);            
         }
 
-        // private  void AddBreak(StringBuilder sb, int count = 2)
-        // {
-        //     for (int x = 0; x <= count; x++) 
-        //     {       
-        //         sb.Append("<br/>");
-        //     }
-        // }
-
         private  void AddFilterDropdown(StringBuilder sb, string modelItemName)
         {            
             sb.AppendFormat("<select id = '{0}' name = '{1}'  asp-for = '{2}'>","ddFilter" +  modelItemName, modelItemName + "Filter", modelItemName + "Filter");
@@ -165,7 +175,6 @@ namespace webviewer.Managers
         private  List<SelectListItem> GetFormats()
         {
             List<SelectListItem> items = new List<SelectListItem>();
-
             List<Format> formats  = dataMgr.GetFormats();
 
             foreach(var format in formats)
@@ -179,12 +188,11 @@ namespace webviewer.Managers
             return  items;
         }
 
-
-        private  List<SelectListItem> GetSubFormats()
+        private  List<SelectListItem> GetSubFormats(string format = "MTR")
         {
             List<SelectListItem> items = new List<SelectListItem>();
+            List<Subformat> subformats  = dataMgr.GetSubFormats(format); 
 
-            List<Subformat> subformats  = dataMgr.GetSubFormats("MTR");           
             foreach(var subformat in subformats)
             {
                 items.Add(new SelectListItem
@@ -196,7 +204,36 @@ namespace webviewer.Managers
 
             return  items;
         }
+        private  List<SelectListItem> GetLanguages()
+        {
+            List<SelectListItem> items = new List<SelectListItem>();
+            List<Language> langs  = dataMgr.GetLanguages();  
 
+            foreach(var lang in langs)
+            {
+                items.Add(new SelectListItem
+                {
+                    Text = lang.Name,
+                    Value = lang.Code
+                });
+            }           
 
+            return  items;
+        }
+        private List<SelectListItem> GetAuthorizationLevels()
+        {
+            List<SelectListItem> items = new List<SelectListItem>();
+            List<Authorization> authLevels = dataMgr.GetsAuthLevels();
+            
+            foreach(var authLevel in authLevels)
+            {
+                items.Add(new SelectListItem
+                {
+                    Value = authLevel.Level.ToString(),
+                    Text = authLevel.Description
+                });
+            }    
+            return items;
+        }
     }
 }

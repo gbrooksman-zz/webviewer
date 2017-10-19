@@ -13,51 +13,62 @@ using System.Data.SqlClient;
 using System.Data.Common;
 using System.Data.SqlTypes;
 using Serilog;
+using Microsoft.Extensions.Caching.Memory;
 
 namespace webviewer.Managers
 {
-
     public class DataManager
     {
         string connString = string.Empty;        
-		DBHelpers db = new DBHelpers();
-
-        public DataManager()
+		private DBHelpers db = new DBHelpers();
+        private IMemoryCache _cache;
+        private IConfiguration _iconfiguration;
+        private MemoryCacheEntryOptions cacheEntryOptions; 
+        public DataManager(IMemoryCache memoryCache, IConfiguration iconfiguration)
         {
-           // connString = @"Server=10.34.4.146;Initial Catalog=QA_P;User Id=wercs;Password=wercs;";
-			connString = @"Server=10.0.2.2;Initial Catalog=SVT_DEV;User Id=wercs;Password=wercs;";
+             _cache = memoryCache;
+            _iconfiguration = iconfiguration;
+             connString =_iconfiguration.GetConnectionString("WVConn");
+             cacheEntryOptions = new MemoryCacheEntryOptions().SetPriority(CacheItemPriority.NeverRemove); 
         }   
 
         public List<Format> GetFormats()
         {
             List<Format> formats = new List<Format>();
 
-             using (SqlConnection con = new SqlConnection(connString)) 
-             {
-                con.Open();
-                try 
-                {
-                    using (SqlCommand command = new SqlCommand(@"SELECT F_FORMAT , F_FORMAT_DESC
-                                                                 FROM T_FORMATS", con)) 
-                    {
-                        SqlDataReader reader  = command.ExecuteReader();
+            if (!_cache.TryGetValue("formats", out formats))
+            { 
+                formats = new List<Format>();
 
-                        while (reader.Read())
+                using (SqlConnection con = new SqlConnection(connString)) 
+                {
+                    con.Open();
+                    try 
+                    {
+                        using (SqlCommand command = new SqlCommand(@"SELECT F_FORMAT , F_FORMAT_DESC
+                                                                    FROM T_FORMATS", con)) 
                         {
-                            formats.Add( new Format()
+                            SqlDataReader reader  = command.ExecuteReader();
+
+                            while (reader.Read())
                             {
-                                Code = db.GetDBString(reader[0]),
-                                Name = db.GetDBString(reader[1])
-                            });
+                                formats.Add( new Format()
+                                {
+                                    Code = db.GetDBString(reader[0]),
+                                    Name = db.GetDBString(reader[1])
+                                });
+                            }
+                            reader.Close();
                         }
-                        reader.Close();
+
+                        _cache.Set("formats",formats,cacheEntryOptions);
+                    }
+                    catch (Exception ex)
+                    {
+                        Log.Error("GetFormats: " + ex.Message);
                     }
                 }
-                catch (Exception ex)
-                {
-                      Log.Error("GetFormats: " + ex.Message);
-                }
-             }           
+            }         
 
             return formats;
         }
@@ -66,41 +77,130 @@ namespace webviewer.Managers
         {
             List<Subformat> subFormats = new List<Subformat>();
 
-             using (SqlConnection con = new SqlConnection(connString)) 
-             {
-                
-                try 
-                {
-                    using (SqlCommand command = new SqlCommand(@"SELECT F_MSDSTYPE, F_MSDSTYPE_DESC
-                                                                 FROM T_MSDSTYPES
-																 WHERE F_FORMAT = @FMT ", con)) 
-					{
-						SqlParameter param = new SqlParameter("@FMT",SqlDbType.VarChar,3);
-						param.Value = formatCode;
-						command.Parameters.Add(param);
-						con.Open();
+            if (!_cache.TryGetValue("subformats", out subFormats))
+            {
+                subFormats = new List<Subformat>();
 
-                        SqlDataReader reader  = command.ExecuteReader();
-
-                        while (reader.Read())
+                using (SqlConnection con = new SqlConnection(connString)) 
+                {                    
+                    try 
+                    {
+                        using (SqlCommand command = new SqlCommand(@"SELECT F_MSDSTYPE, F_MSDSTYPE_DESC
+                                                                    FROM T_MSDSTYPES
+                                                                    WHERE F_FORMAT = @FMT 
+                                                                    ORDER BY 2" , con)) 
                         {
-                            subFormats.Add( new Subformat()
+                            SqlParameter param = new SqlParameter("@FMT",SqlDbType.VarChar,3);
+                            param.Value = formatCode;
+                            command.Parameters.Add(param);
+                            con.Open();
+
+                            SqlDataReader reader  = command.ExecuteReader();
+                            while (reader.Read())
                             {
-                                Code = db.GetDBString(reader[0]),
-                                Name = db.GetDBString(reader[1])
-                            });
+                                subFormats.Add( new Subformat()
+                                {
+                                    Code = db.GetDBString(reader[0]),
+                                    Name = db.GetDBString(reader[1])
+                                });
+                            }
+                            reader.Close();
+                            con.Close();
                         }
-                        reader.Close();
-						con.Close();
+                        _cache.Set("subformats",subFormats,cacheEntryOptions);
+                    }
+                    catch (Exception ex)
+                    {					
+                        Log.Error("GetSubFormats: " + ex.Message);
                     }
                 }
-                catch (Exception ex)
-                {					
-                    Log.Error("GetSubFormats: " + ex.Message);
-                }
-             }          
-
+            }    
             return subFormats;
+        }
+
+        public List<Language> GetLanguages()
+        {
+            List<Language> languages = new List<Language>();
+
+            if (!_cache.TryGetValue("languages", out languages))
+            {
+                languages = new List<Language>();
+
+                using (SqlConnection con = new SqlConnection(connString)) 
+                {                    
+                    try 
+                    {         
+                     using (SqlCommand command = new SqlCommand(@"SELECT F_LANGUAGE , F_LANGUAGE_NAME
+                                                                    FROM T_LANGUAGES
+                                                                    WHERE F_LANGUAGE IN
+                                                                    (SELECT DISTINCT(F_LANGUAGE) 
+                                                                    FROM T_PDF_MSDS)
+                                                                    ORDER BY 2",con))
+                        {                            
+                            con.Open();
+
+                            SqlDataReader reader  = command.ExecuteReader();
+
+           
+                         while (reader.Read())
+                            {
+                                languages.Add( new Language()
+                                {
+                                    Code = db.GetDBString(reader[0]),
+                                    Name = db.GetDBString(reader[1])
+                                });
+                            }
+                            reader.Close();
+                            con.Close();
+                        }
+                        _cache.Set("languages",languages,cacheEntryOptions);
+                    }
+                    catch (Exception ex)
+                    {					
+                        Log.Error("GetLanguages: " + ex.Message);
+                    }
+                }
+            }    
+            return languages;        
+        }
+
+        public string GetAuthDescription(int authLevel)
+        {
+            string authdesc = String.Empty;
+
+            List<Authorization> authLevels = GetsAuthLevels();
+
+            Authorization auth = authLevels.Where(a => a.Level == authLevel).FirstOrDefault();
+
+            if(auth != null)
+            {
+                authdesc = auth.Description;
+            }
+
+            return authdesc;
+        }
+
+        public List<Authorization> GetsAuthLevels()
+        {
+            List<Authorization> authLevels = new List<Authorization>();         
+             
+            if (!_cache.TryGetValue("authlevels", out authLevels))
+            {
+                authLevels = new List<Authorization>();  
+
+                var authSection = _iconfiguration.GetSection("AuthorizationLevels:Levels");
+
+                foreach (IConfigurationSection section in authSection.GetChildren())
+                {
+                    var key = section.GetValue<string>("Description");
+                    var value = section.GetValue<string>("Level");
+                    authLevels.Add(new Authorization{Description = key, Level = int.Parse(value)});
+                }
+
+             
+                _cache.Set("authlevels",authLevels,cacheEntryOptions);
+            }    
+            return authLevels;        
         }
 
         public Document GetDocument(Guid RecordGuid)

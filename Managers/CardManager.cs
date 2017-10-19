@@ -73,9 +73,17 @@ namespace webviewer.Managers
                  ss += " Language: " +  searchParams.Language;
             }
 
+            if (searchParams.Authorization > 0 )
+            {
+                 ss += " Authorization: " +  searchParams.AuthorizationDescription;
+            }
+
             sb.AppendFormat("<div class='well' style='width:95vw;'>{0}</div>",ss);
 
             return sb.ToString();
         }
+
+
+
     }
 }

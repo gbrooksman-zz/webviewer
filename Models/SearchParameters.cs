@@ -18,6 +18,8 @@ namespace webviewer.Models
         public string CASNumberFilter {get; set;}
 
         public string ComponentIDFilter {get; set;}
+        
+        public string AuthorizationDescription {get; set;}
 
     }
 }

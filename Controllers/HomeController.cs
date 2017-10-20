@@ -23,6 +23,7 @@ namespace webviewer.Controllers
         private IConfiguration _iconfiguration;
         private DataManager dataMgr;
        
+        private static CoreEntities coreEntities = new CoreEntities();
         private CardManager cardMgr = new CardManager();
         
         private RenderManager renderMgr = new RenderManager();
@@ -34,27 +35,39 @@ namespace webviewer.Controllers
             _config = controlConfigAccessor.Value;
             _iconfiguration = iconfiguration;
             _cache = memoryCache;
-            dataMgr = new DataManager(_cache,_iconfiguration);              
+            dataMgr = new DataManager(_cache,_iconfiguration);      
+
+            coreEntities.AuthorizationList = dataMgr.GetsAuthLevels();
+            coreEntities.FormatList = dataMgr.GetFormats();
+            coreEntities.SubformatList = dataMgr.GetSubFormats();
+            coreEntities.LanguageList = dataMgr.GetLanguages();                 
         }
 
         [HttpPost]
         public IActionResult Result(SearchParameters searchParams)
         {     
             // for DEV only _iconfiguration = iconfiguration;
-            searchParams.ProductID = "DTE73";
-            searchParams.Format = "MTR";
-            searchParams.Subformat = "DATA";
+            //searchParams.ProductID = "DTE73";
+           // searchParams.Format = "MTR";
+            //searchParams.Subformat = "DATA";
             // for DEV only
 
             var controlMgr = new ControlManager(_iconfiguration, _cache);
 
-            ViewData["headerString"] = GetOrSetCacheEntry("header",controlMgr);  
+            ViewData["headerString"] = GetOrSetCacheEntry("header",controlMgr); 
 
             searchParams.AuthorizationDescription 
-                    = dataMgr.GetAuthDescription(searchParams.Authorization);
+                        =  coreEntities.AuthorizationList
+                                .Where(a => a.Level == searchParams.Authorization)
+                                .FirstOrDefault().Description;
+
+            searchParams.LanguageName 
+                    =  coreEntities.LanguageList
+                        .Where(l=>l.Code == searchParams.Language)
+                        .FirstOrDefault().Name;
 
             List<Document> docs = dataMgr.GetDocuments(searchParams);
-            ViewData["resultString"] = cardMgr.RenderResults(docs,searchParams);
+            ViewData["resultString"] = cardMgr.RenderResults(docs,searchParams, coreEntities);
 
             ViewData["footerString"] = GetOrSetCacheEntry("footer",controlMgr);
 
@@ -76,10 +89,14 @@ namespace webviewer.Controllers
             return View();
         }
 
-        // public IActionResult FormatChange(string newFmt)
-        // {
-
-        // }
+        [HttpGet]
+        public IActionResult GetSubformats(string Format)
+        {
+            List<Subformat> subformats = coreEntities.SubformatList
+                                            .Where(s => s.FormatCode == Format)                
+                                            .ToList();            
+            return Json(subformats);
+        }
 
         private string GetOrSetCacheEntry(string cacheKey, ControlManager controlMgr )
         { 

@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace webviewer.Models
 {
@@ -21,5 +22,6 @@ namespace webviewer.Models
         
         public string AuthorizationDescription {get; set;}
 
+        public string LanguageName {get; set;}
     }
 }

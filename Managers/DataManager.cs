@@ -50,6 +50,8 @@ namespace webviewer.Managers
                         {
                             SqlDataReader reader  = command.ExecuteReader();
 
+                            formats.Add(new Format(){Code ="%", Name="(All)"});
+
                             while (reader.Read())
                             {
                                 formats.Add( new Format()
@@ -77,7 +79,7 @@ namespace webviewer.Managers
         {
             List<Subformat> subFormats = new List<Subformat>();
 
-            if (!_cache.TryGetValue("subformats", out subFormats))
+            if (!_cache.TryGetValue(formatCode + "_subformats", out subFormats))
             {
                 subFormats = new List<Subformat>();
 
@@ -95,19 +97,22 @@ namespace webviewer.Managers
                             command.Parameters.Add(param);
                             con.Open();
 
+                            subFormats.Add(new Subformat(){Code ="%", Name="(All)", FormatCode="%"});
+
                             SqlDataReader reader  = command.ExecuteReader();
                             while (reader.Read())
                             {
                                 subFormats.Add( new Subformat()
                                 {
-                                    Code = db.GetDBString(reader[0]),
-                                    Name = db.GetDBString(reader[1])
+                                    Code = db.GetDBString(reader[0]),                                    
+                                    Name = db.GetDBString(reader[1]),
+                                    FormatCode = formatCode
                                 });
                             }
                             reader.Close();
                             con.Close();
                         }
-                        _cache.Set("subformats",subFormats,cacheEntryOptions);
+                        _cache.Set(formatCode + "_subformats",subFormats,cacheEntryOptions);
                     }
                     catch (Exception ex)
                     {					
@@ -117,6 +122,53 @@ namespace webviewer.Managers
             }    
             return subFormats;
         }
+
+
+        public List<Subformat> GetSubFormats()
+        {
+            List<Subformat> subFormats = new List<Subformat>();
+
+            if (!_cache.TryGetValue("all_subformats", out subFormats))
+            {
+                subFormats = new List<Subformat>();
+
+                using (SqlConnection con = new SqlConnection(connString)) 
+                {                    
+                    try 
+                    {
+                        using (SqlCommand command = new SqlCommand(@"SELECT F_MSDSTYPE, 
+                                                                        F_MSDSTYPE_DESC, F_FORMAT
+                                                                        FROM T_MSDSTYPES                                                                    
+                                                                        ORDER BY 2" , con)) 
+                        {                           
+                            con.Open();
+
+                            subFormats.Add(new Subformat(){Code ="%", Name="(All)", FormatCode="%"});
+
+                            SqlDataReader reader  = command.ExecuteReader();
+                            while (reader.Read())
+                            {
+                                subFormats.Add(new Subformat()
+                                {
+                                    Code = db.GetDBString(reader[0]),                                    
+                                    Name = db.GetDBString(reader[1]),
+                                    FormatCode = db.GetDBString(reader[2])
+                                });
+                            }
+                            reader.Close();
+                            con.Close();
+                        }
+                        _cache.Set("all_subformats",subFormats,cacheEntryOptions);
+                    }
+                    catch (Exception ex)
+                    {					
+                        Log.Error("GetSubFormats: (all) " + ex.Message);
+                    }
+                }
+            }    
+            return subFormats;
+        }
+
 
         public List<Language> GetLanguages()
         {
@@ -137,18 +189,20 @@ namespace webviewer.Managers
                                                                     FROM T_PDF_MSDS)
                                                                     ORDER BY 2",con))
                         {                            
-                            con.Open();
+                            
 
+                            languages.Add(new Language(){Code ="%", Name="(All)"});
+
+                            con.Open();                            
                             SqlDataReader reader  = command.ExecuteReader();
-
            
-                         while (reader.Read())
+                            while (reader.Read())
                             {
-                                languages.Add( new Language()
-                                {
-                                    Code = db.GetDBString(reader[0]),
-                                    Name = db.GetDBString(reader[1])
-                                });
+                                    languages.Add( new Language()
+                                    {
+                                        Code = db.GetDBString(reader[0]),
+                                        Name = db.GetDBString(reader[1])
+                                    });
                             }
                             reader.Close();
                             con.Close();
@@ -163,23 +217,7 @@ namespace webviewer.Managers
             }    
             return languages;        
         }
-
-        public string GetAuthDescription(int authLevel)
-        {
-            string authdesc = String.Empty;
-
-            List<Authorization> authLevels = GetsAuthLevels();
-
-            Authorization auth = authLevels.Where(a => a.Level == authLevel).FirstOrDefault();
-
-            if(auth != null)
-            {
-                authdesc = auth.Description;
-            }
-
-            return authdesc;
-        }
-
+      
         public List<Authorization> GetsAuthLevels()
         {
             List<Authorization> authLevels = new List<Authorization>();         
@@ -187,6 +225,8 @@ namespace webviewer.Managers
             if (!_cache.TryGetValue("authlevels", out authLevels))
             {
                 authLevels = new List<Authorization>();  
+
+                authLevels.Add(new Authorization{Description = "(All)", Level = -99});
 
                 var authSection = _iconfiguration.GetSection("AuthorizationLevels:Levels");
 
@@ -301,17 +341,13 @@ namespace webviewer.Managers
 					command.Parameters.Add(param);
 				}
 
-				if (searchParams.Authorization > 0)
+				if (searchParams.Authorization > -99 )
 				{
 					SqlParameter param = new SqlParameter("@AUTH",SqlDbType.Int);                          
 					param.Value = searchParams.Authorization;
 					sb.Append( " AND F_AUTHORIZED = @AUTH "); 
 					command.Parameters.Add(param);
-				}
-				else
-				{
-					sb.Append(" AND F_AUTHORIZED  > 0 ");         
-				}
+				}				
 
 				if (searchParams.PublishedDate != DateTime.MinValue)
 				{
@@ -321,7 +357,7 @@ namespace webviewer.Managers
 					command.Parameters.Add(param);
 				}
 
-				if (!string.IsNullOrEmpty(searchParams.Language))
+				if (!string.IsNullOrEmpty(searchParams.Language) && (searchParams.Language != "%"))
 				{
 					SqlParameter param = new SqlParameter("@LNG", SqlDbType.VarChar,2);
 					sb.Append(" AND F_LANGUAGE = @LNG ");
@@ -329,7 +365,7 @@ namespace webviewer.Managers
 					command.Parameters.Add(param);
 				}
 
-				if (!string.IsNullOrEmpty(searchParams.Format))
+				if (!string.IsNullOrEmpty(searchParams.Format) && (searchParams.Format != "%"))
 				{
 					SqlParameter param = new SqlParameter("@FMT",SqlDbType.VarChar,3);
 					sb.Append(" AND F_FORMAT = @FMT ");
@@ -337,7 +373,7 @@ namespace webviewer.Managers
 					command.Parameters.Add(param);
 				}
 
-				if (!string.IsNullOrEmpty(searchParams.Subformat))
+				if (!string.IsNullOrEmpty(searchParams.Subformat) &&  (searchParams.Subformat != "%"))
 				{
 					SqlParameter param = new SqlParameter("@SFMT",SqlDbType.VarChar,4);  
 					sb.Append(" AND F_SUBFORMAT = @SFMT ");

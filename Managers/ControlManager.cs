@@ -95,38 +95,47 @@ namespace webviewer.Managers
                     AddLabel(sb, control.DisplayName);
                 sb.Append("</div>");  
                 sb.Append("<div class='col-sm-5'>");   
-                    sb.AppendFormat("<select asp-for = '{0}' name='{1}' id='dd{2}'>", control.Name,control.Name,control.Name);
-                        if (control.Name == "Format")
+                    
+                    if (control.Name == "Format")
+                    {
+                        sb.AppendFormat("<select asp-for = '{0}' name='{1}' id='dd{2}' onchange='fillSubformats()'>", control.Name,control.Name,control.Name);
+
+                        foreach (var item in GetFormats())
                         {
-                            foreach (var item in GetFormats())
-                            {
-                                sb.AppendFormat("<option value = '{0}'>{1}</option>",item.Value, item.Text);
-                            }
+                            sb.AppendFormat("<option value = '{0}'>{1}</option>",item.Value, item.Text);
                         }
-                        else if(control.Name == "Subformat")
+                    }
+                    else if(control.Name == "Subformat")
+                    {
+                        sb.AppendFormat("<select asp-for = '{0}' name='{1}' id='dd{2}'>", control.Name,control.Name,control.Name);
+
+                        foreach (var item in GetSubFormats("MTR"))
                         {
-                            foreach (var item in GetSubFormats())
-                            {
-                                sb.AppendFormat("<option value = '{0}'>{1}</option>",item.Value, item.Text);
-                            }
+                            sb.AppendFormat("<option value = '{0}'>{1}</option>",item.Value, item.Text);
                         }
-                        else if(control.Name == "Language")
+                    }
+                    else if(control.Name == "Language")
+                    {
+                        sb.AppendFormat("<select asp-for = '{0}' name='{1}' id='dd{2}'>", control.Name,control.Name,control.Name);
+
+                        foreach (var item in GetLanguages())
                         {
-                            foreach (var item in GetLanguages())
-                            {
-                                sb.AppendFormat("<option value = '{0}'>{1}</option>",item.Value, item.Text);
-                            }
+                            sb.AppendFormat("<option value = '{0}'>{1}</option>",item.Value, item.Text);
                         }
-                        else if(control.Name == "Authorization")
-                        {
+                    }
+                    else if(control.Name == "Authorization")
+                    {
+                        sb.AppendFormat("<select asp-for = '{0}' name='{1}' id='dd{2}'>", control.Name,control.Name,control.Name);
+                        
                         foreach (var item in GetAuthorizationLevels())
-                            {
-                                sb.AppendFormat("<option value = '{0}'>{1}</option>",item.Value, item.Text);
-                            }
+                        {                                
+                            sb.AppendFormat("<option value = '{0}'>{1}</option>",item.Value, item.Text);
                         }
+                    }
                     sb.Append("</select>");
                 sb.Append("</div>");
             sb.Append("</div>");          
+            
             return sb.ToString();
         }
 
@@ -188,7 +197,7 @@ namespace webviewer.Managers
             return  items;
         }
 
-        private  List<SelectListItem> GetSubFormats(string format = "MTR")
+        private  List<SelectListItem> GetSubFormats(string format)
         {
             List<SelectListItem> items = new List<SelectListItem>();
             List<Subformat> subformats  = dataMgr.GetSubFormats(format); 

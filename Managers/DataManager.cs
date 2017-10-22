@@ -266,7 +266,7 @@ namespace webviewer.Managers
 
                         while (reader.Read())
                         {
-                            doc = GetDocumentFromReader(reader);                           
+                            doc = GetDocumentFromReader(reader,true);                           
                         }
                         reader.Close();
                     }
@@ -280,7 +280,7 @@ namespace webviewer.Managers
             return doc;
         }
 
-        public List<Document> GetDocuments(SearchParameters searchParams)
+        public List<Document> GetDocuments(SearchParameters searchParams, bool fetchPDFs = false, int maxDocs = 100)
         {
             List<Document> docs = new List<Document>();
 
@@ -296,9 +296,12 @@ namespace webviewer.Managers
 					con.Open();               
                     SqlDataReader reader = command.ExecuteReader();
 
-                    while (reader.Read())
+                    int x = 0;
+
+                    while (reader.Read() && x <= maxDocs)
                     {
-                        docs.Add(GetDocumentFromReader(reader));                           
+                        docs.Add(GetDocumentFromReader(reader, fetchPDFs)); 
+                        x++;                          
                     }
                     reader.Close();                  
                 }
@@ -447,7 +450,7 @@ namespace webviewer.Managers
 
 			return sb.ToString();
 		}
-        private Document GetDocumentFromReader(SqlDataReader reader)
+        private Document GetDocumentFromReader(SqlDataReader reader, bool fetchPDFs)
         {
             Document doc = new Document()
             {
@@ -461,7 +464,7 @@ namespace webviewer.Managers
                 Supplier        = db.GetDBString(reader["F_SUPPLIER"]),
                 ProductName     = db.GetDBString(reader["F_PRODUCT_NAME"]),
                 RevisedDate     = db.GetDBDate(reader["F_DATE_REVISED"]),
-                Content         = db.GetDBBlob(reader["F_PDF"]),
+                Content         = GetContent(reader, fetchPDFs),
                 Authorization   = db.GetDBInt(reader["F_AUTHORIZED"]),
                 PublishedDate   = db.GetDBDate(reader["F_PUBLISHED_DATE"]),
                 CasNumbers      = db.GetDBString(reader["F_CAS_NUMBERS"]),
@@ -482,6 +485,18 @@ namespace webviewer.Managers
             };
 
             return doc;           
+        }
+
+        private byte[] GetContent (SqlDataReader reader, bool fetchPDFs )
+        {
+            if (fetchPDFs)
+            {
+                return db.GetDBBlob(reader["F_PDF"]);
+            }
+            else
+            {
+                return new byte[]{};
+            }
         }
     }
 }

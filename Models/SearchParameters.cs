@@ -23,5 +23,7 @@ namespace webviewer.Models
         public string AuthorizationDescription {get; set;}
 
         public string LanguageName {get; set;}
+
+        public int DocCount {get; set;}
     }
 }

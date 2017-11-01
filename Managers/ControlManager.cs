@@ -63,7 +63,7 @@ namespace webviewer.Managers
                     if (control.HasFilterDropDown)
                     {
                         sb.Append("<div class='col-sm-5'></div>");   
-                            AddFilterDropdown(sb, control.Name);
+                            AddFilterDropdown(sb, control.Name);                                                       
                         sb.Append("</div>");   
                     }
                 sb.Append("</div>");

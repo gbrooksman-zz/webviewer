@@ -47,9 +47,9 @@ namespace webviewer.Controllers
         public IActionResult Result(SearchParameters searchParams)
         {     
             // for DEV only _iconfiguration = iconfiguration;
-            //searchParams.ProductID = "DTE73";
-           // searchParams.Format = "MTR";
-            //searchParams.Subformat = "DATA";
+           searchParams.ProductID = "DTE73";
+           searchParams.Format = "MTR";
+           searchParams.Subformat = "DATA";
             // for DEV only
 
             var controlMgr = new ControlManager(_iconfiguration, _cache);

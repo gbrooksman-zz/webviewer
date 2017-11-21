@@ -29,6 +29,12 @@ namespace webviewer.Controllers
         
         private RenderManager renderMgr = new RenderManager();
 
+        /// <summary>
+        /// default constructor
+        /// </summary>
+        /// <param name="controlConfigAccessor"></param>
+        /// <param name="iconfiguration"></param>
+        /// <param name="memoryCache"></param>
         public HomeController(IOptions<ControlConfig> controlConfigAccessor, 
                               IConfiguration iconfiguration,
                               IMemoryCache memoryCache)
@@ -44,6 +50,12 @@ namespace webviewer.Controllers
             coreEntities.LanguageList = dataMgr.GetLanguages();                 
         }
 
+
+        /// <summary>
+        /// show page results
+        /// </summary>
+        /// <param name="searchParams"></param>
+        /// <returns></returns>
         [HttpPost]
         public IActionResult Result(SearchParameters searchParams)
         {     
@@ -75,6 +87,10 @@ namespace webviewer.Controllers
             return View("/Views/Home/Result.cshtml");
         }
 
+        /// <summary>
+        /// render the home page
+        /// </summary>
+        /// <returns></returns>
         public IActionResult Index()
         {
             string searchControls = string.Empty;
